@@ -3,7 +3,7 @@
 
 =================
 
-Elementary Abaqus lessons 
+Elementary Abaqus Lessons 
 
 =================
 
@@ -13,6 +13,7 @@ Table of Contents
 
   * [Lesson 0: Administrative](#lesson-0)  
   * [Lesson 1: Overview of a Model](#lesson-1)  
+  * [Lesson 2: Viewing Results](#lesson-2)  
   
 ---
 
@@ -26,7 +27,7 @@ This lesson covers:
 
 ## [Lesson 1: Overview of a Model](01_Lesson#lesson-1)
 
-This lesson covers the basics of:
+This lesson covers:
 
  1. Node definition
  2. Element connectivity definition
@@ -38,7 +39,7 @@ This lesson covers the basics of:
 
 ## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
 
-This lesson covers the basics of:
+This lesson covers:
 
  1. Viewing results using Abaqus Viewer 
  
