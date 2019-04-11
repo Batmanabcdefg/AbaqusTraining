@@ -26,9 +26,11 @@
  
 	Put the following two lines in a batch file (e.g., check_abq_license.bat):
 	
+	'''
 	"\\nastran2006\nastran2006_c\SIMULIA\License\lmutil.exe" lmstat -c 27000@nastran2006 -a >"%temp%\status.txt" 
 	notepad "%temp%\status.txt"
-
+	'''
+	
 	When you double-click the batch file, a notepad file will pop up to show you the number of licenses that are available.
 	
 	You may also check license availability by going to:
