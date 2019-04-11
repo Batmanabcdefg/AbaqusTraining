@@ -2,7 +2,7 @@
 
  1. Installation:
 	
-	See Milo[![post](https://milo.sgh.com/community/software/blog/2019/02/15/abaqus-2019-is-available-and-some-thoughts-on-software-versions))
+	See Milo ![post](https://milo.sgh.com/community/software/blog/2019/02/15/abaqus-2019-is-available-and-some-thoughts-on-software-versions)
 	
 	Our current license server is: 27000@nastran2006
 	
