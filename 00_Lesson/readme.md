@@ -16,7 +16,7 @@ where XXXX is your jobname, i.e., the filename of the input file without the *.i
 
 ## Batch files
 
-You may also batch your job if you put this command in a batch file:
+You may also batch your job if you put this command in a batch file (e.g., run_all.bat):
 
 	call abaqus job=XXXX cpus=N interactive
 
