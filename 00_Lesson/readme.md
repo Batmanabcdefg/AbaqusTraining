@@ -20,7 +20,7 @@ You may also batch your job if you put this command in a batch file (e.g., run_a
 
 	call abaqus job=XXXX cpus=N interactive
 
-All other windows commands can be used in this batch file (e.g., changing directories, copy or move files, etc.) so that you can automate the running of multiple input files.
+All other windows commands can be used in this batch file (e.g., changing directories, copy or move files, etc.) to automate the running of multiple input files.
 
 ## Check license availability
 
@@ -29,7 +29,7 @@ Put the following two lines in a batch file (e.g., check_abq_license.bat):
 	"\\nastran2006\nastran2006_c\SIMULIA\License\lmutil.exe" lmstat -c 27000@nastran2006 -a >"%temp%\status.txt" 
 	notepad "%temp%\status.txt"	
 
-When you double-click the batch file, a notepad file will pop up to show you the number of licenses that are available.
+When you double-click the batch file, a notepad file will pop up to show you the number of licenses available.
 
 You may also check license availability by going to:
 
