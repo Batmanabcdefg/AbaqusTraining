@@ -22,7 +22,7 @@ This lesson covers:
  1. Installation
  2. Running jobs
  3. Batch files
-
+ 4. Check license availability
 
 ## [Lesson 1: Overview of a Model](01_Lesson#lesson-1)
 
