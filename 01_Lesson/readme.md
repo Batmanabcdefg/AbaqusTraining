@@ -25,7 +25,7 @@ We will be using a single hex finite element. The element is defined using the n
 	*ELEMENT, TYPE=C3D8, ELSET=P1
 	1,      1,      2,      3,      4,      5,      6,      7,      8
 
-The element <em> TYPE </em> refers to the element formulation, which in this case is <em> C3D8 </em><sup>[1](#myfootnote1)</sup>.  
+The element <em> TYPE </em> refers to the element formulation, which in this case is <em> C3D8 </em><sup>[a](#myfootnote1)</sup>.  
 
 The first integer refers to the element label ID (in this case, specified as 1). Subsequent integers specify the ordering of the nodes of the hex element. As we define the element, it is grouped into an element set <em> ELSET </em> called <em> P1 </em>. 
 
@@ -45,7 +45,7 @@ The material is defined using the keyword <em> *MATERIAL </em>:
 	*ELASTIC
 	1000.,0.3
 
-The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We have to specify a name for this material, here called <em> M1 </em>
+The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We must specify a name for this material, here called <em> M1 </em>
 
 ## Surface definition
 For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
@@ -85,4 +85,5 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 2. Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
 
 ---
-<a name="myfootnote1">1</a>: The C3D8 describes a selectively-reduced integration solid element
+## Footnotes
+<a name="myfootnote1">a</a>: The C3D8 describes a selectively-reduced integration solid element
