@@ -88,4 +88,4 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 ## Footnotes
 <a name="myfootnote1">a</a>) It is a common misunderstanding that the C3D8 is a fully-integrated element. It uses a selectively-reduced integration scheme to prevent locking. 
 
-<a name="myfootnote1">b</a>) There is a distiction between <em> element type </em> (specified by <em> TYPE </em> above) and <em> element property </em> (e.g., defined by <em> *SOLID SECTION </em>). 
+<a name="myfootnote1">b</a>) There is a distiction between <em> element type </em> (specified by <em> TYPE </em>) and <em> element property </em> (e.g., specified by <em> *SOLID SECTION </em>). 
