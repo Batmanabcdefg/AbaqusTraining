@@ -29,6 +29,6 @@ The element <em> TYPE </em> is <em> C3D8 </em>. The first integer refers to the 
 
 ## Boundary conditions
 
-The boundary conditions are such that the 
+The boundary conditions are such that the plane X = 0, Y = 0, Z = 0
 
 
