@@ -1,6 +1,6 @@
 # Lesson 1: Overview of a Model
 
-We will build a model of a single element subjected to a 1D compression loading.
+We will build a single-element model subjected to 1D compression loading.
 
 ## Node definition
 
