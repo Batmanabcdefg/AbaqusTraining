@@ -119,9 +119,9 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Stresses
 
-The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the $Z$ (vertical) direction $\sigma_{33}$.
+	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $\sigma_{33}$.
 
-Other shear quantities can be checked. For e.g., the 
+	Other shear quantities can be checked. For e.g., the 
 
 * Reactions
 
@@ -136,7 +136,8 @@ Other shear quantities can be checked. For e.g., the
 ## Exercise 
 
 * Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
-* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
+
+* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>.
 
 ---
 ## Footnotes
