@@ -13,7 +13,7 @@ Table of Contents
 
   * [Lesson 0: Administrative](#lesson-0)  
   * [Lesson 1: Overview of a Model](#lesson-1)  
-  * [Lesson 2: Viewing Results](#lesson-2)  
+  * [Lesson 2: Placeholder](#lesson-2)  
   
 ---
 
@@ -41,9 +41,6 @@ This lesson covers:
  11. Viewing results
  12. Exercise 
 
-## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
+## [Lesson 2: Placeholder](02_Lesson#lesson-2)
 
-This lesson covers:
-
- 1. 
- 
+Placeholder 
