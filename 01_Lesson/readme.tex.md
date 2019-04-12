@@ -35,7 +35,7 @@ Each element must have an element (section) property<sup>[b](#myfootnote1)</sup>
 
 	*SOLID SECTION, ELSET=P1, MATERIAL=M1
 
-We have to specify the group of elements <em> ELSET </em> associated with this property, and also the material name <em> MATERIAL </em> (see below).
+We must specify the group of elements <em> ELSET </em> associated with this property, and also the material name <em> MATERIAL </em> (see below).
 
 ## Material definition
 
@@ -45,7 +45,7 @@ The material is defined using the keyword <em> *MATERIAL </em>:
 	*ELASTIC
 	1000.,0.3
 
-The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We must specify a name for this material, here called <em> M1 </em>
+The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We must specify a name for this material (<em> M1 </em>).
 
 ## Surface definition
 For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
@@ -116,9 +116,9 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in (00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
+After running the analysis as described in [Lesson 0: Administrative](00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
 
-dsadas
+
 
 ## Exercise 
 
