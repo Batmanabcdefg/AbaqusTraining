@@ -1,9 +1,6 @@
 # Lesson 1: Overview of a Model
 
-We will build a model a single element subjected to a 1D compression loading.
-
-The boundary conditions are such that the 
-
+We will build a model of a single element subjected to a 1D compression loading.
 
 ## Node definition
 
@@ -29,5 +26,9 @@ We will be using a single hex finite element. The element is defined using the n
 	1,      1,      2,      3,      4,      5,      6,      7,      8
 
 The element <em> TYPE </em> is <em> C3D8 </em>. The first integer refers to the element label ID (in this case, specified as 1). Subsequent integers specify the ordering of the nodes of the hex element. As we define the element, it is grouped into an element set <em> ELSET </em> called <em> P1 </em>. 
+
+## Boundary conditions
+
+The boundary conditions are such that the 
 
 
