@@ -53,15 +53,15 @@ Uniaxial compression
 *************************
 ** Loads
 *************************
-*DSLOAD, OP=MOD, AMPLITUDE=AmpPres
+*DSLOAD
 TopSurf,P,0.13
 *************************
 ** Output requests
 *************************
 *OUTPUT, FIELD
 *NODE OUTPUT
-U
-*ELEMENT OUTPUT, ELSET=OUT_CONT
+U,RF
+*ELEMENT OUTPUT
 E,S
 *END STEP
 

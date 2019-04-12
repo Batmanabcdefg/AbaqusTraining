@@ -73,7 +73,6 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 	6,    2
 	8,    1	
 
- 
 ## Specifying loads
 
 ## Output request
@@ -82,8 +81,8 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 
 ## Exercise 
 
-1. Define the same 1D compression loading condition by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
-2. Define the same 1D compression loading condition using point loads. Hint: use the keyword <em> *CLOAD </em>
+1. Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
+2. Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
 
 ---
 <a name="myfootnote1">1</a>: The C3D8 describes a selectively-reduced integration solid element
