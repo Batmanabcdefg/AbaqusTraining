@@ -19,7 +19,7 @@ The size of the element is 1 x 1 x 1, i.e., a unit cube. The nodes are located a
 	7,          1.,          1.,          1.
 	8,          0.,          1.,          1.
 
-As we define the nodes, these are also grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
+The first integer of each line refers to the node label ID. The subsequent real numbers define the X, Y, Z coordinates. As we define the nodes, these are grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
 
 ## Element connectivity
 
@@ -32,6 +32,6 @@ The element TYPE is C3D8.
 
 The first integer refers to the element label ID (in this case, specified as 1). 
 
-Subsequent integers specified the ordering of the nodes of the hex element. 
+Subsequent integers specify the ordering of the nodes of the hex element. 
 
 
