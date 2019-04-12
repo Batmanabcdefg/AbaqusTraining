@@ -116,7 +116,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in [Lesson 0: Administrative](00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
+After running the analysis as described in [Lesson 0](./00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
 
 
 
