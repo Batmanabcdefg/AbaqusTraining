@@ -47,6 +47,8 @@ For this example, we will use a linear elastic material with elastic modulus of 
 
 We have to specify a name for this material, which we have called <em> M1 </em>
 
+## Surface definition
+
 ## Boundary conditions
 
 The boundary conditions are such that the plane X = 0, Y = 0, Z = 0

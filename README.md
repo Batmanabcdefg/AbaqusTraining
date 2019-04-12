@@ -33,11 +33,12 @@ This lesson covers:
  2. Element definition
  3. Element property
  4. Material defintion
- 5. Analysis step
- 6. Boundary condition
- 7. Loading
- 8. Output request
- 9. Viewing results 
+ 6. Surface definition
+ 7. Analysis step
+ 8. Boundary condition
+ 9. Loading
+ 10. Output request
+ 11. Viewing results 
 
 ## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
 
