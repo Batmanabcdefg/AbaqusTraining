@@ -36,3 +36,10 @@ You may also check license availability by going to:
 http://alf.sgh.com/
 
 Scroll all the way down to find "Software License Usage".
+
+## Pre- and post-processing of models
+
+We typically use the pre-post software FEMAP for defining model geometry and meshing. A basic Abaqus input file is then generated on which we further modify manually. FEMAP tutorials can be found in the FEMAP documentation.
+
+For post-processing, we typically use Abaqus Viewer. Simple examples of results visualization and querying are described as you work through the lessons here.
+
