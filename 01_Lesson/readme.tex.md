@@ -118,6 +118,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 After running the analysis as described in (00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
 
+dsadas
 
 ## Exercise 
 
