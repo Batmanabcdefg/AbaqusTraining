@@ -6,6 +6,14 @@ See Milo [post](https://milo.sgh.com/community/software/blog/2019/02/15/abaqus-2
 
 Our current license server for Abaqus is: 27000@nastran2006
 
+## Abaqus documentation
+
+As we work through the lessons, you will probably need to find certain information in the Abaqus documentation. You can choose to install the Abaqus Documentation during software installation. Alternatively, you can find the latest Abaqus documentation here:
+
+https://www.3ds.com/support/knowledge-base/
+
+You need to sign up for access.
+
 ## Running jobs
 
 On the command prompt, type:
