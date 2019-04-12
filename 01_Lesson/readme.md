@@ -4,7 +4,7 @@ We will build a model of a single element subjected to a 1D compression loading.
 
 ## Node definition
 
-The size of the element is 1 x 1 x 1, i.e., a unit cube. The nodes are located at the corners of the cube and can be defined using the keyword <em> *NODE </em> as follows:
+The size of the element is 1 x 1 x 1, i.e., a unit cube. The nodes are located at the corners of the cube and can be defined using the keyword <em> *NODE </em>:
 
 	*NODE, NSET=GLOBAL_NSET
 	1,          0.,          0.,          0.
@@ -20,7 +20,7 @@ The first integer of each line refers to the node label ID. The subsequent real 
 
 ## Element connectivity
 
-We will be using a single hex finite element. The element is defined using the nodes through the keyword <em> *ELEMENT </em> as follows:
+We will be using a single hex finite element. The element is defined using the nodes through the keyword <em> *ELEMENT </em>:
 
 	*ELEMENT, TYPE=C3D8, ELSET=P1
 	1,      1,      2,      3,      4,      5,      6,      7,      8
