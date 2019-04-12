@@ -32,11 +32,12 @@ This lesson covers:
  1. Node definition
  2. Element definition
  3. Element property
- 4. Analysis step
- 5. Boundary condition
- 6. Loading
- 7. Output request
- 8. Viewing results 
+ 4. Material defintion
+ 5. Analysis step
+ 6. Boundary condition
+ 7. Loading
+ 8. Output request
+ 9. Viewing results 
 
 ## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
 

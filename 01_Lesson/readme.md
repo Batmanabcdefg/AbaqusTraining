@@ -31,11 +31,21 @@ The first integer refers to the element label ID (in this case, specified as 1).
 
 ## Element property
 
-An element property needs to be assigned. Note: There is a distiction between <em> element type </em> and <em> element property </em> (specified by <em> TYPE </em> above). The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
+An element property needs to be assigned. There is a distiction between <em> element type </em> and <em> element property </em> (specified by <em> TYPE </em> above). The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
 
 	*SOLID SECTION, ELSET=P1, MATERIAL=M1
 
-The element <em> TYPE </em> is <em> C3D8 </em>. The first integer refers to the element label ID (in this case, specified as 1). Subsequent integers specify the ordering of the nodes of the hex element. As we define the element, it is grouped into an element set <em> ELSET </em> called <em> P1 </em>. 
+We have to specify the group of elements <em> ELSET </em> associated with this property, and also the material name <em> MATERIAL </em> (see below).
+
+## Material definition
+
+For this example, we will use a linear elastic material with elastic modulus of 1000 and Poisson's ratio of 0.3. The material is defined using the keyword <em> *MATERIAL </em>:
+
+	**MATERIAL, NAME=M1
+	*ELASTIC
+	1000.,0.3
+
+We have to specify a name for this material, which we have called <em> M1 </em>
 
 ## Boundary conditions
 
