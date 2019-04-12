@@ -31,7 +31,7 @@ The first integer refers to the element label ID (in this case, specified as 1).
 
 ## Element property
 
-Each element must have an element property<sup>[b](#myfootnote1)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
+Each element must have an element (section) property<sup>[b](#myfootnote1)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
 
 	*SOLID SECTION, ELSET=P1, MATERIAL=M1
 
@@ -88,4 +88,4 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 ## Footnotes
 <a name="myfootnote1">a</a>) It is a common misunderstanding that the C3D8 is a fully-integrated element. It uses a selectively-reduced integration scheme to prevent locking. 
 
-<a name="myfootnote1">b</a>) There is a distiction between <em> element type </em> and <em> element property </em> (specified by <em> TYPE </em> above). 
+<a name="myfootnote1">b</a>) There is a distiction between <em> element type </em> (specified by <em> TYPE </em> above) and <em> element property </em> (e.g., defined by <em> *SOLID SECTION </em>). 
