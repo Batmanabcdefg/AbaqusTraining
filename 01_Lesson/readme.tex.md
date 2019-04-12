@@ -16,7 +16,7 @@ The size of the element is 1 x 1 x 1 (a unit cube). The nodes are located at the
 	7,          1.,          1.,          1.
 	8,          0.,          1.,          1.
 
-The first integer of each line refers to the node label ID. The subsequent real numbers define the X, Y, Z coordinates. As we define the nodes, these are grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
+The first integer of each line refers to the node label ID. The subsequent real numbers define the $X$, $Y$, $Z$ coordinates. As we define the nodes, these are grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
 
 ## Element type
 
@@ -55,7 +55,29 @@ For the purpose of defining a pressure loading on a face of the hex element, we 
 
 Refer to the elements manual to identify the surface ID for the hex element.
 
-## Specifying boundary conditions
+## Analysis step definition
+
+We define the analysis step as follows:
+
+	*STEP, NLGEOM=NO, INC=99999999
+	Uniaxial compression
+	*STATIC
+	0.5,1.0,1.e-12,1.0
+		...
+	*END
+	
+	
+<em> NLGEOM=NO </em> ensures that we are using small-strain formulation, and the number of increments for the entire step <em> INC </em> is set to a very large value (in general, this is to prevent premature termination).
+
+A title of the analysis step is given 
+
+We specify a static analysis using the keyword <em> *STATIC </em>. The following line defines the time-stepping characteristics of the analysis step:
+
+	initial time step, total duration of the step, minimum time step, maximum allowable time step
+
+In addition, within the analysis step, we specify:
+	
+### Boundary conditions
 
 The boundary conditions are such that we have symmetry boundary conditions on the planes X = 0, Y = 0 and Z = 0.
 
@@ -73,9 +95,16 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 	6,    2
 	8,    1	
 
-## Specifying loads
+### Loads
 
-## Output request
+We specify the pressure load of 0.13 on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
+
+	*DSLOAD
+	TopSurf,P,0.13
+
+### Output request
+
+
 
 ## Viewing results
 

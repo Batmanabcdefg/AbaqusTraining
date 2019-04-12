@@ -34,7 +34,7 @@ This lesson covers:
  3. Element property
  4. Material defintion
  6. Surface definition
- 7. Analysis step
+ 7. Analysis step definition
  8. Specifying boundary conditions
  9. Specifying loads
  10. Output request
