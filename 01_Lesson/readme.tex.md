@@ -117,26 +117,26 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify these:
 
-1. Stresses
+* Stresses
 
-The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the $Z$ direction $S_{33}$.
+The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the $Z$ (vertical) direction $\sigma_{33}$.
 
 Other shear quantities can be checked. For e.g., the 
 
-2. Reactions
+* Reactions
 
-We can check also check the reactions
+	We can check also check the reactions
 
-3. Displacements
+* Displacements
 
-Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
+	Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
 
 
 
 ## Exercise 
 
-1. Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
-2. Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
+* Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
+* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
 
 ---
 ## Footnotes
