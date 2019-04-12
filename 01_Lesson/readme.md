@@ -53,7 +53,7 @@ For the purpose of defining a pressure loading on a face of the hex element, we 
 	*SURFACE,NAME=TopSurf,TYPE=ELEMENT
 	1,S2
 
-Refer to the elements manual to identify the surface ID for the hex element.
+Refer to the Abaqus Elements Guide<sup>[c](#myfootnote1)</sup> to identify the surface ID for the hex element.
 
 ## Analysis step definition
 
@@ -115,7 +115,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify these:
+After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
 
 * Stresses
 
@@ -129,7 +129,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Displacements
 
-	Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
+	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. For e.g., 
 
 
 
@@ -144,3 +144,5 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 <a name="myfootnote1">a</a>) It is a common misunderstanding that the C3D8 is a fully-integrated element. It uses a selectively-reduced integration scheme to prevent locking. 
 
 <a name="myfootnote1">b</a>) There is a distiction between <em> element type </em> (specified by <em> TYPE </em>) and <em> element property </em> (e.g., specified by <em> *SOLID SECTION </em>). 
+
+<a name="myfootnote1">c</a>) Reference Library > Abaqus > Elements > Continuum Elements > General-purpose continuum elements > Three-dimensional solid element library   
