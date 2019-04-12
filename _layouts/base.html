@@ -1,23 +1,35 @@
+---
+common-css:
+  - "/css/bootstrap.min.css"
+  - "/css/bootstrap-social.css"
+  - "/css/main.css"
+common-ext-css:
+  - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+common-googlefonts:
+  - "Lora:400,700,400italic,700italic"
+  - "Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+common-js:
+  - "/js/jquery-1.11.2.min.js"
+  - "/js/bootstrap.min.js"
+  - "/js/main.js"
+---
+
 <!DOCTYPE html>
-<html>
-  <head>
-    {% include html_meta %}
-    <title>How to use MathJax in Jekyll generated Github pages -- Haixing Hu's Homepage</title>
-    <link href="/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
-    {% if page.use_math %}
-      {% include mathjax_support %}
-    {% endif %}
-  </head>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  {% include head.html %}
+
   <body>
-    {% include navigation_bar %}
-    <div class="container-narrow">
-      <div class="content">
-        {{ content }}
-      </div>
-      <hr/>
-      {% include footer %}
-    </div>
-    {% include JB/analytics %}
+
+    {% include gtm_body.html %}
+  
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+  
+    {% include footer-scripts.html %}
+  
   </body>
 </html>
