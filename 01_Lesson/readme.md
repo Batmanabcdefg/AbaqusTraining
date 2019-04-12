@@ -23,10 +23,10 @@ As we define the nodes, these are also grouped into a node set <em> NSET </em> c
 
 ## Element connectivity
 
-We will be modeling this problem using a single hex element. The geometry of hex element is defined using the nodes through the keyword *ELEMENT as follows:
+We will be using a single hex finite element. The element is defined using the nodes through the keyword *ELEMENT as follows:
 
 *ELEMENT, TYPE=C3D8, ELSET=P1
-      1,      1,      2,      3,      4,      5,      6,      7,      8
+1,      1,      2,      3,      4,      5,      6,      7,      8
 
 The element TYPE is C3D8. 
 
@@ -34,15 +34,4 @@ The first integer refers to the element label ID (in this case, specified as 1).
 
 Subsequent integers specified the ordering of the nodes of the hex element. 
 
-## Element connectivity
 
-We will be modeling this problem using a single hex element. The hex element is defined by specifying its nodal connectivity through the keyword *ELEMENT as follows:
-
-*ELEMENT, TYPE=C3D8, ELSET=P1
-      1,      1,      2,      3,      4,      5,      6,      7,      8
-
-The element TYPE is C3D8. As we define the element, we also group the element into an element set <em> ELSET </em> called <em> P1 </em>
-
-The first integer refers to the element label ID (in this case, specified as 1). 
-
-Subsequent integers specified the ordering of the nodes of the hex element. 
