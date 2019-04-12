@@ -1,9 +1,9 @@
 # Lesson 2: 
 
-<script src="//yihui.name/js/math-code.js"></script>
+<script src="https://yihui.name/js/math-code.js"></script>
 <!-- Just one possible MathJax CDN below. You may use others. -->
 <script async
-  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 Placeholder
