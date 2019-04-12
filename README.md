@@ -35,10 +35,11 @@ This lesson covers:
  4. Material defintion
  6. Surface definition
  7. Analysis step
- 8. Boundary condition
- 9. Loading
+ 8. Specifying boundary conditions
+ 9. Specifying loads
  10. Output request
- 11. Viewing results 
+ 11. Viewing results
+ 12. Exercise 
 
 ## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
 

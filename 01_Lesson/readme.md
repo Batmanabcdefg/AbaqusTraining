@@ -48,10 +48,42 @@ For this example, we will use a linear elastic material with elastic modulus of 
 We have to specify a name for this material, which we have called <em> M1 </em>
 
 ## Surface definition
+For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
 
-## Boundary conditions
+	*SURFACE,NAME=TopSurf,TYPE=ELEMENT
+	1,S2
 
-The boundary conditions are such that the plane X = 0, Y = 0, Z = 0
+Refer to the elements manual to identify the surface ID for the hex element.
+
+## Specifying boundary conditions
+
+The boundary conditions are such that we have symmetry boundary conditions on the planes X = 0, Y = 0 and Z = 0.
+
+	*BOUNDARY
+	1,    1
+	1,    2
+	1,    3
+	2,    2
+	2,    3
+	3,    3
+	4,    1
+	4,    3
+	5,    1
+	5,    2
+	6,    2
+	8,    1	
+
+ 
+## Specifying loads
+
+## Output request
+
+## Viewing results
+
+## Exercise 
+
+1. Define the same 1D compression loading condition by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
+2. Define the same 1D compression loading condition using point loads. Hint: use the keyword <em> *CLOAD </em>
 
 ---
 <a name="myfootnote1">1</a>: The C3D8 describes a selectively-reduced integration solid element
