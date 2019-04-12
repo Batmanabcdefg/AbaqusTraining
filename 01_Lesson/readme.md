@@ -119,9 +119,9 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Stresses
 
-The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> (vertical) direction <img src="/01_Lesson/tex/70bb6548a8b86f34819dd2e83c632c0b.svg?invert_in_darkmode&sanitize=true" align=middle width=22.498200449999988pt height=14.15524440000002pt/>.
+	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/70bb6548a8b86f34819dd2e83c632c0b.svg?invert_in_darkmode&sanitize=true" align=middle width=22.498200449999988pt height=14.15524440000002pt/>.
 
-Other shear quantities can be checked. For e.g., the 
+	Other shear quantities can be checked. For e.g., the 
 
 * Reactions
 
@@ -136,7 +136,8 @@ Other shear quantities can be checked. For e.g., the
 ## Exercise 
 
 * Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
-* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
+
+* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>.
 
 ---
 ## Footnotes
