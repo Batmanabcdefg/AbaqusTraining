@@ -25,8 +25,8 @@ As we define the nodes, these are also grouped into a node set <em> NSET </em> c
 
 We will be using a single hex finite element. The element is defined using the nodes through the keyword *ELEMENT as follows:
 
-*ELEMENT, TYPE=C3D8, ELSET=P1
-1,      1,      2,      3,      4,      5,      6,      7,      8
+	*ELEMENT, TYPE=C3D8, ELSET=P1
+	1,      1,      2,      3,      4,      5,      6,      7,      8
 
 The element TYPE is C3D8. 
 
