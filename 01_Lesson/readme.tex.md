@@ -66,8 +66,7 @@ We define the analysis step as follows:
 		...
 	*END
 	
-	
-<em> NLGEOM=NO </em> ensures that we are using small-strain formulation, and the number of increments for the entire step <em> INC </em> is set to a very large value (in general, this is to prevent premature termination).
+The option <em> NLGEOM=NO </em> ensures that we are using small-strain formulation, and the number of increments for the entire step <em> INC </em> is set to a very large value (in general, this is to prevent premature termination).
 
 A title of the analysis step is given: <em> Uniaxial compression </em>
 
@@ -116,7 +115,21 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. 
+After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify these:
+
+1. Stresses
+
+The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the $Z$ direction $S_{33}$.
+
+Other shear quantities can be checked. For e.g., the 
+
+2. Reactions
+
+We can check also check the reactions
+
+3. Displacements
+
+Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
 
 
 
