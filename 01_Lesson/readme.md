@@ -39,21 +39,19 @@ We have to specify the group of elements <em> ELSET </em> associated with this p
 
 ## Material definition
 
-For this example, we will use a linear elastic material with elastic modulus of 1000 and Poisson's ratio of 0.3. The material is defined using the keyword <em> *MATERIAL </em>:
+The material is defined using the keyword <em> *MATERIAL </em>:
 
-	**MATERIAL, NAME=M1
+	*MATERIAL, NAME=M1
 	*ELASTIC
 	1000.,0.3
 
-We have to specify a name for this material, which we have called <em> M1 </em>
+The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We have to specify a name for this material, here called <em> M1 </em>
 
 ## Surface definition
 For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
 
-''' python
-*SURFACE,NAME=TopSurf,TYPE=ELEMENT
-1,S2
-'''
+	*SURFACE,NAME=TopSurf,TYPE=ELEMENT
+	1,S2
 
 Refer to the elements manual to identify the surface ID for the hex element.
 
