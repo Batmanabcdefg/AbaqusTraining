@@ -50,8 +50,10 @@ We have to specify a name for this material, which we have called <em> M1 </em>
 ## Surface definition
 For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
 
-	*SURFACE,NAME=TopSurf,TYPE=ELEMENT
-	1,S2
+''' python
+*SURFACE,NAME=TopSurf,TYPE=ELEMENT
+1,S2
+'''
 
 Refer to the elements manual to identify the surface ID for the hex element.
 
