@@ -69,11 +69,11 @@ We define the analysis step as follows:
 	
 <em> NLGEOM=NO </em> ensures that we are using small-strain formulation, and the number of increments for the entire step <em> INC </em> is set to a very large value (in general, this is to prevent premature termination).
 
-A title of the analysis step is given 
+A title of the analysis step is given: <em> Uniaxial compression </em>
 
 We specify a static analysis using the keyword <em> *STATIC </em>. The following line defines the time-stepping characteristics of the analysis step:
 
-	initial time step, total duration of the step, minimum time step, maximum allowable time step
+	initial time step, total duration of the step, minimum allowable time step, maximum allowable time step
 
 In addition, within the analysis step, we specify:
 	
@@ -104,9 +104,21 @@ We specify the pressure load of 0.13 on the surface <em> TopSurf </em> defined e
 
 ### Output request
 
+We specify the output we require from the analysis:
 
+	*OUTPUT, FIELD
+	*NODE OUTPUT
+	U,RF
+	*ELEMENT OUTPUT
+	E,S
+
+In the above, we requested nodal field quantities (displacements <em> U </em>, reactions <em> RF </em>) and elemental field quantities (strains <em> E </em>, stresses <em> S </em>).
 
 ## Viewing results
+
+After running the analysis as described in (00_Lesson#lesson-0), we are ready to view the results using Abaqus Viewer. 
+
+dsadas
 
 ## Exercise 
 
