@@ -117,26 +117,26 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify these:
 
-1. Stresses
+* Stresses
 
-The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>.
+The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> (vertical) direction <img src="/01_Lesson/tex/70bb6548a8b86f34819dd2e83c632c0b.svg?invert_in_darkmode&sanitize=true" align=middle width=22.498200449999988pt height=14.15524440000002pt/>.
 
 Other shear quantities can be checked. For e.g., the 
 
-2. Reactions
+* Reactions
 
-We can check also check the reactions
+	We can check also check the reactions
 
-3. Displacements
+* Displacements
 
-Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
+	Finally, we can also check the displacements given that we have a simple linear elastic material and that the stress state is homogeneous throughout the element.
 
 
 
 ## Exercise 
 
-1. Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
-2. Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
+* Define the same 1D compression loading by prescribing displacements on the nodes of the top face. Hint: modify the boundary condition.
+* Define the same 1D compression loading using point loads. Hint: use the keyword <em> *CLOAD </em>
 
 ---
 ## Footnotes
