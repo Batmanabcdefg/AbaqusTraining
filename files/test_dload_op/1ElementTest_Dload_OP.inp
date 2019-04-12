@@ -1,0 +1,91 @@
+** ***************************************************************************
+**   1 element test 
+** ***************************************************************************
+** 
+*HEADING
+ABAQUS Static Analysis Set
+*NODE, NSET=GLOBAL_NSET
+       1,          0.,          0.,          0.
+       2,          1.,          0.,          0.
+       3,          1.,          1.,          0.
+       4,          0.,          1.,          0.
+       5,          0.,          0.,          1.
+       6,          1.,          0.,          1.
+       7,          1.,          1.,          1.
+       8,          0.,          1.,          1.
+*ELEMENT, TYPE=C3D8, ELSET=P1
+      1,      1,      2,      3,      4,      5,      6,      7,      8
+*NSET,NSET=PlaneXNodes
+2,3,6,7
+*NSET,NSET=PlaneYNodes
+3,4,7,8
+*NSET,NSET=PlaneZNodes
+5,6,7,8
+*ELSET, ELSET=OUT_CONT
+1
+**********************************************************************
+*SOLID SECTION, ELSET=P1, MATERIAL=M1
+**********************************************************************
+*MATERIAL, NAME=M1
+*ELASTIC
+1000.,0.3,,1.0
+**********************************************************************
+** Define top surface
+** Element 1, Face 2
+**********************************************************************
+*SURFACE,NAME=TopSurf,TYPE=ELEMENT
+1,S2
+**********************************************************************
+** Boundary Conditions
+**********************************************************************
+*BOUNDARY, OP=MOD
+    1,    1
+    1,    2
+    1,    3
+    2,    2
+    2,    3
+    3,    3
+    4,    1
+    4,    3
+    5,    1
+    5,    2
+    6,    2
+    8,    1	
+**********************************************************************
+** Amplitudes for Load
+**********************************************************************
+*AMPLITUDE, NAME=AmpPres
+0.0, 0.0, 1.0, 0.13
+**********************************************************************
+** Load Step 1 - 1D Compression
+**********************************************************************
+*STEP, NLGEOM=NO, INC=99999999
+Uniaxial compression
+*STATIC
+0.5,1.0,1.e-12,1.0
+**********************
+*OUTPUT, FIELD
+*NODE OUTPUT
+U
+*ELEMENT OUTPUT, ELSET=OUT_CONT
+E,S
+**********************
+*DSLOAD, OP=MOD, AMPLITUDE=AmpPres
+TopSurf,P,1.0
+**********************
+*END STEP
+**********************************************************************
+** Load Step 2
+**********************************************************************
+*STEP, NLGEOM=NO, INC=99999999
+Add load
+*STATIC
+0.5,1.0,1.e-12,1.0
+***
+*** Add pressure of 0.12 so that total pressure should be 0.12+0.13 = 0.25
+*** Since definition is identical as before, if we had keyed in 0.12, we are
+*** actually REDEFINING (instead of adding) the total pressure of 0.12
+***
+*DSLOAD, OP=MOD
+TopSurf,P,0.25
+*END STEP
