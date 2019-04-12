@@ -30,7 +30,7 @@ This lesson covers:
 This lesson covers:
 
  1. Node definition
- 2. Element connectivity definition
+ 2. Element definition
  3. Element property
  4. Analysis step
  5. Boundary condition

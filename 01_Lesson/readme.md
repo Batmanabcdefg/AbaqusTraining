@@ -41,5 +41,5 @@ The element <em> TYPE </em> is <em> C3D8 </em>. The first integer refers to the 
 
 The boundary conditions are such that the plane X = 0, Y = 0, Z = 0
 
-
+---
 <a name="myfootnote1">1</a>: The C3D8 describes a selectively-reduced integration solid element
