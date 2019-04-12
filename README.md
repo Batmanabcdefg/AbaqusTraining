@@ -34,12 +34,13 @@ This lesson covers:
  3. Element property
  4. Analysis step
  5. Boundary condition
- 6. Load
+ 6. Loading
  7. Output request
+ 8. Viewing results 
 
 ## [Lesson 2: Viewing Results](02_Lesson#lesson-2)
 
 This lesson covers:
 
- 1. Viewing results using Abaqus Viewer 
+ 1. 
  
