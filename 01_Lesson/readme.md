@@ -4,7 +4,7 @@ We will build a single-element model subjected to 1D compression loading.
 
 ## Node definition
 
-The size of the element is 1 x 1 x 1, i.e., a unit cube. The nodes are located at the corners of the cube and can be defined using the keyword <em> *NODE </em>:
+The size of the element is 1 x 1 x 1 (a unit cube). The nodes are located at the corners of the cube and can be defined using the keyword <em> *NODE </em>:
 
 	*NODE, NSET=GLOBAL_NSET
 	1,          0.,          0.,          0.
