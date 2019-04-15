@@ -123,9 +123,9 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
-	Other stress quantities can also be checked. For e.g., the von Mises shear stress <img src="/01_Lesson/tex/d5c18a8ca1894fd3a7d25f242cbe8890.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928106449999989pt height=14.15524440000002pt/> should be 0.13 since <img src="/01_Lesson/tex/ca733056d7352e21721fb76ae1897463.svg?invert_in_darkmode&sanitize=true" align=middle width=82.65012854999998pt height=19.1781018pt/> where <img src="/01_Lesson/tex/e43e9767dae0b64f91b079e1ae4685f9.svg?invert_in_darkmode&sanitize=true" align=middle width=61.87021499999999pt height=22.465723500000017pt/> is the minimum principal stress and <img src="/01_Lesson/tex/a9f68728f328a87b2b1ef206a687e188.svg?invert_in_darkmode&sanitize=true" align=middle width=46.90440644999998pt height=21.18721440000001pt/> is the maximum principal stress; the lateral stress is zero.
+	Other stress quantities can also be checked. For e.g., the von Mises shear stress <img src="/01_Lesson/tex/d5c18a8ca1894fd3a7d25f242cbe8890.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928106449999989pt height=14.15524440000002pt/> should be 0.13 since <img src="/01_Lesson/tex/a03c0cdcd2a4f14d3fa3e52fa13ad35a.svg?invert_in_darkmode&sanitize=true" align=middle width=92.60449109999998pt height=24.65753399999998pt/> where <img src="/01_Lesson/tex/e03c67b59d1405f92aed6a4c7eb4deca.svg?invert_in_darkmode&sanitize=true" align=middle width=46.90440644999998pt height=21.18721440000001pt/> is the maximum principal stress and <img src="/01_Lesson/tex/87913464a94d6d2e461966c0b3c99095.svg?invert_in_darkmode&sanitize=true" align=middle width=61.87021499999999pt height=22.465723500000017pt/> is the minimum principal stress; the lateral stress <img src="/01_Lesson/tex/deba3c11eac8595fd69f5a791a715a87.svg?invert_in_darkmode&sanitize=true" align=middle width=34.11909929999999pt height=14.15524440000002pt/>\sigma_2$ is zero.
 	
-	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png)
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
 * Reactions
 
