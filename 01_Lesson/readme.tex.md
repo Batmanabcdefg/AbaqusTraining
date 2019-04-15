@@ -123,9 +123,9 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
-	Other stress quantities can also be checked. For e.g., the von Mises shear stress $q$ should be 0.13 since $q = \sigma_1 - \sigma_3$ where $\sigma_1 = S_{33}$ is the minimum principal stress and $\sigma_3 = 0$ is the maximum principal stress; the lateral stress is zero.
+	Other stress quantities can also be checked. For e.g., the von Mises shear stress $q$ should be 0.13 since $q = |\sigma_1 - \sigma_3|$ where $\sigma_1 = 0$ is the maximum principal stress and $\sigma_3 = S_{33}$ is the minimum principal stress; the lateral stress $\sigma_1 = $\sigma_2$ is zero.
 	
-	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png)
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
 * Reactions
 
