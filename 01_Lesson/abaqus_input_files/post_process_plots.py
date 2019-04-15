@@ -6,6 +6,7 @@
 #
 # Use: abaqus viewer script=post_process_plots.py
 #
+#
 
 from abaqus import *
 from abaqusConstants import *
