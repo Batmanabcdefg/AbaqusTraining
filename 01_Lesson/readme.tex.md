@@ -121,11 +121,11 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
 
-	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.tif)
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
 	Other stress quantities can also be checked. For e.g., the von Mises shear stress $q$ should be 0.13 since $q = \sigma_1 - \sigma_3$ where $\sigma_1 = S_{33}$ is the minimum principal stress and $\sigma_3 = 0$ is the maximum principal stress; the lateral stress is zero.
 	
-	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.tif)
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png)
 
 * Reactions
 
