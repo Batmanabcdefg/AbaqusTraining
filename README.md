@@ -21,9 +21,11 @@ Table of Contents
 This lesson covers:
 
  1. Installation
- 2. Running jobs
- 3. Batch files
- 4. Check license availability
+ 2. Checking license availability
+ 3. Coordinating software needs
+ 3. Running jobs
+ 4. Batch files
+ 5. Pre- and post-processing of models
 
 ## [Lesson 1: Overview of a Model](01_Lesson#lesson-1)
 

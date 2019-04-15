@@ -14,6 +14,25 @@ https://www.3ds.com/support/knowledge-base/
 
 You need to sign up for access.
 
+## Checking license availability
+
+Put the following two lines in a batch file (e.g., check_abq_license.bat):
+
+	"\\nastran2006\nastran2006_c\SIMULIA\License\lmutil.exe" lmstat -c 27000@nastran2006 -a >"%temp%\status.txt" 
+	notepad "%temp%\status.txt"	
+
+When you double-click the batch file, a notepad file will pop up to show you the number of licenses available.
+
+You may also check license availability by going to:
+
+http://alf.sgh.com/
+
+Scroll all the way down to find "Software License Usage".
+
+## Coordinating software needs
+
+We communicate our license needs on Slack:
+
 ## Running jobs
 
 On the command prompt, type:
@@ -29,21 +48,6 @@ You may also batch your job if you put this command in a batch file (e.g., run_a
 	call abaqus job=XXXX cpus=N interactive
 
 All other windows commands can be used in this batch file (e.g., changing directories, copy or move files, etc.) to automate the running of multiple input files.
-
-## Check license availability
-
-Put the following two lines in a batch file (e.g., check_abq_license.bat):
-
-	"\\nastran2006\nastran2006_c\SIMULIA\License\lmutil.exe" lmstat -c 27000@nastran2006 -a >"%temp%\status.txt" 
-	notepad "%temp%\status.txt"	
-
-When you double-click the batch file, a notepad file will pop up to show you the number of licenses available.
-
-You may also check license availability by going to:
-
-http://alf.sgh.com/
-
-Scroll all the way down to find "Software License Usage".
 
 ## Pre- and post-processing of models
 
