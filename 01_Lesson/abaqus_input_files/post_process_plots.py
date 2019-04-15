@@ -41,10 +41,17 @@ v.viewportAnnotationOptions.setValues(titleBackgroundStyle=MATCH, stateBackgroun
 v.odbDisplay.basicOptions.setValues(connectorDisplay=OFF)
 session.printOptions.setValues(reduceColors=False)
 session.printOptions.setValues(vpDecorations=OFF)
-v.view.setProjection(projection=PARALLEL)
 v.odbDisplay.commonOptions.setValues(visibleEdges=FREE) 
+
+# paralel projection view
+v.view.setProjection(projection=PARALLEL)
+
+# fit view
 session.viewports['Viewport: 1'].view.fitView()
 
+# rotate model so that vertical Z is up
+session.viewports['Viewport: 1'].view.rotate(xAngle=-90, yAngle=0, zAngle=0, mode=MODEL)
+	
 StepName = 'Step-'+str(StepNo)
 frames = odb.steps[StepName].frames
 nframes = len(frames)
