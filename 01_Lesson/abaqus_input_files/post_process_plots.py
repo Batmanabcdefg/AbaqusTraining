@@ -83,7 +83,7 @@ for i in range(0,len(fNum)):
 	v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 	
 	# output to TIFF file
-	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_VMS', format=TIFF, canvasObjects=(session.viewports['Viewport: 1'], ))
+	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_VMS', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 	
 	# plot stress S33
 	v.odbDisplay.setPrimaryVariable(variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 'S33'))
@@ -91,7 +91,7 @@ for i in range(0,len(fNum)):
 	v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 	
 	# output to TIFF file
-	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_S33', format=TIFF, canvasObjects=(session.viewports['Viewport: 1'], ))
+	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_S33', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 	
 	#v.odbDisplay.setPrimaryVariable(variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U2'), )
 	
