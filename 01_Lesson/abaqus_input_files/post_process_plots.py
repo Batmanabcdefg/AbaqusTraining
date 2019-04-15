@@ -77,7 +77,7 @@ for i in range(0,len(fNum)):
 	# deformation scale factor
 	session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(deformationScaling=UNIFORM, uniformScaleFactor=1)
 	
-	# plot stress
+	# plot stress q
 	v.odbDisplay.setPrimaryVariable(variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 'Mises'), )
 	v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
 	v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
@@ -85,6 +85,13 @@ for i in range(0,len(fNum)):
 	# output to TIFF file
 	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_VMS', format=TIFF, canvasObjects=(session.viewports['Viewport: 1'], ))
 	
+	# plot stress S33
+	v.odbDisplay.setPrimaryVariable(variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 'S33'))
+	v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
+	v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
+	
+	# output to TIFF file
+	session.printToFile(fileName=Jobname+'_'+fLabel[i]+'_S33', format=TIFF, canvasObjects=(session.viewports['Viewport: 1'], ))
 	
 	#v.odbDisplay.setPrimaryVariable(variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U2'), )
 	
