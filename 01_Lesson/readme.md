@@ -119,9 +119,13 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Stresses
 
-	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/70bb6548a8b86f34819dd2e83c632c0b.svg?invert_in_darkmode&sanitize=true" align=middle width=22.498200449999988pt height=14.15524440000002pt/>.
+	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
 
-	Other shear quantities can be checked. For e.g., the 
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.tif)
+	
+	Other stress quantities can also be checked. For e.g., the von Mises shear stress <img src="/01_Lesson/tex/d5c18a8ca1894fd3a7d25f242cbe8890.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928106449999989pt height=14.15524440000002pt/> should be 0.13 since <img src="/01_Lesson/tex/ca733056d7352e21721fb76ae1897463.svg?invert_in_darkmode&sanitize=true" align=middle width=82.65012854999998pt height=19.1781018pt/> where <img src="/01_Lesson/tex/e43e9767dae0b64f91b079e1ae4685f9.svg?invert_in_darkmode&sanitize=true" align=middle width=61.87021499999999pt height=22.465723500000017pt/> is the minimum principal stress and <img src="/01_Lesson/tex/a9f68728f328a87b2b1ef206a687e188.svg?invert_in_darkmode&sanitize=true" align=middle width=46.90440644999998pt height=21.18721440000001pt/> is the maximum principal stress; the lateral stress is zero.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.tif)
 
 * Reactions
 
