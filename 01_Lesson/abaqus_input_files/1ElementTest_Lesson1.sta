@@ -1,0 +1,9 @@
+ Abaqus/Standard 3DEXPERIENCE R2018x                  DATE 15-Apr-2019 TIME 08:05:40
+ SUMMARY OF JOB INFORMATION:
+ STEP  INC ATT SEVERE EQUIL TOTAL  TOTAL      STEP       INC OF       DOF    IF
+               DISCON ITERS ITERS  TIME/    TIME/LPF    TIME/LPF    MONITOR RIKS
+               ITERS               FREQ
+   1     1   1     0     1     1  0.500      0.500      0.5000    
+   1     2   1     0     1     1  1.00       1.00       0.5000    
+                          
+ THE ANALYSIS HAS COMPLETED SUCCESSFULLY
