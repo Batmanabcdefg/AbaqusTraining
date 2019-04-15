@@ -8,7 +8,7 @@ Our current license server for Abaqus is: 27000@nastran2006
 
 ## Abaqus documentation
 
-As we work through the lessons, you will probably need to find certain information in the Abaqus documentation. You can choose to install the Abaqus Documentation during software installation. Alternatively, you can find the latest Abaqus documentation here:
+You will very likely need to find certain information in the Abaqus documentation. You can choose to install the Abaqus Documentation during software installation. Alternatively, you can find the latest Abaqus documentation here:
 
 https://www.3ds.com/support/knowledge-base/
 
@@ -49,5 +49,20 @@ Scroll all the way down to find "Software License Usage".
 
 We typically use the pre-post software FEMAP for defining model geometry and meshing. A basic Abaqus input file is then generated on which we further modify manually. FEMAP tutorials can be found in the FEMAP documentation.
 
-For post-processing, we typically use Abaqus Viewer. Simple examples of results visualization and querying are described as you work through the lessons here.
+For post-processing, we typically use Abaqus Viewer. To start Abaqus Viewer, type on the command prompt:
 
+	abaqus viewer
+
+For post-processing using Python scripts for output database (ODB) acess, type on the command prompt:
+
+	abaqus python XXXX
+
+where XXXX is the name of the Python script (including the extension .py)
+	
+For post-processing using Python scripts that invoke Abaqus Viewer for generating plots, type on the command prompt:
+
+	abaqus viewer script=XXXX
+
+where XXXX is the name of the Python script (including the extension .py). 
+
+Simple examples of results visualization and querying are described as you work through the lessons here.
