@@ -129,7 +129,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_RF3.png	)
 	
-* **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. Since the cube has unit dimensions, the displacement would be equal to the strain. From ![linear elasticty](https://en.wikipedia.org/wiki/Linear_elasticity), the vertical strain/displacement is:
+* **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. Since the cube has unit dimensions, the displacement would be equal to the strain. From [linear elasticty](https://en.wikipedia.org/wiki/Linear_elasticity), the vertical strain/displacement is:
 		
 	<p align="center"><img src="/01_Lesson/tex/bfd725bb8e9573ebfe78ef13dc374abc.svg?invert_in_darkmode&sanitize=true" align=middle width=314.53656794999995pt height=32.990165999999995pt/></p>
 	
