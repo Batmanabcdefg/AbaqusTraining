@@ -38,8 +38,6 @@ cmap=v.colorMappings['Section']
 cmap.updateOverrides(overrides={'PART-1-1.PDD_1MM.Section-PDD_1MM':(True, '#999999', 'Default', '#999999')})
 v.disableMultipleColors()
 ##v.viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-80-*-*-p-*-*-*', titleFont='-*-verdana-medium-r-normal-*-*-80-*-*-p-*-*-*', stateFont='-*-verdana-medium-r-normal-*-*-80-*-*-p-*-*-*')
-# set legend font size
-v.viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-180-*-*-p-*-*-*')
 v.viewportAnnotationOptions.setValues(titleBackgroundStyle=MATCH, stateBackgroundStyle=MATCH, legendBackgroundStyle=MATCH,compass=OFF)
 v.odbDisplay.basicOptions.setValues(connectorDisplay=OFF)
 session.printOptions.setValues(reduceColors=False)
@@ -87,6 +85,9 @@ for i in range(0,len(fNum)):
 	# deformation scale factor
 	session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(deformationScaling=UNIFORM, uniformScaleFactor=1)
 	
+	# set legend font size
+	v.viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-180-*-*-p-*-*-*')
+
 	# ========================================
 	# plot stress q
 	# ========================================
