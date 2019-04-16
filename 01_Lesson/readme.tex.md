@@ -134,7 +134,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	$
 	\begin{eqnarray*}
 	\epsilon_{ij} &=& \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]\\
-	&=& z
+	              &=& z
 	\end{eqnarray*}
 	$
 	
