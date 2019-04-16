@@ -5,9 +5,10 @@
 * Job restarts (RECL)
 * Joining ODB (RECL)
 * Python postprocessing (RECL)
-
+* Contact, contact stabilization
 * Stablization for unstable problems (RECL)
 * Regularizing material data points (PBSF)
+* Monitoring quantities
 
 ## Fire-related
 * Shell temperature gradient (PBSF)
@@ -19,15 +20,19 @@
 ## Concrete
 * Concrete damage plasticity
 
-## Geomechanics
+## Hyperelastic materials
+
+## Geomaterials
 * Mohr-Coulomb
 * Geostatic
 * Consolidation
 * Grav vs Body force
 * Total vs excess pore pressure
+* Foundation/elastic stiffness (aka subgrade modulus)
 
 ## Composites
 * Shell layup
 
 ## Connector elements
 * Connector elements
+
