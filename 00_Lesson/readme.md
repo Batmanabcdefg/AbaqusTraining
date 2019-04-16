@@ -33,6 +33,10 @@ Scroll all the way down to find "Software License Usage".
 
 We communicate our license needs on Slack:
 
+https://sgh-analysis.slack.com/
+
+You need to sign up for access.
+	
 ## Running jobs
 
 On the command prompt, type:
