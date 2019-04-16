@@ -1,6 +1,6 @@
 # Lesson 1: Overview of a Model
 
-We will build a single-element model subjected to 1D compression loading.
+We will build a single-element model subjected to 1D compression loading. The input file can be found in the "abaqus_input_files" folder above.
 
 ## Node definition
 
@@ -78,7 +78,7 @@ In addition, within the analysis step, we specify:
 	
 ### Boundary conditions
 
-The boundary conditions are such that we have symmetry boundary conditions on the planes X = 0, Y = 0 and Z = 0.
+The boundary conditions are such that we have symmetry boundary conditions on the planes <img src="/01_Lesson/tex/b6903d0bfe9fdb18f618c3811752bda9.svg?invert_in_darkmode&sanitize=true" align=middle width=45.04550654999999pt height=22.465723500000017pt/>, <img src="/01_Lesson/tex/5e00215a538a57a8b3eae1a769cd34d6.svg?invert_in_darkmode&sanitize=true" align=middle width=43.33321904999999pt height=22.465723500000017pt/> and <img src="/01_Lesson/tex/e51463e7c08e166a5ffb970655d2d909.svg?invert_in_darkmode&sanitize=true" align=middle width=42.53410919999999pt height=22.465723500000017pt/>.
 
 	*BOUNDARY
 	1,    1
@@ -96,7 +96,7 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 
 ### Loads
 
-We specify the pressure load of 0.13 on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
+We specify the pressure load of <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/> on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
 
 	*DSLOAD
 	TopSurf,P,0.13
@@ -119,22 +119,27 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Stresses
 
-	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
+	The first obvious check that we can make is to confirm that we applied the correct stress value <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/>. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
-	Other stress quantities can also be checked. For e.g., the von Mises shear stress <img src="/01_Lesson/tex/d5c18a8ca1894fd3a7d25f242cbe8890.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928106449999989pt height=14.15524440000002pt/> should be 0.13 since <img src="/01_Lesson/tex/a03c0cdcd2a4f14d3fa3e52fa13ad35a.svg?invert_in_darkmode&sanitize=true" align=middle width=92.60449109999998pt height=24.65753399999998pt/> where <img src="/01_Lesson/tex/e03c67b59d1405f92aed6a4c7eb4deca.svg?invert_in_darkmode&sanitize=true" align=middle width=46.90440644999998pt height=21.18721440000001pt/> is the maximum principal stress and <img src="/01_Lesson/tex/87913464a94d6d2e461966c0b3c99095.svg?invert_in_darkmode&sanitize=true" align=middle width=61.87021499999999pt height=22.465723500000017pt/> is the minimum principal stress; the lateral stress <img src="/01_Lesson/tex/0d1356111d3a14163216612043294f2e.svg?invert_in_darkmode&sanitize=true" align=middle width=54.63085154999999pt height=14.15524440000002pt/> is zero.
+	Other stress quantities can also be checked. For e.g., the von Mises shear stress <img src="/01_Lesson/tex/d5c18a8ca1894fd3a7d25f242cbe8890.svg?invert_in_darkmode&sanitize=true" align=middle width=7.928106449999989pt height=14.15524440000002pt/> should be <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/> since <img src="/01_Lesson/tex/a03c0cdcd2a4f14d3fa3e52fa13ad35a.svg?invert_in_darkmode&sanitize=true" align=middle width=92.60449109999998pt height=24.65753399999998pt/> where <img src="/01_Lesson/tex/e03c67b59d1405f92aed6a4c7eb4deca.svg?invert_in_darkmode&sanitize=true" align=middle width=46.90440644999998pt height=21.18721440000001pt/> is the maximum principal stress and <img src="/01_Lesson/tex/87913464a94d6d2e461966c0b3c99095.svg?invert_in_darkmode&sanitize=true" align=middle width=61.87021499999999pt height=22.465723500000017pt/> is the minimum principal stress; the lateral stress <img src="/01_Lesson/tex/0d1356111d3a14163216612043294f2e.svg?invert_in_darkmode&sanitize=true" align=middle width=54.63085154999999pt height=14.15524440000002pt/> is zero.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
 * Reactions
 
-	We can check also check the reactions
-
+	The reactions at the four base nodes are equal to <img src="/01_Lesson/tex/6a295b2e0ddef468a1bf686a71ef7080.svg?invert_in_darkmode&sanitize=true" align=middle width=113.242173pt height=24.65753399999998pt/>.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_RF3.png	)
+	
 * Displacements
 
-	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. For e.g., 
+	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
+	
+	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]
 
+	
 
 
 ## Exercise 
