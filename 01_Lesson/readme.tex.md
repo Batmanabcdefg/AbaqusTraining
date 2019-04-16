@@ -134,11 +134,19 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	$$
 	\begin{align}
 	\epsilon_{ij} &=& \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]\\
-	              &=& z
 	\end{align}
 	$$
 	
+	Since the cube has unit dimensions, the displacement would be equal to the strain. The vertical strain/displacement is
+	$$
+	\begin{align}
+	\epsilon_{33} &=& \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{33} - \nu\left(\sigma_{11}+\sigma_{22}+\sigma_{33}\right) \right]\\
+	\end{align}
+	$$
 	
+	A trite calculation would show that $\epsilon_{33} = -1.3\times10^{-4}$, which agrees with the contour plot below.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_U3.png	)
 	
 
 
