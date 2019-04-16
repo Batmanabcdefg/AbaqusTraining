@@ -45,7 +45,7 @@ The material is defined using the keyword <em> *MATERIAL </em>:
 	*ELASTIC
 	1000.,0.3
 
-The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is 1000 and Poisson's ratio is 0.3. We must specify a name for this material (<em> M1 </em>).
+The material is linear elastic, defined using the keyword <em> *ELASTIC </em>. The elastic modulus is <img src="/01_Lesson/tex/57edfc49eca3237d9614cdfaa86fd48a.svg?invert_in_darkmode&sanitize=true" align=middle width=67.87664564999999pt height=22.465723500000017pt/> and Poisson's ratio is <img src="/01_Lesson/tex/15c1721523b4a6c9de5c6579ea380fdd.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>. We must specify a name for this material (<em> M1 </em>).
 
 ## Surface definition
 For the purpose of defining a pressure loading on a face of the hex element, we need to first define a surface
