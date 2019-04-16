@@ -117,9 +117,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
 
-* Stresses
-
-	The first obvious check that we can make is to confirm that we applied the correct stress value $0.13$. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
+* **Stresses**. The first obvious check that we can make is to confirm that we applied the correct stress value $0.13$. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
@@ -127,17 +125,13 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
-* Reactions
-
-	The reactions at the four base nodes are equal to $0.13/4 = 0.0325$.
+* **Reactions**. The reactions at the four base nodes are equal to $0.13/4 = 0.0325$.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_RF3.png	)
 	
-* Displacements
-
-	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
+* **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
 	
-	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]
+	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]$
 
 	
 
