@@ -117,9 +117,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
 
-* Stresses
-
-	The first obvious check that we can make is to confirm that we applied the correct stress value <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/>. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
+* **Stresses**. The first obvious check that we can make is to confirm that we applied the correct stress value <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/>. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
@@ -127,17 +125,13 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
-* Reactions
-
-	The reactions at the four base nodes are equal to <img src="/01_Lesson/tex/6a295b2e0ddef468a1bf686a71ef7080.svg?invert_in_darkmode&sanitize=true" align=middle width=113.242173pt height=24.65753399999998pt/>.
+* **Reactions**. The reactions at the four base nodes are equal to <img src="/01_Lesson/tex/6a295b2e0ddef468a1bf686a71ef7080.svg?invert_in_darkmode&sanitize=true" align=middle width=113.242173pt height=24.65753399999998pt/>.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_RF3.png	)
 	
-* Displacements
-
-	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
+* **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
 	
-	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]
+	<img src="/01_Lesson/tex/e7c4e09994f2dac52eb951a01cce7d5b.svg?invert_in_darkmode&sanitize=true" align=middle width=215.92746284999993pt height=43.42856099999997pt/>
 
 	
 
