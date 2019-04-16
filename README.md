@@ -12,7 +12,7 @@ Table of Contents
 =================
 
   * [Lesson 0: Administrative](#lesson-0)  
-  * [Lesson 1: Overview of a Model](#lesson-1)  
+  * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
   * [Lesson 2: Placeholder](#lesson-2)  
   
 ---
@@ -27,7 +27,7 @@ This lesson covers:
  4. Batch files
  5. Pre- and post-processing of models
 
-## [Lesson 1: Overview of a Model](01_Lesson#lesson-1)
+## [Lesson 1: Overview of a Model](01_Lesson#lesson-1-overview-of-a-model)
 
 This lesson covers:
 
