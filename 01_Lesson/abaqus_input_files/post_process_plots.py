@@ -87,6 +87,9 @@ for i in range(0,len(fNum)):
 	# set legend font size
 	v.viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-180-*-*-p-*-*-*')
 
+	# legend - no bounding box
+	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendBox=OFF)
+	
 	# ========================================
 	# plot stress q
 	# ========================================
