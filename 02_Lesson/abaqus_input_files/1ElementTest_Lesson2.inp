@@ -1,0 +1,104 @@
+** ***************************************************************************
+**   1 element test 
+** ***************************************************************************
+** 
+*HEADING
+ABAQUS Static Analysis Set
+*NODE, NSET=GLOBAL_NSET
+       1,          0.,          0.,          0.
+       2,          1.,          0.,          0.
+       3,          1.,          1.,          0.
+       4,          0.,          1.,          0.
+       5,          0.,          0.,          1.
+       6,          1.,          0.,          1.
+       7,          1.,          1.,          1.
+       8,          0.,          1.,          1.
+*ELEMENT, TYPE=C3D8, ELSET=P1
+      1,      1,      2,      3,      4,      5,      6,      7,      8
+**********************************************************************
+*SOLID SECTION, ELSET=P1, MATERIAL=M1
+**********************************************************************
+*MATERIAL, NAME=M1
+*ELASTIC,DEPENDENCIES=2
+1000.,0.3,,1.0,1.0
+ 100.,0.3,,2.0,1.0
+  10.,0.3,,3.0,1.0
+   1.,0.3,,4.0,1.0
+1000.,0.2,,1.0,2.0
+ 100.,0.2,,2.0,2.0
+  10.,0.2,,3.0,2.0
+   1.,0.2,,4.0,2.0
+**********************************************************************
+** Define top surface
+** Element 1, Face 2
+**********************************************************************
+*SURFACE,NAME=TopSurf,TYPE=ELEMENT
+1,S2
+**********************************************************************
+** Initial field variable #1
+** Note: field variables are associated with nodes
+**
+*INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=1
+GLOBAL_NSET,1.0   
+*INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=2
+GLOBAL_NSET,1.0   
+**********************************************************************
+** Load Step 1 - 1D Compression
+**********************************************************************
+*STEP, NLGEOM=NO, INC=99999999
+Uniaxial compression
+*STATIC
+0.5,1.0,1.e-12,1.0
+*************************
+** Boundary conditions
+*************************
+*BOUNDARY
+    1,    1
+    1,    2
+    1,    3
+    2,    2
+    2,    3
+    3,    3
+    4,    1
+    4,    3
+    5,    1
+    5,    2
+    6,    2
+    8,    1	
+*************************
+** Loads
+*************************
+*DSLOAD
+TopSurf,P,0.13
+*************************
+** Output requests
+*************************
+*OUTPUT, FIELD
+*NODE OUTPUT
+U,RF
+*ELEMENT OUTPUT
+E,S
+FV1,FV2
+*END STEP
+**********************************************************************
+** Load Step 2
+** Hold displacement and change field Variable #1 from 1.0 to 4.0
+**********************************************************************
+*STEP, NLGEOM=NO, INC=99999999
+Change field variable #1
+*STATIC
+0.5,1.0,1.e-12,0.5
+*FIELD, VARIABLE=1
+GLOBAL_NSET,4.0
+*END STEP
+**********************************************************************
+** Load Step 3
+** Hold displacement and change field Variable #2 from 1.0 to 2.0
+**********************************************************************
+*STEP, NLGEOM=NO, INC=99999999
+Change field variable #2
+*STATIC
+0.5,1.0,1.e-12,0.5
+*FIELD, VARIABLE=2
+GLOBAL_NSET,2.0
+*END STEP
