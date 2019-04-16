@@ -85,7 +85,7 @@ for i in range(0,len(fNum)):
 	session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(deformationScaling=UNIFORM, uniformScaleFactor=1)
 	
 	# set legend font size
-	v.viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-180-*-*-p-*-*-*')
+	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-140-*-*-p-*-*-*')
 
 	# legend - no bounding box
 	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendBox=OFF)
