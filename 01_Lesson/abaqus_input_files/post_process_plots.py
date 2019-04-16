@@ -16,7 +16,7 @@ import sys
 #executeOnCaeStartup()
 
 #create viewport
-v=session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=300, height=200)
+v=session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=300, height=150)
 v.makeCurrent()
 v.restore()
 #v.maximize()
@@ -85,7 +85,7 @@ for i in range(0,len(fNum)):
 	session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(deformationScaling=UNIFORM, uniformScaleFactor=1)
 	
 	# set legend font size
-	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-140-*-*-p-*-*-*')
+	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendFont='-*-verdana-medium-r-normal-*-*-120-*-*-p-*-*-*')
 
 	# legend - no bounding box
 	session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendBox=OFF)
