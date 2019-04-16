@@ -131,8 +131,13 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 * **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
 	
-	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]$
-
+	$$\begin{eqnarray*}
+	x &=& y \\
+	&=& z
+	\end{eqnarray*}$$	
+	
+	$\epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]$
+	
 	
 
 
