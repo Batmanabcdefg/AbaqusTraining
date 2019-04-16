@@ -1,6 +1,6 @@
 # Lesson 1: Overview of a Model
 
-We will build a single-element model subjected to 1D compression loading.
+We will build a single-element model subjected to 1D compression loading. The input file can be found in the "abaqus_input_files" folder above.
 
 ## Node definition
 
@@ -78,7 +78,7 @@ In addition, within the analysis step, we specify:
 	
 ### Boundary conditions
 
-The boundary conditions are such that we have symmetry boundary conditions on the planes X = 0, Y = 0 and Z = 0.
+The boundary conditions are such that we have symmetry boundary conditions on the planes $X = 0$, $Y = 0$ and $Z = 0$.
 
 	*BOUNDARY
 	1,    1
@@ -96,7 +96,7 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 
 ### Loads
 
-We specify the pressure load of 0.13 on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
+We specify the pressure load of $0.13$ on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
 
 	*DSLOAD
 	TopSurf,P,0.13
@@ -119,22 +119,27 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 
 * Stresses
 
-	The first obvious check that we can make is to confirm that we applied the correct stress value 0.13. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
+	The first obvious check that we can make is to confirm that we applied the correct stress value $0.13$. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
 
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_S33.png)
 	
-	Other stress quantities can also be checked. For e.g., the von Mises shear stress $q$ should be 0.13 since $q = |\sigma_1 - \sigma_3|$ where $\sigma_1 = 0$ is the maximum principal stress and $\sigma_3 = S_{33}$ is the minimum principal stress; the lateral stress $\sigma_1 = \sigma_2$ is zero.
+	Other stress quantities can also be checked. For e.g., the von Mises shear stress $q$ should be $0.13$ since $q = |\sigma_1 - \sigma_3|$ where $\sigma_1 = 0$ is the maximum principal stress and $\sigma_3 = S_{33}$ is the minimum principal stress; the lateral stress $\sigma_1 = \sigma_2$ is zero.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_VMS.png	)
 
 * Reactions
 
-	We can check also check the reactions
-
+	The reactions at the four base nodes are equal to $0.13/4 = 0.0325$.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_RF3.png	)
+	
 * Displacements
 
-	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. For e.g., 
+	Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
+	
+	$ \epsilon_{ij} = \dfrac{1}{E}\left[ \left(1+\nu\right) \sigma_{ij} - \nu\delta_{ij}\sigma_{kk} \right]
 
+	
 
 
 ## Exercise 
