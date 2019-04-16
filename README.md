@@ -11,13 +11,13 @@ Elementary Abaqus Lessons
 Table of Contents
 =================
 
-  * [Lesson 0: Administrative](#lesson-0)  
+  * [Lesson 0: Administrative](#lesson-0-administrative)  
   * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
-  * [Lesson 2: Placeholder](#lesson-2)  
+  * [Lesson 2: Placeholder](#lesson-2-placeholder)  
   
 ---
 
-## [Lesson 0: Administrative](00_Lesson#lesson-0)
+## [Lesson 0: Administrative](00_Lesson#lesson-0-administrative)
 This lesson covers:
 
  1. Installation
@@ -43,6 +43,6 @@ This lesson covers:
  11. Viewing results
  12. Exercise 
 
-## [Lesson 2: Placeholder](02_Lesson#lesson-2)
+## [Lesson 2: Placeholder](02_Lesson#lesson-2-placeholder)
 
 Placeholder 
