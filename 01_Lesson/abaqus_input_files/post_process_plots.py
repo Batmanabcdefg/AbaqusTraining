@@ -16,7 +16,7 @@ import sys
 #executeOnCaeStartup()
 
 #create viewport
-v=session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=300, height=150)
+v=session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=300, height=200)
 v.makeCurrent()
 v.restore()
 #v.maximize()
