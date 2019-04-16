@@ -137,7 +137,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	\end{align}
 	$$
 	
-	A trite calculation would show that $\epsilon_{33} = -1.3\times10^{-4}$, and $U_{3} = \epsilon_{33}#, which agrees with the contour plot below.
+	A trite calculation would show that $\epsilon_{33} = -1.3\times10^{-4}$, and $U_{3} = \epsilon_{33}$, which agrees with the contour plot below.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_U3.png	)
 	
