@@ -131,9 +131,14 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 * **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
 	
-	<p align="center"><img src="/01_Lesson/tex/a623b90067c7e9ab70215898462aa4c0.svg?invert_in_darkmode&sanitize=true" align=middle width=227.79971114999998pt height=53.3736918pt/></p>
+	<p align="center"><img src="/01_Lesson/tex/b9f0552da18c2c672c56cb7ffad59dea.svg?invert_in_darkmode&sanitize=true" align=middle width=227.79971114999998pt height=32.990165999999995pt/></p>
 	
+	Since the cube has unit dimensions, the displacement would be equal to the strain. The vertical strain/displacement is
+	<p align="center"><img src="/01_Lesson/tex/bfd725bb8e9573ebfe78ef13dc374abc.svg?invert_in_darkmode&sanitize=true" align=middle width=314.53656794999995pt height=32.990165999999995pt/></p>
 	
+	A trite calculation would show that <img src="/01_Lesson/tex/fcf8c1f48d1ea620135c53b35a252ef2.svg?invert_in_darkmode&sanitize=true" align=middle width=129.66327825pt height=26.76175259999998pt/>, which agrees with the contour plot below.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_U3.png	)
 	
 
 
