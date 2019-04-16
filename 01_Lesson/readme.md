@@ -131,8 +131,10 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 	
 * **Displacements**. Since we have a simple linear elastic material and the stress state is homogeneous throughout the element, we can also check the displacements. From linear elasticty, 
 	
-	<img src="/01_Lesson/tex/e7c4e09994f2dac52eb951a01cce7d5b.svg?invert_in_darkmode&sanitize=true" align=middle width=215.92746284999993pt height=43.42856099999997pt/>
-
+	<p align="center"><img src="/01_Lesson/tex/2f1eeb09ee910a27864e5508f3f48732.svg?invert_in_darkmode&sanitize=true" align=middle width=63.70633004999999pt height=26.803649399999998pt/></p>	
+	
+	<img src="/01_Lesson/tex/67b603594b6203fb4e4f253e91290b86.svg?invert_in_darkmode&sanitize=true" align=middle width=215.92746284999993pt height=43.42856099999997pt/>
+	
 	
 
 
