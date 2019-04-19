@@ -1,4 +1,9 @@
-# Lesson 2: 
+# Lesson 2: Predefined Field Variables
+
+Field variables are typically used to: 
+
+* Indirectly model some prescribed response 
+* Control the response of the model in some way to get desired effect
 
 The problem setup (geometry and loading) is identical to that in Lesson 1, with the following exceptions:
 
@@ -30,7 +35,6 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time, ..
 ## Analysis steps
 
 	There are a total of 3 steps in this analysis. Step 1 is identical to that in Lesson 1. We define two additional steps to demonstrate how the field variables are used to affect the response of the model.
-
 	
 	**********************************************************************
 	** Load Step 2

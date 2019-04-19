@@ -13,7 +13,8 @@ Table of Contents
 
   * [Lesson 0: Administrative](#lesson-0-administrative)  
   * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
-  * [Lesson 2: Placeholder](#lesson-2-placeholder)  
+  * [Lesson 2: Predefined field variables](#lesson-2-predefined-field-variables)  
+  * [Lesson 3: Placeholder](#lesson-2-placeholder)  
   
 ---
 
@@ -41,8 +42,14 @@ This lesson covers:
  9. Specifying loads
  10. Output request
  11. Viewing results
- 12. Exercise 
+ 
+## [Lesson 2: Predefined field variables](02_Lesson#lesson-2-predefined-field-variables)
 
-## [Lesson 2: Placeholder](02_Lesson#lesson-2-placeholder)
+This lesson covers:
+
+ 1. Predefined field variables
+ 2. Multi-step analysis 
+ 
+## [Lesson 3: Placeholder](03_Lesson#lesson-3-placeholder)
 
 Placeholder 
