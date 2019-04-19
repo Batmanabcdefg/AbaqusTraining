@@ -35,8 +35,8 @@ ABAQUS Static Analysis Set
 *SURFACE,NAME=TopSurf,TYPE=ELEMENT
 1,S2
 **********************************************************************
-** Initial field variable #1
-** Note: field variables are associated with nodes
+** Initialize field variables #1 and #2
+** Note: field variables are initialized at nodes
 **
 *INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=1
 GLOBAL_NSET,1.0   
