@@ -133,7 +133,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 		
 	<p align="center"><img src="/01_Lesson/tex/bfd725bb8e9573ebfe78ef13dc374abc.svg?invert_in_darkmode&sanitize=true" align=middle width=314.53656794999995pt height=32.990165999999995pt/></p>
 	
-	A trite calculation would show that <img src="/01_Lesson/tex/fcf8c1f48d1ea620135c53b35a252ef2.svg?invert_in_darkmode&sanitize=true" align=middle width=129.66327825pt height=26.76175259999998pt/>, and <img src="/01_Lesson/tex/12e1dc42f1fa4d6291c44c2ad9f1768f.svg?invert_in_darkmode&sanitize=true" align=middle width=60.293313299999994pt height=22.465723500000017pt/>, which agrees with the contour plot below.
+	A trite calculation would show that <img src="/01_Lesson/tex/fcf8c1f48d1ea620135c53b35a252ef2.svg?invert_in_darkmode&sanitize=true" align=middle width=129.66327825pt height=26.76175259999998pt/>, and the vertical displacement <img src="/01_Lesson/tex/12e1dc42f1fa4d6291c44c2ad9f1768f.svg?invert_in_darkmode&sanitize=true" align=middle width=60.293313299999994pt height=22.465723500000017pt/>, which agrees with the contour plot below.
 	
 	![](./abaqus_input_files/1ElementTest_Lesson1_Step1_U3.png	)
 	
