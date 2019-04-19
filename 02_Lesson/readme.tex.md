@@ -24,7 +24,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time, ..
 
 ## Initial conditions on field variables
 
-	Initialize field variables #1 and #2. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
+Initialize field variables #1 and #2. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
 
 	*INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=1
 	GLOBAL_NSET,1.0   
@@ -34,7 +34,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time, ..
 	
 ## Analysis steps
 
-	There are a total of 3 steps in this analysis. Step 1 is identical to that in Lesson 1. We define two additional steps to demonstrate how the field variables are used to affect the response of the model.
+There are a total of 3 steps in this analysis. Step 1 is identical to that in Lesson 1. We define two additional steps to demonstrate how the field variables are used to affect the response of the model.
 	
 	**********************************************************************
 	** Load Step 2
@@ -61,7 +61,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time, ..
 
 ### Output request
 
-	Add output for field variable values:
+Add output for field variable values:
 	
 	**********************************************************************
 	** Load Step 1 - 1D Compression
@@ -73,8 +73,9 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time, ..
 	E,S
 	FV1,FV2	
 
-	The second line is the same as in Lesson 1. In the third line, 
-	We define the output request in step 1. This request will be propagated into the following steps.
+	The second line is the same as in Lesson 1. In the third line, ...
+	
+	We define the output request in Step 1. This output request is then propagated into the following steps. 
 	
 ## Viewing results	
 
