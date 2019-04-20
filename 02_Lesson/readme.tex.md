@@ -23,7 +23,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but $E$ and $\nu$
 	  10.,0.2,,3.0,2.0
 	   1.,0.2,,4.0,2.0
 
-The number of field variables is specified using the option <em> DEPENDENCIES </em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[c](#myfootnote1)</sup>. 
+The number of field variables is specified using the option <em> DEPENDENCIES </em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[a](#myfootnote1)</sup>. 
 	
 ## Initial conditions on field variables
 
@@ -117,7 +117,7 @@ Add output for field variable values:
 
 ---
 ## Footnotes
-<a name="myfootnote1">a</a>) The general rule to tabulating the field variables is: "keep the right constant, vary the left". As an example, suppose you have have 3 field variables. Then, one could have the following tabulation of field variable values: 
+<a name="myfootnote1">a</a>) The general rule to tabulating the field variables is: "keep the right constant, vary the left". As an example, suppose you have 3 field variables. Then, one could have the following tabulation of field variable values: 
 
 	1.0,1.0,0.0
 	2.0,1.0,0.0
@@ -128,4 +128,4 @@ Add output for field variable values:
 	3.0,2.0,1.0
 	4.0,2.0,1.0
 	
-Here, field variable #1 varies from 1 to 4, field variable #2 varies from 1 to 2 and field variable #3 varies from 0 to 1. You may guess that if the number of field variables is large, this table becomes quite big and it may be more convenient to actually write a subroutine to vary the field variables. In most cases, however, one or two field variables are used.
+Here, field variable #1 varies from 1 to 4, field variable #2 varies from 1 to 2 and field variable #3 varies from 0 to 1. You may guess that if the number of field variables is large, this table becomes quite big and it may be more convenient to actually write a subroutine to vary the field variables (not covered in this training). In most cases, however, one or two field variables are used.
