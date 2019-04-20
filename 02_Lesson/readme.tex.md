@@ -23,11 +23,11 @@ The material is defined using the keyword <em> *MATERIAL </em> but $E$ and $\nu$
 	  10.,0.2,,3.0,2.0
 	   1.,0.2,,4.0,2.0
 
-The number of field variables is specified using the option <em> DEPENDENCIES </em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[a](#myfootnote1)</sup>. 
+The number of field variables is specified using the option <em>DEPENDENCIES</em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[a](#myfootnote1)</sup>. 
 	
 ## Initial conditions on field variables
 
-Initialize field variables #1 and #2. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
+Field variables #1 and #2 needs to be initialized since these do not start from zero. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
 
 	*INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=1
 	GLOBAL_NSET,1.0   
