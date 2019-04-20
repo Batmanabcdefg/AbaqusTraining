@@ -10,7 +10,7 @@ The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesso
 
 ## Material definition
 
-The material is defined using the keyword <em> *MATERIAL </em> but this time the values of <img src="/02_Lesson/tex/84df98c65d88c6adf15d4645ffa25e47.svg?invert_in_darkmode&sanitize=true" align=middle width=13.08219659999999pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/b49211c7e49541e500c32b4d56d354dc.svg?invert_in_darkmode&sanitize=true" align=middle width=9.16670204999999pt height=14.15524440000002pt/> vary with the field variables.
+The material is defined using the keyword <em> *MATERIAL </em> but <img src="/02_Lesson/tex/84df98c65d88c6adf15d4645ffa25e47.svg?invert_in_darkmode&sanitize=true" align=middle width=13.08219659999999pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/b49211c7e49541e500c32b4d56d354dc.svg?invert_in_darkmode&sanitize=true" align=middle width=9.16670204999999pt height=14.15524440000002pt/> are now made to vary using field variables.
 
 	*MATERIAL, NAME=M1
 	*ELASTIC,DEPENDENCIES=2
@@ -23,7 +23,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time the
 	  10.,0.2,,3.0,2.0
 	   1.,0.2,,4.0,2.0
 
-The last two columns correspond to the values of the field variables #1 and #2, respectively<sup>[c](#myfootnote1)</sup>. 
+The number of field variables is specified using the option <em> DEPENDENCIES </em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[c](#myfootnote1)</sup>. 
 	
 ## Initial conditions on field variables
 
