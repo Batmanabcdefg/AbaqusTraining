@@ -6,7 +6,7 @@ Field variables are typically used to:
 
 * Control the model to a get desired effect, e.g., turn on or off the effects of certain materials.
 
-The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except that we include the following changes.
+The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except we now make the following changes.
 
 ## Material definition
 
@@ -27,7 +27,7 @@ The number of field variables is specified using the option <em>DEPENDENCIES</em
 	
 ## Initial conditions on field variables
 
-Field variables #1 and #2 needs to be initialized since these do not start from zero. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
+Field variables #1 and #2 need to be initialized since these do not start from zero. Note that the field variables are initialized at the nodes; each element will then perform an interpolation of the nodal values to obtain the field variable value at the integration points.
 
 	*INITIAL CONDITIONS, TYPE=FIELD, VARIABLE=1
 	GLOBAL_NSET,1.0   
