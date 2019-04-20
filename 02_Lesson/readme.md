@@ -77,7 +77,7 @@ Add output for field variable values:
 	E,S
 	FV1,FV2	
 
-The input line <em> E,S </em> is the same as in Lesson 1. In the following line, we request that the values of field variables #1 and #2 (<em> FV1 <\em>, <em> FV1 <\em>) be made available.
+The input line <em> E,S </em> is the same as in Lesson 1. In the following line, we request that the values of field variables #1 and #2 (<em>FV1</em>, <em>FV1</em>) be made available.
 	
 We define the output request in Step 1. This output request is then propagated into the following steps. 
 	
