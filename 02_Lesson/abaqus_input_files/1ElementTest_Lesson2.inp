@@ -82,7 +82,7 @@ FV1,FV2
 *END STEP
 **********************************************************************
 ** Load Step 2
-** Hold displacement and change field Variable #1 from 1.0 to 4.0
+** Change field variable #1 from 1.0 to 4.0
 **********************************************************************
 *STEP, NLGEOM=NO, INC=99999999
 Change field variable #1
@@ -93,7 +93,7 @@ GLOBAL_NSET,4.0
 *END STEP
 **********************************************************************
 ** Load Step 3
-** Hold displacement and change field Variable #2 from 1.0 to 2.0
+** Change field variable #2 from 1.0 to 2.0
 **********************************************************************
 *STEP, NLGEOM=NO, INC=99999999
 Change field variable #2
