@@ -10,7 +10,7 @@ The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesso
 
 ## Material definition
 
-The material is defined using the keyword <em> *MATERIAL </em> but this time the values of $E$ and $\nu$ vary with the field variables.
+The material is defined using the keyword <em> *MATERIAL </em> but $E$ and $\nu$ are now made to vary using field variables.
 
 	*MATERIAL, NAME=M1
 	*ELASTIC,DEPENDENCIES=2
@@ -23,7 +23,7 @@ The material is defined using the keyword <em> *MATERIAL </em> but this time the
 	  10.,0.2,,3.0,2.0
 	   1.,0.2,,4.0,2.0
 
-The last two columns correspond to the values of the field variables #1 and #2, respectively<sup>[c](#myfootnote1)</sup>. 
+The number of field variables is specified using the option <em> DEPENDENCIES </em>. The last two columns of the input correspond to the values of field variables #1 and #2, respectively<sup>[c](#myfootnote1)</sup>. 
 	
 ## Initial conditions on field variables
 
