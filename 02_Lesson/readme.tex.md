@@ -2,9 +2,9 @@
 
 Field variables are typically used to: 
 
-* Change the properties of a material because we know <em> a-priori </em> that this is going to happen. This change could be due to a chemical or some other process, but we are not modeling this process in Abaqus. Rather, we are specifying the effect of this process on the material properties.
+* Change the properties of a material because we know <em> a-priori </em> that this change is going to happen. This change could be due to a chemical or some other process, but we are not modeling this process in Abaqus. Rather, we are specifying the <em> effect </em> of this process on the material properties.
 
-* Control the model to get desired effect, e.g., turn on or off the effects of certain materials
+* Control the model to a get desired effect, e.g., turn on or off the effects of certain materials.
 
 The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except that we include the following changes.
 
