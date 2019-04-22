@@ -115,9 +115,21 @@ We define the output request in Step 1. This output request is then propagated i
 	2.0,1.0,0.0
 	3.0,1.0,0.0
 	4.0,1.0,0.0
+	****
+	1.0,2.0,0.0
+	2.0,2.0,0.0
+	3.0,2.0,0.0
+	4.0,2.0,0.0
+	****
+	1.0,1.0,1.0
+	2.0,1.0,1.0
+	3.0,1.0,1.0
+	4.0,1.0,1.0
+	****
 	1.0,2.0,1.0
 	2.0,2.0,1.0
 	3.0,2.0,1.0
 	4.0,2.0,1.0
 	
-Here, field variable #1 varies from 1 to 4, field variable #2 varies from 1 to 2 and field variable #3 varies from 0 to 1. You may guess that if the number of field variables is large, this table becomes quite big and it may be more convenient to actually write a subroutine to vary the field variables (not covered in this training). In most cases, however, one or two field variables are used.
+
+Here, field variable #1 varies from 1 to 4, field variable #2 varies from 1 to 2 and field variable #3 varies from 0 to 1. Generally, if there are <img src="/02_Lesson/tex/1236ac78b1cdd28827445e0b964e3f20.svg?invert_in_darkmode&sanitize=true" align=middle width=85.43369504999998pt height=22.465723500000017pt/> data points for field variables #1 through #<img src="/02_Lesson/tex/50bcbd31cb5727aaec7e9e52c6ec40cf.svg?invert_in_darkmode&sanitize=true" align=middle width=18.42473654999999pt height=14.15524440000002pt/>, respectively, the table size would be <img src="/02_Lesson/tex/25ff5f224f96c963d78146bb0040a737.svg?invert_in_darkmode&sanitize=true" align=middle width=109.66888844999998pt height=22.465723500000017pt/> rows by <img src="/02_Lesson/tex/236282d361948631b3d7ba153f663ebe.svg?invert_in_darkmode&sanitize=true" align=middle width=28.32205199999999pt height=22.465723500000017pt/> columns. Therefore, if the number of field variables is large, this table becomes quite big. It may be more convenient to actually write a subroutine to vary the field variables (not covered in this training). In most cases, however, one or two field variables are used.
