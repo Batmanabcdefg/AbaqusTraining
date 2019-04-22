@@ -87,9 +87,9 @@ We define the output request in Step 1. This output request is then propagated i
 
 | End of Step | Field Variable #1 | Field Variable #2 | 
 | :---: | --- | --- | 
-| 1 | ![](./abaqus_input_files/1ElementTest_Lesson2Step_1_Frame3_VF1_Step2.png) | ![](./abaqus_input_files/1ElementTest_Lesson2Step_1_Frame3_VF2_Step2.png) | 
-| 2 | ![](./abaqus_input_files/1ElementTest_Lesson2Step_2_Frame3_VF1_Step2.png) | ![](./abaqus_input_files/1ElementTest_Lesson2Step_2_Frame3_VF2_Step2.png) | 
-| 3 | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF1_Step3.png) | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF2_Step3.png) | 
+| 1 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF2_Step2.png) | 
+| 2 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF2_Step2.png) | 
+| 3 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF2_Step3.png) | 
 
 * **Displacements**. As in Lesson 1, the vertical strain after Step 1 (gravity) is <img src="/02_Lesson/tex/fcf8c1f48d1ea620135c53b35a252ef2.svg?invert_in_darkmode&sanitize=true" align=middle width=129.66327825pt height=26.76175259999998pt/>.
 
@@ -99,7 +99,7 @@ We define the output request in Step 1. This output request is then propagated i
 	
 	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/15c1721523b4a6c9de5c6579ea380fdd.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>.	These values jibe with the contour plots below.
 	
-	![](./abaqus_input_files/1ElementTest_Lesson2Step_2_Frame3_E22.png	)
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_E22.png	)
 	
 	In Step 3, the modulus <img src="/02_Lesson/tex/1a4fb486f854c2b4efad46a2f5ed93c6.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> is kept constant, while the Poisson's ratio <img src="/02_Lesson/tex/b49211c7e49541e500c32b4d56d354dc.svg?invert_in_darkmode&sanitize=true" align=middle width=9.16670204999999pt height=14.15524440000002pt/> is dropped from <img src="/02_Lesson/tex/5a2912de5997e53d19e8044db54d76e3.svg?invert_in_darkmode&sanitize=true" align=middle width=21.00464354999999pt height=21.18721440000001pt/> to <img src="/02_Lesson/tex/358d4d0949e47523757b4bc797ab597e.svg?invert_in_darkmode&sanitize=true" align=middle width=21.00464354999999pt height=21.18721440000001pt/> through field variable <img src="/02_Lesson/tex/fb19066311f84c5909400aa479652a43.svg?invert_in_darkmode&sanitize=true" align=middle width=21.91788224999999pt height=22.831056599999986pt/>. Therefore, at the end of Step 3, the lateral strain is:
 	
@@ -107,7 +107,7 @@ We define the output request in Step 1. This output request is then propagated i
 			
 	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/a30bb2b6b987e9176d707426add7226a.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>.	These values jibe with the contour plots below.
 
-	![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_E22.png	)
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png	)
 
 ## Exercise 
 
