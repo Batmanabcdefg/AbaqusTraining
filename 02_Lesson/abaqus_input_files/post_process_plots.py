@@ -141,11 +141,28 @@ for StepNo in StepVec:
 		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
 		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
-		# output to TIFF file
-		
+		# output to TIFF file		
 		session.printToFile(fileName=base_figname+'_U3' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 		
+		# ========================================
+		# plot field variable 1
+		# ========================================
+		v.odbDisplay.setPrimaryVariable(variableLabel='FV1', outputPosition=INTEGRATION_POINT)
+		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
+		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
+		# output to TIFF file		
+		session.printToFile(fileName=base_figname+'_VF1' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+
+		# ========================================
+		# plot field variable 2
+		# ========================================
+		v.odbDisplay.setPrimaryVariable(variableLabel='FV2', outputPosition=INTEGRATION_POINT)
+		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
+		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
+		
+		# output to TIFF file		
+		session.printToFile(fileName=base_figname+'_VF2' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))		
 
 odb.close()
 

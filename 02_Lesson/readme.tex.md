@@ -83,7 +83,12 @@ We define the output request in Step 1. This output request is then propagated i
 	
 ## Viewing results	
 
-* **Field variables**. We can check that the field variables are properly initialized and modified through the steps.
+* **Field variables**. We can check that the field variables are correctly initialized and modified through the steps.
+
+End of Step | Field Variable #1 | Field Variable #2
+--- | --- | ---
+2 | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF1_Step2.png) | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF2_Step2.png)
+3 | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF1_Step3.png) | ![](./abaqus_input_files/1ElementTest_Lesson2Step_3_Frame3_VF2_Step3.png)
 
 * **Displacements**. As in Lesson 1, the vertical strain after Step 1 (gravity) is $\epsilon_{33} = -1.3\times10^{-4}$.
 
