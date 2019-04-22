@@ -2,7 +2,7 @@
 #
 # Abaqus/Viewer Release 2018 replay file
 # Internal Version: 2017_11_07-09.21.41 127140
-# Run by klim on Mon Apr 22 11:58:48 2019
+# Run by klim on Mon Apr 22 12:07:26 2019
 #
 
 # from driverUtils import executeOnCaeGraphicsStartup

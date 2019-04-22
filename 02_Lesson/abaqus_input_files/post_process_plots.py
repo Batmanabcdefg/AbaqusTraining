@@ -92,7 +92,7 @@ for StepNo in StepVec:
 		session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendBox=OFF)
 		
 		# basename for fig file
-		base_figname = Jobname+'Step_'+str(StepNo)+'_Frame'+str(fNum[i])
+		base_figname = Jobname+'_Step'+str(StepNo)+'_Frame'+str(fNum[i])
 		
 		# ========================================
 		# plot stress q
@@ -142,7 +142,7 @@ for StepNo in StepVec:
 		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
 		# output to TIFF file		
-		session.printToFile(fileName=base_figname+'_U3' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+		session.printToFile(fileName=base_figname+'_U3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 		
 		# ========================================
 		# plot field variable 1
@@ -152,7 +152,7 @@ for StepNo in StepVec:
 		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
 		# output to TIFF file		
-		session.printToFile(fileName=base_figname+'_VF1' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+		session.printToFile(fileName=base_figname+'_VF1', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 
 		# ========================================
 		# plot field variable 2
@@ -162,7 +162,7 @@ for StepNo in StepVec:
 		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
 		# output to TIFF file		
-		session.printToFile(fileName=base_figname+'_VF2' + '_Step' + str(StepNo), format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))		
+		session.printToFile(fileName=base_figname+'_VF2', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))		
 
 odb.close()
 
