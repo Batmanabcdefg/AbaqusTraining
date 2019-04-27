@@ -87,9 +87,9 @@ We define the output request in Step 1. This output request is then propagated i
 
 | End of Step | Field Variable #1 | Field Variable #2 | 
 | :---: | --- | --- | 
-| 1 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF2_Step2.png) | 
-| 2 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF2_Step2.png) | 
-| 3 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF2_Step3.png) | 
+| 1 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step1_Frame3_VF2.png) | 
+| 2 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_VF2.png) | 
+| 3 | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF1.png) | ![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_VF2.png) | 
 
 * **Displacements**. As in Lesson 1, the vertical strain after Step 1 (gravity) is <img src="/02_Lesson/tex/fcf8c1f48d1ea620135c53b35a252ef2.svg?invert_in_darkmode&sanitize=true" align=middle width=129.66327825pt height=26.76175259999998pt/>.
 
