@@ -1,0 +1,262 @@
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 26-Apr-2019   Time 16:36:01
+   For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine KLIM 
+                          you are authorized to run
+                          Abaqus/Standard until 20-Dec-2019
+
+                          Your site id is: 200000000025732 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *               Abaqus 3DEXPERIENCE R2018x                * 
+                *                                                         * 
+                *          BUILD ID: 2017_11_07-09.21.41 127140           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release 3DEXPERIENCE R2018x manuals                    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *HEADING
+          ABAQUS Static Analysis Set                                                                                                                                                                                                                                      
+  *NODE, NSET=GLOBAL_NSET
+  *ELEMENT, TYPE=C3D8, ELSET=P1
+  *ELEMENT, TYPE=S4, ELSET=P2
+  *MATERIAL, NAME=M1
+  *ELASTIC
+  *MATERIAL, NAME=M2
+  *ELASTIC
+  *SOLID SECTION, ELSET=P1, MATERIAL=M1
+  *SHELL SECTION, ELSET=P2, MATERIAL=M2
+  *SOLID SECTION, ELSET=P1, MATERIAL=M1
+  *SHELL SECTION, ELSET=P2, MATERIAL=M2
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
+  *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
+  *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
+  *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+
+ ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+  *SURFACE INTERACTION, NAME=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+
+ ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+
+ ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+  *SURFACE INTERACTION, NAME=SurfInterProps
+  *FRICTION
+  *SURFACE INTERACTION, NAME=SurfInterProps
+  *BOUNDARY
+  *BOUNDARY
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+
+ ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+  *SURFACE INTERACTION, NAME=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+
+ ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+  *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
+  *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
+  *OUTPUT, FIELD, VARIABLE=PRESELECT
+  *ELEMENT OUTPUT
+  *OUTPUT, FIELD, VARIABLE=PRESELECT
+  *ELEMENT OUTPUT
+  *OUTPUT, FIELD, VARIABLE=PRESELECT
+  *ELEMENT OUTPUT
+  *STEP, NLGEOM=NO, INC=99999999, UNSYMM=YES
+  *OUTPUT, FIELD, VARIABLE=PRESELECT
+  *STEP, NLGEOM=NO, INC=99999999, UNSYMM=YES
+  *STEP, NLGEOM=NO, INC=99999999, UNSYMM=YES
+  Contact example                                                                 
+  *STATIC
+  *BOUNDARY
+  *DSLOAD
+  *OUTPUT, FIELD, VARIABLE=PRESELECT
+  *NODE OUTPUT
+  *ELEMENT OUTPUT
+  *END STEP
+  *STEP, NLGEOM=NO, INC=99999999, UNSYMM=YES
+  *STATIC
+  *BOUNDARY
+  *END STEP
+
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    21
+          NUMBER OF ELEMENTS DEFINED BY THE USER AND *TIE           5
+          NUMBER OF INTERNAL ELEMENTS GENERATED FOR CONTACT        16
+          NUMBER OF NODES IS                                       49
+          NUMBER OF NODES DEFINED BY THE USER                      17
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        32
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                  126
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   0.0000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          1
+1
+
+   Abaqus 3DEXPERIENCE R2018x                                  Date 26-Apr-2019   Time 16:36:03
+   For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
+
+     ABAQUS Static Analysis Set                                                                STEP    1  INCREMENT    1
+     Contact example                                                                      TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+          Contact example                                                                 
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                0.100    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-12
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+
+          UNSYMMETRIC MATRIX STORAGE AND SOLUTION WILL BE USED
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          2.00E+05               17                 24
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      2 ERROR MESSAGES ON THE MSG FILE
+                              AND      21 WARNING MESSAGES ON THE MSG FILE
+                                        2 WARNINGS ARE FOR NUMERICAL PROBLEMS
+                                       19 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.80000    
+       SYSTEM TIME (SEC)    =  0.30000    
+       TOTAL CPU TIME (SEC) =   1.1000    
+       WALLCLOCK TIME (SEC) =          1

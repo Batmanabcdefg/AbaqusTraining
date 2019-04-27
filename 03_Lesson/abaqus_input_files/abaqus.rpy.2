@@ -1,0 +1,54 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2018 replay file
+# Internal Version: 2017_11_07-09.21.41 127140
+# Run by klim on Fri Apr 26 16:10:04 2019
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=339.333343505859, 
+    height=180.603713989258)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o1 = session.openOdb(
+    name='C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       3
+#: Number of Node Sets:          2
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].view.setProjection(projection=PARALLEL)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.39904, 
+    farPlane=8.36103, cameraPosition=(6.36472, -1.85039, -0.361595), 
+    cameraUpVector=(-0.157723, 0.143555, 0.976993), cameraTarget=(0.554658, 
+    0.455123, 0.515219))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.39378, 
+    farPlane=8.37144, cameraPosition=(6.09091, -2.57663, 0.644435), 
+    cameraUpVector=(-0.296701, 0.188962, 0.936088), cameraTarget=(0.551737, 
+    0.447376, 0.525951))
+session.viewports['Viewport: 1'].odbDisplay.basicOptions.setValues(
+    renderBeamProfiles=ON, renderShellThickness=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.35613, 
+    farPlane=8.41573, cameraPosition=(5.55105, -3.40682, 0.459759), 
+    cameraUpVector=(-0.252021, 0.203345, 0.946117), cameraTarget=(0.545763, 
+    0.438189, 0.523907))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.70005, 
+    farPlane=8.07182, width=3.09924, height=1.27145, cameraPosition=(5.61412, 
+    -3.32806, 0.659829), cameraTarget=(0.608832, 0.516952, 0.723977))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.5951, 
+    farPlane=8.07862, cameraPosition=(5.62771, -2.87925, -1.05197), 
+    cameraUpVector=(-0.0429099, 0.0398442, 0.998284), cameraTarget=(0.60899, 
+    0.52215, 0.704153))
+session.odbs['C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb'].close(
+    )

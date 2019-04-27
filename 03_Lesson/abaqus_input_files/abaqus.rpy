@@ -1,0 +1,19 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2018 replay file
+# Internal Version: 2017_11_07-09.21.41 127140
+# Run by klim on Fri Apr 26 16:12:12 2019
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=339.333343505859, 
+    height=180.603713989258)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
