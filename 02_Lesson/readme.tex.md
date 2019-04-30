@@ -6,7 +6,7 @@ Field variables are typically used to:
 
 * Control the model to a get desired effect, e.g., turn on or off the effects of certain materials.
 
-The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except we now make the following changes.
+The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except we now make the following changes. The input file can be found in the "abaqus_input_files" folder above.
 
 ## Material definition
 

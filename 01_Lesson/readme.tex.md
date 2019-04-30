@@ -18,7 +18,7 @@ The size of the element is 1 x 1 x 1 (a unit cube). The nodes are located at the
 
 The first integer of each line refers to the node label ID. The subsequent real numbers define the $X$, $Y$, $Z$ coordinates. As we define the nodes, these are grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
 
-## Element type
+## Element definition
 
 We will be using a single hex finite element. The element is defined using the nodes through the keyword <em> *ELEMENT </em>:
 
@@ -31,7 +31,7 @@ The first integer refers to the element label ID (in this case, specified as 1).
 
 ## Element property
 
-Each element must have an element (section) property<sup>[b](#myfootnote2)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
+Each element must have an element (section) property<sup>[b](#myfootnote2)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the <em> C3D8 </em> hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
 
 	*SOLID SECTION, ELSET=P1, MATERIAL=M1
 
