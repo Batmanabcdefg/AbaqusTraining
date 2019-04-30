@@ -56,8 +56,6 @@ This lesson covers:
 
  1. Definining contact pairs
  2. Surface-to-surface contact
- 3. Node-to-surface contact
- 4. Adjusting nodes on surfaces
- 5. Contact stabilization
+
  
  
