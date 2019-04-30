@@ -54,8 +54,8 @@ This lesson covers:
 
 This lesson covers:
 
- 1. Definining contact pairs
- 2. Surface-to-surface contact
+ 1. Definining surface interaction properties
+ 2. Definining surface-to-surface contact pairs
 
  
  
