@@ -139,7 +139,9 @@ Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What ar
 
 <a name="myfootnote1">b</a>) Why do we need an unsymmetric solver for frictional problems?
  
-<a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces:
+<a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces (taken from https://www.quora.com/What-are-the-three-main-criteria-to-determine-the-slave-and-master-surfaces-in-ABAQUS):
+
+
 
 If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
 
