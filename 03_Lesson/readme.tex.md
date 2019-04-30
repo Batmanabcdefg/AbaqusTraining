@@ -78,7 +78,7 @@ Contact interaction properties for surfaces are needed to define the frictional 
 	*FRICTION
 	0.3
 	
-This interaction is named <em> SurfInterProps </em>, which will be used in the contact pair definition:
+This interaction is named <em> SurfInterProps </em>, which will be referenced in the contact pair definition:
  
 	**********************************************************************
 	** Define contact pair
@@ -128,7 +128,7 @@ What happens when you swap the master and contact surfaces? Do you get convergen
 
 <a name="myfootnote1">a</a>) The <em> *SURFACE INTERACTION </em> is a required keyword for contact definition, even if you are considering frictionless contact. In this case, there is <em> *FRICTION </em> line and associated coefficient of friction is not required.
 
-<a name="myfootnote1">b</a>) Why we need an unsymmetric solver for frictional problems?
+<a name="myfootnote1">b</a>) Why do we need an unsymmetric solver for frictional problems?
  
 
 
