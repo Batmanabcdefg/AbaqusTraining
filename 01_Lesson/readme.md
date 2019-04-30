@@ -18,7 +18,7 @@ The size of the element is 1 x 1 x 1 (a unit cube). The nodes are located at the
 
 The first integer of each line refers to the node label ID. The subsequent real numbers define the <img src="/01_Lesson/tex/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode&sanitize=true" align=middle width=14.908688849999992pt height=22.465723500000017pt/>, <img src="/01_Lesson/tex/91aac9730317276af725abd8cef04ca9.svg?invert_in_darkmode&sanitize=true" align=middle width=13.19638649999999pt height=22.465723500000017pt/>, <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> coordinates. As we define the nodes, these are grouped into a node set <em> NSET </em> called <em> GLOBAL_NSET </em>.
 
-## Element type
+## Element definition
 
 We will be using a single hex finite element. The element is defined using the nodes through the keyword <em> *ELEMENT </em>:
 
@@ -31,7 +31,7 @@ The first integer refers to the element label ID (in this case, specified as 1).
 
 ## Element property
 
-Each element must have an element (section) property<sup>[b](#myfootnote2)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the C3D8 hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
+Each element must have an element (section) property<sup>[b](#myfootnote2)</sup> assigned to it. The element property determines whether you are describing a continuum, or some other structural-type stress-state (e.g., shell, beam, etc.). For the <em> C3D8 </em> hex element, we would need a continuum description, which is specified using keyword <em> *SOLID SECTION </em>
 
 	*SOLID SECTION, ELSET=P1, MATERIAL=M1
 
@@ -96,7 +96,7 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 
 ### Loads
 
-We specify the pressure load of <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/> on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
+We specify the pressure load of <img src="/01_Lesson/tex/e4879cca02caa03e5ba578d1f3f0e24a.svg?invert_in_darkmode&sanitize=true" align=middle width=59.41204994999998pt height=21.18721440000001pt/> on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
 
 	*DSLOAD
 	TopSurf,P,0.13
