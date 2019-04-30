@@ -78,7 +78,9 @@ Contact interaction properties for surfaces are needed to define the frictional 
 	*FRICTION
 	0.3
 	
-This interaction is named <em> SurfInterProps </em>, which will be referenced in the contact pair definition:
+## Contact pair definition
+
+The contact pair is defined using using the keyword <em> *CONTACT PAIR </em>:
  
 	**********************************************************************
 	** Define contact pair
@@ -87,7 +89,9 @@ This interaction is named <em> SurfInterProps </em>, which will be referenced in
 	*CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 	TopSurfCube,BotSurfTable
  
-The slave surface is specified, followed by the master. Note: TopSurfCube was defined and used in Lesson 1.
+Here, the <em> TYPE=SURFACE TO SURFACE </em> option is used. For this type of contact, the thickness of shell elements, if used in the contact pair definition, will be relevant. The interaction <em> SurfInterProps </em>, which was defined earlier, is referenced in the contact pair definition. 
+
+The next line specifies the two surfaces in contact. The slave surface is first specified, followed by the master. Some general guidance on the selection of the slave and master surfaces are given in the footnotes:
 
 ## Analysis step definition
 
@@ -123,6 +127,11 @@ Here, the base of the cube is fixed against all 3 translations. Furthermore, the
 
 What happens when you swap the master and contact surfaces? Do you get convergence? If not, why?
 
+Try tieing the surfaces ....
+
+
+Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
+
 ---
 ## Footnotes
 
@@ -130,5 +139,15 @@ What happens when you swap the master and contact surfaces? Do you get convergen
 
 <a name="myfootnote1">b</a>) Why do we need an unsymmetric solver for frictional problems?
  
+<a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces:
 
+If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
 
+If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
+
+The densely meshed body should be the slave. This is because, ABAQUS allows master to penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. If densely meshed, the element size of slave is small which allows the nodes to effectively prevent penetration into their sphere of influence. The coarser mesh is the master.
+
+The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
+
+The more smoother of the two surfaces should be the master. This is because non smooth surfaces can have gaps or peaks in the mesh or cracks in the mesh. A slave node sliding on such non smooth surface can fall through this crack causing convergence issues.
+If an assembly consists or two identical surfaces, one which was created and meshed in ABAQUS and the other one being imported from a third party , then it is better for the one meshed and created in ABAQUS to be the master. This is because imported geometries and meshes are prone to sudden changes in mesh, cracks or gaps in the mesh.
