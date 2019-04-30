@@ -78,7 +78,7 @@ Contact interaction properties for surfaces are needed to define the frictional 
 	*FRICTION
 	0.3
 	
-This interaction is named <em> SurfInterProps </em> , which will be used in the contact pair definition:
+This interaction is named <em> SurfInterProps </em>, which will be used in the contact pair definition:
  
 	**********************************************************************
 	** Define contact pair
@@ -91,7 +91,7 @@ The slave surface is specified, followed by the master. Note: TopSurfCube was de
 
 ## Analysis step definition
 
-The unsymmetric solver must be used<sup>[b](#myfootnote1)</sup>:
+The unsymmetric solver must be used<sup>[b](#myfootnote1)</sup>. This is specified using the option <em> UNSYMM=YES </em> on the <em> *STEP </em> line:
 
 	**********************************************************************
 	** Load Step 1
@@ -117,7 +117,7 @@ We implement the following boundary conditions and loads:
 	*DSLOAD
 	TopSurfTable,P,0.13	
 
-Here, the base of the cube is fixed against all 3 translations, and the pressure load is applied on the table top surface.
+Here, the base of the cube is fixed against all 3 translations. Furthermore, the middle of the table (node $13$) is fixed against translations in $X$ and $Y$; this is to prevent rigid body motion of the table. The pressure load of $p = 0.13$ is applied on the table top surface.
 	
 ## Exercise 
 

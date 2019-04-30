@@ -96,7 +96,7 @@ The boundary conditions are such that we have symmetry boundary conditions on th
 
 ### Loads
 
-We specify the pressure load of $0.13$ on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
+We specify the pressure load of $p = 0.13$ on the surface <em> TopSurf </em> defined earlier. Positive pressure is in the direction opposite to the surface normal.
 
 	*DSLOAD
 	TopSurf,P,0.13
