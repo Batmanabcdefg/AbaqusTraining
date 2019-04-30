@@ -1,6 +1,6 @@
 # Lesson 3: Contact Interactions
 
-The build on the cube model described in [Lesson 1](./../01_Lesson). In this lesson, we will add a "table" of thickness 0.1 units on top of the cube (the cube will serve as "a table stand"). 
+We build on the cube model described in [Lesson 1](./../01_Lesson). In this lesson, we will add a "table" of thickness 0.1 units on top of the cube (the cube will serve as "a table stand"). 
 
 The following blocks in the inpur file need to be modified. The input file can be found in the "abaqus_input_files" folder above.
 
