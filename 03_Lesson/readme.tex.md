@@ -16,6 +16,8 @@ Under the <em> *NODE </em> block, we define these additional nodes for the mid-s
       11,          1.5,          1.5,          1.05
       12,         -0.5,          1.5,          1.05
 
+These nodes define the dimensions of the table to be $2 \times 2$, giving a total area $A = 4$.
+	  
 ## Element definition
 		  
 Next, we define 1 shell element using the keyword <em> *ELEMENT </em> to represent the table:
@@ -113,20 +115,20 @@ We implement the following boundary conditions and loads:
 	*DSLOAD
 	TopSurfTable,P,0.13	
 
-Here, the base of the cube is fixed against all 3 translations. Furthermore, the middle of the table (node $13$) is fixed against translations in $X$ and $Y$; this is to prevent rigid body motion of the table. The pressure load of $p = 0.13$ is applied on the table top surface.
+Here, the base of the cube is fixed against all 3 translations. Furthermore, one corner of the table (node $12$) is fixed against translations in $X$ and $Y$; this is to prevent rigid body motion of the table. The pressure load of $p = 0.13$ is applied on the table top surface.
 
 ## Viewing results	
 
-* **Reactions**. We can check that the reactions at the 4 corner nodes of the cube at the base to be $0.13/4 = 0.0325$.
+* **Reactions**. We can check that the reactions at the 4 corner nodes of the cube at the base to be $\dfrac{p\,A}{4} = 0.13$.
 
 ![](./abaqus_input_files/ContactInteractions_Step1_Frame7_RF3.png)
 	
 ## Exercise 
 
-What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see guidelines in the footnotes below.
+* What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see guidelines in the footnotes below.
 
 
-Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
+* Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
 
 ---
 ## Footnotes
@@ -137,11 +139,11 @@ Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What ar
  
 <a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces:
 
-1. If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
+* If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
 
-2. If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
+* If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
 
-3. The densely meshed body should be the slave. This is because the nodes on the master surface can penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. The coarser mesh is the master.
+* The densely meshed body should be the slave. This is because the nodes on the master surface can penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. The coarser mesh is the master.
 
-4. The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
+* The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
 
