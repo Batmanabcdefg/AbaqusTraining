@@ -23,7 +23,7 @@ Under the <em> *NODE </em> block, we define these additional nodes for the mid-s
 
 ## Element definition
 		  
-Next, we define the 4 elements using the keyword <em> *ELEMENT </em> to represent the table:
+Next, we define 4 shell elements using the keyword <em> *ELEMENT </em> to represent the table:
 
 	*ELEMENT, TYPE=S4, ELSET=P2
 		  2,      9,     10,     13,     12
