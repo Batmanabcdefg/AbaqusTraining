@@ -6,7 +6,7 @@ Field variables are typically used to:
 
 * Control the model to a get desired effect, e.g., turn on or off the effects of certain materials.
 
-The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except we now make the following changes.
+The model setup for this lesson is identical to that in [Lesson 1](./../01_Lesson), except we now make the following changes. The input file can be found in the "abaqus_input_files" folder above.
 
 ## Material definition
 
@@ -107,7 +107,7 @@ We define the output request in Step 1. This output request is then propagated i
 			
 	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/a30bb2b6b987e9176d707426add7226a.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>.	These values jibe with the contour plots below.
 
-	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png	)
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png)
 
 ## Exercise 
 
