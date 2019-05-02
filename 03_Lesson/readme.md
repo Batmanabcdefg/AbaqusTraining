@@ -125,7 +125,7 @@ Here, the base of the cube is fixed against all 3 translations. Furthermore, one
 	
 ## Exercise 
 
-* What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see general guidelines on the selection of slave and master surfaces in the footnotes below.
+[comment]: <> (What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see general guidelines on the selection of slave and master surfaces in the footnotes below.)
 
 * Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
 
