@@ -67,7 +67,8 @@ for StepNo in StepVec:
 		session.viewports[session.currentViewportName].odbDisplay.setFrame(step=StepName, frame=fNum[i])
 		
 		# view element
-		leaf = dgo.LeafFromElementSets(elementSets=("PART-1-1.P1", ))
+		#leaf = dgo.LeafFromElementSets(elementSets=("PART-1-1.P1", ))
+		leaf = dgo.LeafFromElementSets(elementSets=(" ALL ELEMENTS", ))
 		session.viewports['Viewport: 1'].odbDisplay.displayGroup.replace(leaf=leaf)	
 		
 		# title block

@@ -2,7 +2,7 @@
 #
 # Abaqus/Viewer Release 2018 replay file
 # Internal Version: 2017_11_07-09.21.41 127140
-# Run by klim on Thu May  2 16:28:46 2019
+# Run by klim on Thu May  2 16:55:52 2019
 #
 
 # from driverUtils import executeOnCaeGraphicsStartup
@@ -17,7 +17,9 @@ session.viewports['Viewport: 1'].maximize()
 from viewerModules import *
 from driverUtils import executeOnCaeStartup
 executeOnCaeStartup()
-execfile('post_process_plots.py', __main__.__dict__)
+o1 = session.openOdb(
+    name='C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
 #: Model: C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb
 #: Number of Assemblies:         1
 #: Number of Assembly instances: 0
@@ -26,7 +28,5 @@ execfile('post_process_plots.py', __main__.__dict__)
 #: Number of Element Sets:       3
 #: Number of Node Sets:          2
 #: Number of Steps:              1
-#* VisError: Primary Variable not available: 'FV1' at integration points.
-#* File "post_process_plots.py", line 150, in <module>
-#*     v.odbDisplay.setPrimaryVariable(variableLabel='FV1', 
-#* outputPosition=INTEGRATION_POINT)
+leaf = dgo.LeafFromElementSets(elementSets=(" ALL ELEMENTS", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.replace(leaf=leaf)
