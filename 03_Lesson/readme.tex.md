@@ -2,11 +2,11 @@
 
 We build on the cube model described in [Lesson 1](./../01_Lesson). In this lesson, we will add a "table" of thickness 0.1 units on top of the cube (the cube will serve as "a table stand"). 
 
-The following blocks in the inpur file need to be modified. The input file can be found in the "abaqus_input_files" folder above.
+The following blocks in the input file of [Lesson 1](./../01_Lesson) need to be modified. The modified input file can be found in the "abaqus_input_files" folder above.
 
 ## Node definition
 
-Under the <em> *NODE </em> block, we define these additional nodes for the mid-surface of table:
+Under the <em> *NODE </em> block, we define the additional nodes for the mid-surface of table:
 
 	****
 	**** Nodes for mid-surface of "table"
@@ -83,7 +83,7 @@ The contact pair is defined using using the keyword <em> *CONTACT PAIR </em>:
 	*CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 	TopSurfCube,BotSurfTable
  
-Here, the <em> TYPE=SURFACE TO SURFACE </em> option is used. For this type of contact, the thickness of shell elements, if used in the contact pair definition, will be relevant. The interaction <em> SurfInterProps </em>, which was defined earlier, is referenced in the contact pair definition. 
+Here, the <em> TYPE=SURFACE TO SURFACE </em> option is used. For this type of contact, the thickness of shell elements, if used in the contact pair definition, will be relevant. The interaction <em> SurfInterProps </em> defined above is referenced in the contact pair definition. 
 
 The next line specifies the two surfaces in contact. The slave surface is first specified, followed by the master. Some general guidance on the selection of the slave and master surfaces are given in the footnotes:
 
@@ -125,15 +125,14 @@ Here, the base of the cube is fixed against all 3 translations. Furthermore, one
 	
 ## Exercise 
 
-* What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see guidelines in the footnotes below.
-
+* What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see general guidelines on the selection of slave and master surfaces in the footnotes below.
 
 * Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
 
 ---
 ## Footnotes
 
-<a name="myfootnote1">a</a>) The <em> *SURFACE INTERACTION </em> is a required keyword for contact definition, even if you are considering frictionless contact. In this case, there is <em> *FRICTION </em> line and associated coefficient of friction is not required.
+<a name="myfootnote1">a</a>) The <em> *SURFACE INTERACTION </em> is a required keyword for contact definition, even if you are considering frictionless contact. In this case, there is <em> *FRICTION </em> line and associated coefficient of friction are not required.
 
 <a name="myfootnote1">b</a>) In Abaqus/Standard the inclusion of friction in a model adds unsymmetric terms to the system of equations being solved. 
  

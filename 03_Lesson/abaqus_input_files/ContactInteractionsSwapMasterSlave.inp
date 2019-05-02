@@ -67,10 +67,10 @@ P2,SPOS
 **********************************************************************
 *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 ***ExtSurfCube,BotSurfTable
-TopSurfCube,BotSurfTable
+***TopSurfCube,BotSurfTable
 *** 
-*** If cube is master
-*** BotSurfTable,TopSurfCube
+*** If cube is master, contact would fail !
+BotSurfTable,TopSurfCube
 **********************************************************************
 *PREPRINT,CONTACT=YES
 **********************************************************************
