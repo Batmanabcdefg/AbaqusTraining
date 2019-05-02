@@ -16,6 +16,8 @@ Under the <em> *NODE </em> block, we define these additional nodes for the mid-s
       11,          1.5,          1.5,          1.05
       12,         -0.5,          1.5,          1.05
 
+These nodes define the dimensions of the table to be <img src="/03_Lesson/tex/ab2d2968f149e290d718f3d1135e40ac.svg?invert_in_darkmode&sanitize=true" align=middle width=36.52961069999999pt height=21.18721440000001pt/>, giving a total area <img src="/03_Lesson/tex/020477b3138d97236c032805a0ab2ffd.svg?invert_in_darkmode&sanitize=true" align=middle width=42.46563914999999pt height=22.465723500000017pt/>.
+	  
 ## Element definition
 		  
 Next, we define 1 shell element using the keyword <em> *ELEMENT </em> to represent the table:
@@ -113,20 +115,20 @@ We implement the following boundary conditions and loads:
 	*DSLOAD
 	TopSurfTable,P,0.13	
 
-Here, the base of the cube is fixed against all 3 translations. Furthermore, the middle of the table (node <img src="/03_Lesson/tex/058144136c51a2587e0014f0855b972a.svg?invert_in_darkmode&sanitize=true" align=middle width=16.438418699999993pt height=21.18721440000001pt/>) is fixed against translations in <img src="/03_Lesson/tex/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode&sanitize=true" align=middle width=14.908688849999992pt height=22.465723500000017pt/> and <img src="/03_Lesson/tex/91aac9730317276af725abd8cef04ca9.svg?invert_in_darkmode&sanitize=true" align=middle width=13.19638649999999pt height=22.465723500000017pt/>; this is to prevent rigid body motion of the table. The pressure load of <img src="/03_Lesson/tex/e4879cca02caa03e5ba578d1f3f0e24a.svg?invert_in_darkmode&sanitize=true" align=middle width=59.41204994999998pt height=21.18721440000001pt/> is applied on the table top surface.
+Here, the base of the cube is fixed against all 3 translations. Furthermore, one corner of the table (node <img src="/03_Lesson/tex/d0b46deac7c0bf4f6285cbeb41067c88.svg?invert_in_darkmode&sanitize=true" align=middle width=16.438418699999993pt height=21.18721440000001pt/>) is fixed against translations in <img src="/03_Lesson/tex/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode&sanitize=true" align=middle width=14.908688849999992pt height=22.465723500000017pt/> and <img src="/03_Lesson/tex/91aac9730317276af725abd8cef04ca9.svg?invert_in_darkmode&sanitize=true" align=middle width=13.19638649999999pt height=22.465723500000017pt/>; this is to prevent rigid body motion of the table. The pressure load of <img src="/03_Lesson/tex/e4879cca02caa03e5ba578d1f3f0e24a.svg?invert_in_darkmode&sanitize=true" align=middle width=59.41204994999998pt height=21.18721440000001pt/> is applied on the table top surface.
 
 ## Viewing results	
 
-* **Reactions**. We can check that the reactions at the 4 corner nodes of the cube at the base to be <img src="/03_Lesson/tex/6a295b2e0ddef468a1bf686a71ef7080.svg?invert_in_darkmode&sanitize=true" align=middle width=113.242173pt height=24.65753399999998pt/>.
+* **Reactions**. We can check that the reactions at the 4 corner nodes of the cube at the base to be <img src="/03_Lesson/tex/2e2fdc36206df51890eed39e5a8ee865.svg?invert_in_darkmode&sanitize=true" align=middle width=76.45308pt height=44.70706679999999pt/>.
 
 ![](./abaqus_input_files/ContactInteractions_Step1_Frame7_RF3.png)
 	
 ## Exercise 
 
-What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see guidelines in the footnotes below.
+* What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see guidelines in the footnotes below.
 
 
-Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
+* Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
 
 ---
 ## Footnotes
@@ -137,11 +139,11 @@ Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What ar
  
 <a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces:
 
-1. If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
+* If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
 
-2. If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
+* If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
 
-3. The densely meshed body should be the slave. This is because the nodes on the master surface can penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. The coarser mesh is the master.
+* The densely meshed body should be the slave. This is because the nodes on the master surface can penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. The coarser mesh is the master.
 
-4. The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
+* The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
 
