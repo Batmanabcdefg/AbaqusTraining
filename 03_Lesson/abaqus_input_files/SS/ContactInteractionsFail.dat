@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 26-Apr-2019   Time 16:36:01
+   Abaqus 3DEXPERIENCE R2018x                                  Date 02-May-2019   Time 15:58:29
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
 
@@ -86,49 +86,64 @@
   *SHELL SECTION, ELSET=P2, MATERIAL=M2
   *SOLID SECTION, ELSET=P1, MATERIAL=M1
   *SHELL SECTION, ELSET=P2, MATERIAL=M2
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
+  *SURFACE,NAME=TopSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
   *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
+  *SURFACE,NAME=TopSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
   *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
+  *SURFACE,NAME=TopSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
   *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 
- ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
-          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
-          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+ ***NOTE: THE  ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          MASTER SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (TOPSURFCUBE, BOTSURFTABLE).
   *SURFACE INTERACTION, NAME=SurfInterProps
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 
- ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
-          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
-          PAIR (BOTSURFTABLE, EXTSURFCUBE).
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+ ***NOTE: THE  ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          MASTER SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (TOPSURFCUBE, BOTSURFTABLE).
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 
- ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
-          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
-          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+ ***NOTE: THE  ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          MASTER SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (TOPSURFCUBE, BOTSURFTABLE).
   *SURFACE INTERACTION, NAME=SurfInterProps
   *FRICTION
   *SURFACE INTERACTION, NAME=SurfInterProps
   *BOUNDARY
   *BOUNDARY
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 
- ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
-          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
-          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+ ***NOTE: THE  ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          MASTER SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (TOPSURFCUBE, BOTSURFTABLE).
+
+
+  SLAVE : TOPSURFCUBE                                                                     
+  MASTER: BOTSURFTABLE                                                                    
+              DISTANCE
+   NODE       ADJUSTED    REMARKS/WARNINGS
+
+         5    0.0000      ADJUSTED TO (  0.0000    ,  0.0000    ,  1.0000    ).
+         6   2.22045E-16  ADJUSTED TO (  1.0000    ,  0.0000    ,  1.0000    ).
+         7    0.0000      ADJUSTED TO (  1.0000    ,  1.0000    ,  1.0000    ).
+         8    0.0000      ADJUSTED TO (  0.0000    ,  1.0000    ,  1.0000    ).
   *SURFACE INTERACTION, NAME=SurfInterProps
-  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps
+  *CONTACT PAIR, TYPE=SURFACE TO SURFACE, INTERACTION=SurfInterProps, ADJUST=1.e-3
 
- ***NOTE: THE ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
-          SLAVE SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
-          PAIR (BOTSURFTABLE, EXTSURFCUBE).
+ ***NOTE: THE  ROTATIONAL DEGREES OF FREEDOM OF THE NODES THAT CONSTITUTE THE 
+          MASTER SURFACE WILL NOT BE CONSTRAINED BETWEEN THE SLAVE AND MASTER 
+          PAIR (TOPSURFCUBE, BOTSURFTABLE).
+  *SURFACE,NAME=TopSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=ExtSurfCube,TYPE=ELEMENT
   *SURFACE,NAME=BotSurfTable,TYPE=ELEMENT
   *SURFACE,NAME=TopSurfTable,TYPE=ELEMENT
@@ -155,6 +170,100 @@
   *BOUNDARY
   *END STEP
 
+
+          FINITE SLIDING NON-RIGID  3D ELEMENT(S) 
+          GENERATED INTERNALLY
+          SLAVE  SURFACE : TOPSURFCUBE                                                                     
+          MASTER SURFACE : BOTSURFTABLE                                                                    
+          SURFACE INTERACTION : SURFINTERPROPS                                                                  
+
+    ELEMENT  SLAVE
+    NUMBER   NODE(S)
+
+       9974          5
+       9975          6
+       9976          7
+       9977          8
+
+
+
+
+
+                         S U R F A C E   I N T E R A C T I O N S
+
+
+
+
+  NAME SURFINTERPROPS                                                                  
+
+  THICKNESS / AREA:               1.0000    
+
+  PENALTY CONSTRAINT ENFORCEMENT
+
+  ISOTROPIC COULOMB FRICTION
+    SLIP TOLERANCE FRACTION            5.00000E-03
+    AVERAGE INTERFACE ELEMENT LENGTH 
+    IF CONTACT ELEMENTS ARE DEFINED  
+    USING THE *ELEMENT KEYWORD          1.0000    
+    SLIP TOLERANCE 2                   5.00000E-03
+    SCALE PENALTY FACTOR                1.0000    
+
+    FRICTION     SLIP         CONTACT      SURFACE      FIELD VARIABLES
+    COEFFICIENT  VELOCITY     PRESSURE     TEMPERATURE
+    0.30000    
+
+
+
+
+
+                         C O N T A C T   P A I R (S)
+
+                                               FILLET RADIUS  CHARACTERISTIC  EXTENSION
+  SLAVE     MASTER    INTERACTION     HCRIT       OR SMOOTH      LENGTH         RATIO      NOTE
+
+    -1-       -3-        -6-                                     1.0000                    FINITE SLIDING WITH ADJUST =  1.00000E-03
+                                                                                           SURFACE TO SURFACE WITH THICKNESS
+                                                                                           CONSTRAINT POSITION IS AT NODE 
+                                                                                           MINIMUM DISTANCE = YES
+                                                                                           ADAPTIVE INTEGRATION = FIXED
+                                                                                           SUPPLEMENTARY CONSTRAINTS = NO
+
+
+     LABELS REFERENCED IN THE ABOVE TABLE
+
+      -1-      TOPSURFCUBE                                                                     
+      -3-      BOTSURFTABLE                                                                    
+      -6-      SURFINTERPROPS                                                                  
+
+
+
+                                 I N I T I A L   C O N T A C T   S T A T U S
+
+
+
+ ***NOTE: The following initial contact status information will reflect some 
+          but not all types of automated nodal position adjustments. Output 
+          variables such as CSTATUS and COPEN written to the output database 
+          (.odb) at the initial output frame (if the CSTATUS and CDISP output 
+          variables are requested) will reflect all types of automated nodal 
+          position adjustments. Viewing CSTATUS and COPEN in a post-processor 
+          is the recommended way to determine the initial contact status. 
+          Initial contact status information may not be available in the .dat 
+          file in a future version.
+
+
+    SLAVE SURFACE:         TOPSURFCUBE                                                                     
+    MASTER SURFACE:        BOTSURFTABLE                                                                    
+
+
+       NODE        STATUS            CLEARANCE            NOTE
+       NUMBER
+
+          5       CLOSED             0.000                             
+          6       CLOSED             0.000                             
+          7       CLOSED             0.000                             
+          8       CLOSED             0.000                             
+
      - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
 
 
@@ -162,13 +271,13 @@
                             P R O B L E M   S I Z E
 
 
-          NUMBER OF ELEMENTS IS                                    21
+          NUMBER OF ELEMENTS IS                                     9
           NUMBER OF ELEMENTS DEFINED BY THE USER AND *TIE           5
-          NUMBER OF INTERNAL ELEMENTS GENERATED FOR CONTACT        16
-          NUMBER OF NODES IS                                       49
+          NUMBER OF INTERNAL ELEMENTS GENERATED FOR CONTACT         4
+          NUMBER OF NODES IS                                       25
           NUMBER OF NODES DEFINED BY THE USER                      17
-          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        32
-          TOTAL NUMBER OF VARIABLES IN THE MODEL                  126
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM         8
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   90
           (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
            VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
 
@@ -179,13 +288,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   0.0000    
+       USER TIME (SEC)      =  0.10000    
        SYSTEM TIME (SEC)    =  0.10000    
-       TOTAL CPU TIME (SEC) =  0.10000    
-       WALLCLOCK TIME (SEC) =          1
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          0
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 26-Apr-2019   Time 16:36:03
+   Abaqus 3DEXPERIENCE R2018x                                  Date 02-May-2019   Time 15:58:31
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
      ABAQUS Static Analysis Set                                                                STEP    1  INCREMENT    1
@@ -213,7 +322,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION           (MB)               (MB)
   
-     1          2.00E+05               17                 24
+     1          1.77E+05               17                 24
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -246,17 +355,16 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 
 
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
 
                               ANALYSIS COMPLETE
-                              WITH      2 ERROR MESSAGES ON THE MSG FILE
-                              AND      21 WARNING MESSAGES ON THE MSG FILE
-                                        2 WARNINGS ARE FOR NUMERICAL PROBLEMS
-                                       19 WARNINGS ARE FOR NEGATIVE EIGENVALUES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.80000    
-       SYSTEM TIME (SEC)    =  0.30000    
-       TOTAL CPU TIME (SEC) =   1.1000    
-       WALLCLOCK TIME (SEC) =          1
+       USER TIME (SEC)      =  0.30000    
+       SYSTEM TIME (SEC)    =  0.20000    
+       TOTAL CPU TIME (SEC) =  0.50000    
+       WALLCLOCK TIME (SEC) =          0

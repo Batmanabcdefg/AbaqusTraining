@@ -1,0 +1,89 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2018 replay file
+# Internal Version: 2017_11_07-09.21.41 127140
+# Run by klim on Thu May  2 15:07:31 2019
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=339.333343505859, 
+    height=180.603713989258)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o1 = session.openOdb(
+    name='C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       3
+#: Number of Node Sets:          2
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.48628, 
+    farPlane=8.23518, width=5.23824, height=2.14896, cameraPosition=(5.47017, 
+    -3.46847, 0.471303), cameraUpVector=(-0.0940067, 0.401804, 0.910888), 
+    cameraTarget=(0.549709, 0.484585, 0.529578))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.4478, 
+    farPlane=8.24348, width=5.19331, height=2.13053, cameraPosition=(3.61415, 
+    -4.86828, 1.89115), cameraUpVector=(-0.133845, 0.528647, 0.838223), 
+    cameraTarget=(0.535481, 0.473855, 0.540462))
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    deformationScaling=UNIFORM, uniformScaleFactor=11)
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    uniformScaleFactor=22)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    ORIENT_ON_DEF, ))
+#: Warning: Material orientation information is not available for some elements.  Please make sure the primary variable is element-based and is the one to which the material orientation pertains.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.00221, 
+    farPlane=8.6144, width=10.087, height=4.13815, viewOffsetX=0.343543, 
+    viewOffsetY=0.297094)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    DEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(normals=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.37803, 
+    farPlane=8.3314, width=5.94319, height=2.43816, viewOffsetX=0.315978, 
+    viewOffsetY=0.410148)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.4453, 
+    farPlane=8.38251, width=6.03452, height=2.47563, cameraPosition=(4.69645, 
+    -4.29065, 1.28565), cameraUpVector=(-0.178412, 0.431298, 0.884393), 
+    cameraTarget=(0.588694, 0.441537, 0.52822), viewOffsetX=0.320834, 
+    viewOffsetY=0.416451)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.5246, 
+    farPlane=8.55007, width=6.14217, height=2.51979, cameraPosition=(4.48149, 
+    -4.11549, 2.88981), cameraUpVector=(-0.374277, 0.546304, 0.749312), 
+    cameraTarget=(0.709299, 0.368842, 0.544109), viewOffsetX=0.326557, 
+    viewOffsetY=0.42388)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='RF', outputPosition=NODAL, refinement=(COMPONENT, 'RF3'))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'))
+leaf = dgo.LeafFromElementSets(elementSets=("PART-1-1.P2", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.remove(leaf=leaf)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U3'))
+leaf = dgo.LeafFromElementSets(elementSets=(" ALL ELEMENTS", ))
+session.viewports['Viewport: 1'].odbDisplay.displayGroup.replace(leaf=leaf)

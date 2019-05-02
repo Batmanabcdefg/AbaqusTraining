@@ -115,7 +115,7 @@ We define the output request in Step 1. This output request is then propagated i
 			
 	where $E = 1$ and $\nu = 0.2$.	These values jibe with the contour plots below.
 
-	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png	)
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png)
 
 ## Exercise 
 

@@ -1,0 +1,69 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 2018 replay file
+# Internal Version: 2017_11_07-09.21.41 127140
+# Run by klim on Thu May  2 15:05:34 2019
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=339.333343505859, 
+    height=180.603713989258)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o1 = session.openOdb(
+    name='C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractionsTied.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractionsTied.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       3
+#: Number of Node Sets:          2
+#: Number of Steps:              1
+o1 = session.openOdb(
+    name='C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/klim/Desktop/SGH/GITHUB/AbaqusTraining/03_Lesson/abaqus_input_files/ContactInteractions.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       3
+#: Number of Node Sets:          2
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    deformationScaling=UNIFORM, uniformScaleFactor=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.35051, 
+    farPlane=8.19717, width=5.07972, height=2.08393, cameraPosition=(-4.07917, 
+    -2.3767, 3.71642), cameraUpVector=(0.753647, 0.210918, 0.622519), 
+    cameraTarget=(0.562267, 0.461076, 0.515626))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.43811, 
+    farPlane=8.12149, width=5.182, height=2.12589, cameraPosition=(-4.50012, 
+    -3.29623, 0.369037), cameraUpVector=(0.238571, 0.19582, 0.951177), 
+    cameraTarget=(0.564825, 0.466665, 0.535972))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.61794, 
+    farPlane=8.03308, width=5.39197, height=2.21203, cameraPosition=(1.72534, 
+    -4.13143, 4.66574), cameraUpVector=(-0.531267, 0.720931, 0.444989), 
+    cameraTarget=(0.532937, 0.470943, 0.513963))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.54003, 
+    farPlane=8.17518, width=5.301, height=2.17471, cameraPosition=(3.25195, 
+    -5.21736, 0.136418), cameraUpVector=(0.0312552, 0.323783, 0.945615), 
+    cameraTarget=(0.536206, 0.468618, 0.504265))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.61889, 
+    farPlane=8.09632, width=4.21064, height=1.7274, viewOffsetX=0.0451578, 
+    viewOffsetY=0.133591)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=4.62179, 
+    farPlane=8.16424, width=4.21329, height=1.72848, cameraPosition=(3.34264, 
+    -5.11891, 1.63967), cameraUpVector=(-0.120957, 0.493137, 0.861502), 
+    cameraTarget=(0.564829, 0.435709, 0.512331), viewOffsetX=0.0451862, 
+    viewOffsetY=0.133674)
