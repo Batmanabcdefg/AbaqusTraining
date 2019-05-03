@@ -125,6 +125,26 @@ for StepNo in StepVec:
 		# output to TIFF file
 		session.printToFile(fileName=base_figname+'_S33', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 		
+
+		
+		# ========================================
+		# plot displacement
+		# ========================================
+		session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+		session.viewports['Viewport: 1'].view.fitView()
+		session.viewports['Viewport: 1'].view.setValues(nearPlane=4.60318, 
+			farPlane=7.21412, width=3.3969, height=1.39356, cameraPosition=(0.622208, 
+			-5.40885, 0.370479), cameraTarget=(0.622208, 0.499796, 0.370479))
+		session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.624203, 
+			-5.40885, 0.348549), cameraTarget=(0.624203, 0.499796, 0.348549))
+			
+		v.odbDisplay.setPrimaryVariable(variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U3'))
+		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
+		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
+		
+		# output to TIFF file		
+		session.printToFile(fileName=base_figname+'_U3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+		
 		# ========================================
 		# plot reaction force
 		# ========================================
@@ -134,18 +154,6 @@ for StepNo in StepVec:
 		
 		# output to TIFF file
 		session.printToFile(fileName=base_figname+'_RF3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
-		
-		# ========================================
-		# plot displacement
-		# ========================================
-		v.odbDisplay.setPrimaryVariable(variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U3'))
-		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
-		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
-		
-		# output to TIFF file		
-		session.printToFile(fileName=base_figname+'_U3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
-		
-
 
 		
 

@@ -119,6 +119,12 @@ Here, the base of the cube is fixed against all 3 translations. Furthermore, one
 
 ## Viewing results	
 
+* **Displacements**. We can visually check the vertical deflection of the cube.
+
+![](./abaqus_input_files/ContactInteractions_Step1_Frame7_U3.png)
+
+Note that the surface thickness is accounted for in the contact analysis.
+
 * **Reactions**. We can check that the reactions at the 4 corner nodes at the base of the cube is $\dfrac{p\,A}{4} = 0.13$.
 
 ![](./abaqus_input_files/ContactInteractions_Step1_Frame7_RF3.png)
