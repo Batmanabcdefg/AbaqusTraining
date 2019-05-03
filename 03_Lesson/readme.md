@@ -29,7 +29,7 @@ Here, we defined 1 shell element of type <em> S4 </em>. In each line, the first 
 
 ## Element property
 
-The required element property is the one that describes a shell-type stress-state. For the <em> S4 </em> hex element, this is specified using keyword <em> *SHELL SECTION </em>. The next required line is the specified shell thickness:
+The required element property is the one that describes a shell-type stress-state. For the <em> S4 </em> shell element, this is specified using keyword <em> *SHELL SECTION </em>. The next required line is the specified shell thickness:
 
 	*SHELL SECTION, ELSET=P2, MATERIAL=M2
 	0.1	
@@ -151,11 +151,11 @@ What happens when you swap the master and contact surfaces? Do you get convergen
  
 <a name="myfootnote1">c</a>) General guidelines on the selection of slave and master surfaces:
 
-* If you have a combination of Rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
+* If you have both rigid and deformable bodies, the rigid body should be the master and the deformable should be the slave.
 
-* If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the more stronger is the master.
+* If both surfaces in a contact definition are deformable, then the softer of the two is the slave and the stiffer is the master.
 
-* The densely meshed body should be the slave. This is because the nodes on the master surface can penetrate into the slave. To avoid too much penetration, the slave meshing must be denser. The coarser mesh is the master.
+* The denser meshed body should be the slave and the coarser mesh is the master. This is because the master surface enforces the non-penetration of the nodes on the slave surface. The nodes on the master surface can penetrate into the slave. A denser mesh of the slave reduces this penetration.
 
-* The longer of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues occur.
+* The longer/larger of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues is likely to occur.
 
