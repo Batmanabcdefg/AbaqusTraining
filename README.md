@@ -54,8 +54,10 @@ This lesson covers:
 
 This lesson covers:
 
- 1. Definining surface interaction properties
- 2. Definining surface-to-surface contact pairs
+ 1. Defining shell elements.
+ 2. Defining surfaces using elements.
+ 3. Defining surface interaction properties
+ 4. Defining surface-to-surface contact pairs
 
  
  
