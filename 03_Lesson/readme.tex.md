@@ -119,15 +119,22 @@ Here, the base of the cube is fixed against all 3 translations. Furthermore, one
 
 ## Viewing results	
 
-* **Reactions**. We can check that the reactions at the 4 corner nodes of the cube at the base to be $\dfrac{p\,A}{4} = 0.13$.
+* **Reactions**. We can check that the reactions at the 4 corner nodes at the base of the cube is $\dfrac{p\,A}{4} = 0.13$.
 
 ![](./abaqus_input_files/ContactInteractions_Step1_Frame7_RF3.png)
 	
 ## Exercise 
 
-[comment]: <> (What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see general guidelines on the selection of slave and master surfaces in the footnotes below.)
+None for this lesson.
 
-* Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Hint: for this contact type, the shell thickness is not used.
+[comment]: <> (
+What happens when you swap the master and contact surfaces? Do you get convergence? If not, why? Hint: see general guidelines on the selection of slave and master surfaces in the footnotes below.
+
+* Try changing the contact pair option to <em> TYPE=NODE TO SURFACE </em>. What are the things that you need to change in the input file to make the contact work? Subtasks: 
+
+** You need to redefine the table surface using nodes; in <em> *SURFACE </em>, check option <em> TYPE=NODE </em>
+** Redefine 
+)
 
 ---
 ## Footnotes
