@@ -97,7 +97,48 @@ We define the output request in Step 1. This output request is then propagated i
 	Also, the lateral strain <img src="/02_Lesson/tex/a16f48844ce61fa0ca5324a6b58cc2a7.svg?invert_in_darkmode&sanitize=true" align=middle width=62.29450919999999pt height=14.15524440000002pt/> is:
 	<p align="center"><img src="/02_Lesson/tex/9a664cf78ef0b558bcc327c9244fbf3b.svg?invert_in_darkmode&sanitize=true" align=middle width=373.89721049999997pt height=32.990165999999995pt/></p>
 	
-	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/2b8463a74b5bbe47c21a0584da185544.svg?invert_in_darkmode&sanitize=true" align=middle width=486.81089820000005pt height=85.29681270000002pt/>E=1<img src="/02_Lesson/tex/8fbae802a2aa6aace902d63bffecd077.svg?invert_in_darkmode&sanitize=true" align=middle width=286.14298184999996pt height=24.7161288pt/>\nu<img src="/02_Lesson/tex/31f2327237f7b31ed37c6f01d2df61c2.svg?invert_in_darkmode&sanitize=true" align=middle width=107.86869554999998pt height=22.831056599999986pt/>0.3<img src="/02_Lesson/tex/5b7ce0b11756ea13938668594c96a288.svg?invert_in_darkmode&sanitize=true" align=middle width=13.90414904999999pt height=20.221802699999984pt/>0.2<img src="/02_Lesson/tex/dbc92bd3fde78a06f5be289e3c35088b.svg?invert_in_darkmode&sanitize=true" align=middle width=154.88865975pt height=22.831056599999986pt/>\#2<img src="/02_Lesson/tex/cb12151c03ada6d8e7b3cd409f6a6495.svg?invert_in_darkmode&sanitize=true" align=middle width=360.2829944999999pt height=22.831056599999986pt/><img src="/02_Lesson/tex/8bfb08a9f927d62a8451584e32e86d54.svg?invert_in_darkmode&sanitize=true" align=middle width=8.21920935pt height=14.15524440000002pt/><img src="/02_Lesson/tex/616d4c00d60a668183b23782fa41cbe8.svg?invert_in_darkmode&sanitize=true" align=middle width=30.182742149999992pt height=39.45205439999997pt/>E = 1<img src="/02_Lesson/tex/fd92a53167b3c6ae9574071613d555dc.svg?invert_in_darkmode&sanitize=true" align=middle width=27.11199479999999pt height=22.831056599999986pt/>\nu = 0.2<img src="/02_Lesson/tex/bdb86e7267672cfac6fcec66fef3bdd7.svg?invert_in_darkmode&sanitize=true" align=middle width=486.81089820000005pt height=118.35616650000001pt/>\epsilon_{33}<img src="/02_Lesson/tex/19efe8c03ad1a17b7f19b5b086069707.svg?invert_in_darkmode&sanitize=true" align=middle width=357.97459994999997pt height=22.831056599999986pt/>\epsilon_{33}<img src="/02_Lesson/tex/7a54972854c0eaec7d41e45bc156c747.svg?invert_in_darkmode&sanitize=true" align=middle width=700.2745645499999pt height=282.55708469999996pt/>N_1,\hdots,N_{nv}<img src="/02_Lesson/tex/9e204235bccb82794e0e97f50e41640c.svg?invert_in_darkmode&sanitize=true" align=middle width=273.7524339pt height=22.831056599999986pt/>nv<img src="/02_Lesson/tex/a32bee6e910695da6e2a2ce2e1bb1893.svg?invert_in_darkmode&sanitize=true" align=middle width=247.66845675000002pt height=22.831056599999986pt/>N_1 \times N_2 \times N_{nv}<img src="/02_Lesson/tex/b879b2028552ba040d64509809b6ff7c.svg?invert_in_darkmode&sanitize=true" align=middle width=51.46135334999998pt height=22.831056599999986pt/>N_{nv}$ columns. Therefore, if the number of field variables is large, this table becomes quite big. It may be more convenient to actually write a subroutine to vary the field variables (not covered in this training). In most cases, however, one or two field variables are used.
+	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/15c1721523b4a6c9de5c6579ea380fdd.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>.	These values jibe with the contour plots below.
+	
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step2_Frame3_E22.png	)
+	
+	In Step 3, the modulus <img src="/02_Lesson/tex/1a4fb486f854c2b4efad46a2f5ed93c6.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> is kept constant, while the Poisson's ratio <img src="/02_Lesson/tex/b49211c7e49541e500c32b4d56d354dc.svg?invert_in_darkmode&sanitize=true" align=middle width=9.16670204999999pt height=14.15524440000002pt/> is dropped from <img src="/02_Lesson/tex/5a2912de5997e53d19e8044db54d76e3.svg?invert_in_darkmode&sanitize=true" align=middle width=21.00464354999999pt height=21.18721440000001pt/> to <img src="/02_Lesson/tex/358d4d0949e47523757b4bc797ab597e.svg?invert_in_darkmode&sanitize=true" align=middle width=21.00464354999999pt height=21.18721440000001pt/> through field variable <img src="/02_Lesson/tex/fb19066311f84c5909400aa479652a43.svg?invert_in_darkmode&sanitize=true" align=middle width=21.91788224999999pt height=22.831056599999986pt/>. Therefore, at the end of Step 3, the lateral strain is:
+	
+	<p align="center"><img src="/02_Lesson/tex/fd7bce942625b3c8ca160aa45fc30f29.svg?invert_in_darkmode&sanitize=true" align=middle width=373.89721049999997pt height=32.990165999999995pt/></p>
+			
+	where <img src="/02_Lesson/tex/9be2903ee179a35a7fad437ee97c1c1f.svg?invert_in_darkmode&sanitize=true" align=middle width=43.219017599999994pt height=22.465723500000017pt/> and <img src="/02_Lesson/tex/a30bb2b6b987e9176d707426add7226a.svg?invert_in_darkmode&sanitize=true" align=middle width=52.088957249999986pt height=21.18721440000001pt/>.	These values jibe with the contour plots below.
+
+	![](./abaqus_input_files/1ElementTest_Lesson2_Step3_Frame3_E22.png)
+
+## Exercise 
+
+* The vertical strain <img src="/02_Lesson/tex/fb693681620c7d77e353de0fea217589.svg?invert_in_darkmode&sanitize=true" align=middle width=19.777485749999993pt height=14.15524440000002pt/> did not change during Step 3. Why? Hint: Calculate <img src="/02_Lesson/tex/fb693681620c7d77e353de0fea217589.svg?invert_in_darkmode&sanitize=true" align=middle width=19.777485749999993pt height=14.15524440000002pt/> using linear elasticity above.
+
+---
+## Footnotes
+<a name="myfootnote1">a</a>) The general rule to tabulating the field variables is: "keep the right constant, vary the left". As an example, suppose you have 3 field variables. Then, one could have the following tabulation of field variable values: 
+
+	1.0,1.0,0.0
+	2.0,1.0,0.0
+	3.0,1.0,0.0
+	4.0,1.0,0.0
+	****
+	1.0,2.0,0.0
+	2.0,2.0,0.0
+	3.0,2.0,0.0
+	4.0,2.0,0.0
+	****
+	1.0,1.0,1.0
+	2.0,1.0,1.0
+	3.0,1.0,1.0
+	4.0,1.0,1.0
+	****
+	1.0,2.0,1.0
+	2.0,2.0,1.0
+	3.0,2.0,1.0
+	4.0,2.0,1.0
+	
+
+Here, field variable #1 varies from 1 to 4, field variable #2 varies from 1 to 2 and field variable #3 varies from 0 to 1. Generally, if there are <img src="/02_Lesson/tex/1236ac78b1cdd28827445e0b964e3f20.svg?invert_in_darkmode&sanitize=true" align=middle width=85.43369504999998pt height=22.465723500000017pt/> data points for field variables #1 through #<img src="/02_Lesson/tex/50bcbd31cb5727aaec7e9e52c6ec40cf.svg?invert_in_darkmode&sanitize=true" align=middle width=18.42473654999999pt height=14.15524440000002pt/>, respectively, the table size would be <img src="/02_Lesson/tex/25ff5f224f96c963d78146bb0040a737.svg?invert_in_darkmode&sanitize=true" align=middle width=109.66888844999998pt height=22.465723500000017pt/> rows by <img src="/02_Lesson/tex/236282d361948631b3d7ba153f663ebe.svg?invert_in_darkmode&sanitize=true" align=middle width=28.32205199999999pt height=22.465723500000017pt/> columns. Therefore, if the number of field variables is large, this table becomes quite big. It may be more convenient to actually write a subroutine to vary the field variables (not covered in this training). In most cases, however, one or two field variables are used.
 
 ---
 ## Additional Comments on This Lesson (Links to Milo)
