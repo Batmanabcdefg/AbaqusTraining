@@ -115,7 +115,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
+After submitting the analysis job as described in [Lesson 0](./../00_Lesson), and the analysis is completed, we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
 
 * **Stresses**. The first obvious check that we can make is to confirm that we applied the correct stress value <img src="/01_Lesson/tex/619592087e8219141eb96df340222866.svg?invert_in_darkmode&sanitize=true" align=middle width=29.22385289999999pt height=21.18721440000001pt/>. This can be confirmed by visualizing the stress in the (vertical) <img src="/01_Lesson/tex/5b51bd2e6f329245d425b8002d7cf942.svg?invert_in_darkmode&sanitize=true" align=middle width=12.397274999999992pt height=22.465723500000017pt/> direction <img src="/01_Lesson/tex/8f372bf5cff388edf2a30074c7f27736.svg?invert_in_darkmode&sanitize=true" align=middle width=23.18501789999999pt height=22.465723500000017pt/>, which should be -0.13 (compressive).
 
