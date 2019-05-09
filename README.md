@@ -3,7 +3,7 @@
 
 =================
 
-Abaqus Lessons 
+Abaqus Elementary Lessons 
 
 =================
 
@@ -66,6 +66,3 @@ This lesson covers:
 
 **In progress, incomplete**
  
-## [Lesson X1: Borja-Amies Model (Advanced)](X001_Lesson#lesson-X1-borja-amies)
-
-**In progress, incomplete**
