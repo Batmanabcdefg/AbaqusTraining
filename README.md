@@ -18,7 +18,7 @@ Table of Contents
   * [Lesson 2: Predefined Field Variables](#lesson-2-predefined-field-variables)  
   * [Lesson 3: Contact Interactions](#lesson-3-contact-interactions)  
   * [Lesson 4: Heat Transfer](#lesson-4-heat-transfer)  
-  * [Lesson X1: Borja-Amies Model (Advanced)](#lesson-X1-borja-amies)    
+  
 ---
 
 ## [Lesson 0: Administrative](000_Lesson#lesson-0-administrative)
