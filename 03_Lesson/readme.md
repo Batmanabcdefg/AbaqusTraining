@@ -63,7 +63,7 @@ The top surface will be used for load application, and the bottom surface will b
 
 ## Contact surface interaction properties
 
-Contact interaction properties for surfaces are needed to define the frictional properties<sup>[a](#myfootnote1)</sup>. We define the contact interaction friction of 0.3 using the keyword <em> *SURFACE INTERACTION </em> and option <em> *FRICTION </em>:
+Contact interaction properties for surfaces are needed to define the frictional properties<sup>[a](#myfootnote1)</sup>. We define the contact interaction friction of <img src="/03_Lesson/tex/17a881aefc58abc1f59e1154c8dec45c.svg?invert_in_darkmode&sanitize=true" align=middle width=52.82719694999999pt height=21.18721440000001pt/> using the keyword <em> *SURFACE INTERACTION </em> and option <em> *FRICTION </em>:
 
 	**********************************************************************
 	** Define contact interaction properties
@@ -158,4 +158,8 @@ What happens when you swap the master and contact surfaces? Do you get convergen
 * The denser meshed body should be the slave and the coarser mesh is the master. This is because the master surface enforces the non-penetration of the nodes on the slave surface. The nodes on the master surface can penetrate into the slave. A denser mesh of the slave reduces this penetration.
 
 * The longer/larger of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues is likely to occur.
+
+---
+## Additional Comments on This Lesson (Links to Milo)
+None
 
