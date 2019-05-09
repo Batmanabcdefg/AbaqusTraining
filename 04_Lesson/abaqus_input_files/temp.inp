@@ -1,0 +1,56 @@
+*HEADING
+ABAQUS Static Analysis Set
+*NODE, NSET=GLOBAL
+
+*ELEMENT, TYPE=DC3D8, ELSET=ELALL
+      1,      
+      2,     
+      3,     
+*NSET,NSET=EDGEA
+1,2,3,4,9,10,11,12
+*ELSET, ELSET=BOT_BLOCK
+1,2
+*ELSET, ELSET=TOP_BLOCK
+3
+*ELSET, ELSET=OUT_CONT
+1,2,3
+*SOLID SECTION,ELSET=ELALL,MATERIAL=EQUIL
+*MATERIAL,NAME=EQUIL
+*CONDUCTIVITY
+1., 
+************************************************
+*Surface, type=ELEMENT, name=TOP_BLOCK_TopSurf
+TOP_BLOCK, S5
+*Surface, type=ELEMENT, name=TOP_BLOCK_BotSurf
+TOP_BLOCK, S3
+*Surface, type=ELEMENT, name=BOT_BLOCK_TopSurf
+BOT_BLOCK, S5
+************************************************
+*Surface Interaction, name=Thermal_Contact
+1.,
+*Gap Conductance
+ 1e+06,   0.
+    0., 0.05
+** Interaction: Thermal_Contact
+*Contact Pair, interaction=Thermal_Contact, type=SURFACE TO SURFACE
+BOT_BLOCK_TopSurf, TOP_BLOCK_BotSurf
+************************************************
+*AMPLITUDE, NAME=RAMPQ
+0.0,0.0,1.0,10.0
+************************************************
+*STEP,INC=50
+*HEAT TRANSFER,STEADY STATE
+.1,1.,.25,.1
+*BOUNDARY
+EDGEA,11,11,500.
+*DSFLUX, AMPLITUDE=RAMPQ, OP=MOD
+TOP_BLOCK_TopSurf,S,1.
+*NODE PRINT,FREQ=1
+NT11,RFL
+*EL PRINT,FREQ=2
+HFL, 
+*NODE FILE,FREQ=2
+NT, 
+*EL FILE,FREQ=2
+HFL, 
+*END STEP

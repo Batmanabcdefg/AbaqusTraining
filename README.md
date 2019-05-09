@@ -17,6 +17,7 @@ Table of Contents
   * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
   * [Lesson 2: Predefined Field Variables](#lesson-2-predefined-field-variables)  
   * [Lesson 3: Contact Interactions](#lesson-3-contact-interactions)  
+  * [Lesson 4: Heat Transfer](#lesson-4-heat-transfer)  
   
 ---
 
@@ -61,5 +62,7 @@ This lesson covers:
  3. Defining surface interaction properties
  4. Defining surface-to-surface contact pairs
 
- 
+## [Lesson 4: Heat Transfer](04_Lesson#lesson-4-heat-transfer)
+
+In progress, incomplete
  
