@@ -159,3 +159,6 @@ What happens when you swap the master and contact surfaces? Do you get convergen
 
 * The longer/larger of the two surfaces should be the master. This will prevent sliding slave nodes from sliding off from the surface and falling behind. If a slave node falls behind a master, excessive convergence issues is likely to occur.
 
+---
+## Additional Comments on This Lesson (Links to Milo)
+None

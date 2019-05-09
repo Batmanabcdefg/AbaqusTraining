@@ -156,3 +156,7 @@ After running the analysis as described in [Lesson 0](./../00_Lesson), we are re
 <a name="myfootnote2">b</a>) There is a distiction between <em> element type </em> (specified by <em> TYPE </em>) and <em> element property </em> (e.g., specified by <em> *SOLID SECTION </em>). 
 
 <a name="myfootnote3">c</a>) Reference Library > Abaqus > Elements > Continuum Elements > General-purpose continuum elements > Three-dimensional solid element library   
+
+---
+## Additional Comments on This Lesson (Links to Milo)
+None

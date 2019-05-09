@@ -8,9 +8,11 @@ Elementary Abaqus Lessons
 =================
 
 
+
 Table of Contents
 =================
 
+  * [Latest News on Tips, Tricks and Guidance on Use of Abaqus (Links to Milo)](LatestNews#Latest-News)  
   * [Lesson 0: Administrative](#lesson-0-administrative)  
   * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
   * [Lesson 2: Predefined Field Variables](#lesson-2-predefined-field-variables)  
