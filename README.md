@@ -64,5 +64,5 @@ This lesson covers:
 
 ## [Lesson 4: Heat Transfer](04_Lesson#lesson-4-heat-transfer)
 
-In progress, incomplete
+**In progress, incomplete**
  

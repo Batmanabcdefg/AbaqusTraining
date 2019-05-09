@@ -1,6 +1,6 @@
 # Lesson 4: Heat Transfer
 
-In progress and incomplete
+**In progress and incomplete**
 
 This is a transient heat transfer analysis 
 
