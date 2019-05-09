@@ -63,7 +63,7 @@ The top surface will be used for load application, and the bottom surface will b
 
 ## Contact surface interaction properties
 
-Contact interaction properties for surfaces are needed to define the frictional properties<sup>[a](#myfootnote1)</sup>. We define the contact interaction friction of 0.3 using the keyword <em> *SURFACE INTERACTION </em> and option <em> *FRICTION </em>:
+Contact interaction properties for surfaces are needed to define the frictional properties<sup>[a](#myfootnote1)</sup>. We define the contact interaction friction of $\mu = 0.3$ using the keyword <em> *SURFACE INTERACTION </em> and option <em> *FRICTION </em>:
 
 	**********************************************************************
 	** Define contact interaction properties
