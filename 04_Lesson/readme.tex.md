@@ -5,7 +5,6 @@ In progress and incomplete
 This is a transient heat transfer analysis 
 
 
-
 a block of material, with top edge prescribed with a distributed flux, prescribed temperature on bottom edge, and all other edges insulated 
 
 A steady-state heat transfer analysis of a unit block is performed. The block is composed of three 8-node brick elements (DC3D8). The block is split into top and bottom halves, which are meshed separately and tied together. Ties are typicalled used to transition ...
