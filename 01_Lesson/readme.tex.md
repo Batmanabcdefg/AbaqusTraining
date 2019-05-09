@@ -115,7 +115,7 @@ In the above, we requested nodal field quantities (displacements <em> U </em>, r
 
 ## Viewing results
 
-After running the analysis as described in [Lesson 0](./../00_Lesson), we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
+After submitting the analysis job as described in [Lesson 0](./../00_Lesson), and the analysis is completed, we are ready to view the results using Abaqus Viewer. In this lesson, we will verify:
 
 * **Stresses**. The first obvious check that we can make is to confirm that we applied the correct stress value $0.13$. This can be confirmed by visualizing the stress in the (vertical) $Z$ direction $S_{33}$, which should be -0.13 (compressive).
 
