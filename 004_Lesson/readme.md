@@ -27,9 +27,12 @@ The block is composed of three 8-node brick elements (DC3D8). To make things mor
 The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 300 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
 ## Viewing results	
-	
+
+TODO
+
 ## Exercise 
 
+None
 
 ---
 ## Footnotes
