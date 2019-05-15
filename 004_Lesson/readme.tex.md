@@ -10,7 +10,7 @@ The flux associated with conduction across a surface is given by<sup>[a](#myfoot
 
 $q_s = -\bold{n} \cdot \bold{k} \cdot \dfrac{\partial \theta}{\partial \bold{x}}$
 
-which in this case can be reduced to the 1-dimensional problem:
+where $q_s$ is the surface flux, $\bold{n}$ is the surface normal, $\bold{k}$ is the conductivity tensor, and $\theta$ is the temperature. For our 1-dimensional problem, the above can be reduced to a scale equation:
 
 $q_s = -k \dfrac{\Delta\theta}{\Delta x} - \left(\theta_A - \theta_B\right)$
 
