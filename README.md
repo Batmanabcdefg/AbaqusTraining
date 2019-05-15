@@ -64,5 +64,7 @@ This lesson covers:
 
 ## [Lesson 4: Heat Transfer](004_Lesson#lesson-4-heat-transfer)
 
+ X. Defining amplitude function
+ 
 **In progress, incomplete**
  
