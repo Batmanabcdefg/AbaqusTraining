@@ -22,7 +22,9 @@ which can be used to check the accuracy of the thermal conduction procedure.
 
 ## Modeling
 
-The block is composed of three 8-node brick elements (DC3D8). To make things more interested, we also test the use of a non-conforming mesh where the block is split into top and bottom halves, which are meshed separately and tied together<sup>[b](#myfootnote1)</sup>. The tie is achieved using the keyword *CONTACT PAIR, and a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is prescribed under the keyword *GAP CONDUCTANCE. In the *CONTACT PAIR, the slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
+The block is composed of three 8-node brick elements (DC3D8). To make things more interested, we also test the use of a non-conforming mesh where the block is split into top and bottom halves, which are meshed separately and tied together<sup>[b](#myfootnote1)</sup>. 
+
+The tie is achieved using the keyword *CONTACT PAIR, and a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is prescribed under the keyword *GAP CONDUCTANCE. In the *CONTACT PAIR, the slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
 
 The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 300 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
