@@ -10,7 +10,7 @@ The flux associated with conduction across a surface is given by<sup>[a](#myfoot
 
 $q_s = -\bold{n}  \dfrac{\partial \theta}{\partial \bold{x}}$
 
-$\dot \bold{k} \dot$
+$\cdot \bold{k} \cdot$
 
 which in this case can be reduced to the 1-dimensional problem:
 
