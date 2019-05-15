@@ -27,7 +27,6 @@ TOP_BLOCK, S3
 BOT_BLOCK, S5
 ************************************************
 *Surface Interaction, name=Thermal_Contact
-1.,
 *Gap Conductance
  1e+06,   0.
     0., 0.05
