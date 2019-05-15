@@ -8,9 +8,7 @@ A steady-state heat transfer analysis of a unit block is performed. The top edge
 
 The flux associated with conduction across a surface is given by<sup>[a](#myfootnote1)</sup>: 
 
-$q_s = -\bold{n}  \dfrac{\partial \theta}{\partial \bold{x}}$
-
-$\cdot \bold{k} \cdot$
+$q_s = -\bold{n} \cdot \bold{k} \cdot \dfrac{\partial \theta}{\partial \bold{x}}$
 
 which in this case can be reduced to the 1-dimensional problem:
 
