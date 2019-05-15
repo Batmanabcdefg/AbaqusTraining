@@ -20,13 +20,20 @@ since <img src="/004_Lesson/tex/417e9d7f078cdb8c16592aee5f8c7687.svg?invert_in_d
 
 which can be used to check the accuracy of the thermal conduction procedure.
 
-## Nodes
+## Node definition
+
+
+## Element definition
 
 The block is composed of three 8-node brick elements (DC3D8). 
 
+
+
+## Element property
+
 	*SOLID SECTION,ELSET=ELALL,MATERIAL=EQUIL	
 
-## Material property
+## Material definition
 
 The sole material property associated with these elements is the thermal conductivity.
 
@@ -36,13 +43,16 @@ The sole material property associated with these elements is the thermal conduct
 
 To make things more interested, we also test the use of a non-conforming mesh where the block is split into top and bottom halves, which are meshed separately and tied together<sup>[b](#myfootnote1)</sup>. 
 
-The tie is achieved using the keyword *CONTACT PAIR, and a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is prescribed under the keyword *GAP CONDUCTANCE. 
+## Surface interaction
 
-	*Surface Interaction, name=Thermal_Contact
-	1.,
+For the interaction properties of the tied surface is specified using *SURFACE INTERACTION:
+
+	*Surface Interaction, name=Thermal_Contact	
 	*Gap Conductance
 	 1e+06,   0.
 		0., 0.05
+
+The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is specified.
 
 		
 # Thermal surfaces
@@ -55,8 +65,8 @@ The tie is achieved using the keyword *CONTACT PAIR, and a large thermal conduct
 	BOT_BLOCK, S5
 
 # Thermal contact
-	
-Thermal contact between the top and bottom blocks is specified using *CONTACT PAIR:
+		
+The top and bottom blocks are tied together using *CONTACT PAIR:
 	
 	*Contact Pair, interaction=Thermal_Contact, type=SURFACE TO SURFACE
 	BOT_BLOCK_TopSurf, TOP_BLOCK_BotSurf
