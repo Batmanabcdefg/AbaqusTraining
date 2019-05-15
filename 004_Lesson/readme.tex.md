@@ -4,7 +4,7 @@
 
 ## Background
 
-A steady-state heat transfer analysis of a unit block is performed. The top edge (B) of the block is prescribed with a distributed flux, while the bottom edge (A) has a prescribed temperature. All other edges are insulated. The thermal conductivity of the block material is 1.0. 
+A steady-state heat transfer analysis of a unit block is performed. The top edge (B) of the block is prescribed with a distributed flux, while the bottom edge (A) has a prescribed temperature. All other edges are insulated. The thermal conductivity of the block material is $k = 1$. 
 
 The flux associated with conduction across a surface is given by<sup>[a](#myfootnote1)</sup>: 
 
