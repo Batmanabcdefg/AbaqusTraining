@@ -10,7 +10,7 @@ The flux associated with conduction across a surface is given by<sup>[a](#myfoot
 
 <img src="/004_Lesson/tex/ae408535435f2a09ffe3f2fa5136a230.svg?invert_in_darkmode&sanitize=true" align=middle width=114.88108664999999pt height=45.072403200000004pt/>
 
-which in this case can be reduced to the 1-dimensional problem:
+where <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/> is the surface flux, <img src="/004_Lesson/tex/c2e026b8a86e00d5c521886fb6a64d89.svg?invert_in_darkmode&sanitize=true" align=middle width=10.502226899999991pt height=14.611878600000017pt/> is the surface normal, <img src="/004_Lesson/tex/4d05b05c2efa8462d93f554065731f8f.svg?invert_in_darkmode&sanitize=true" align=middle width=9.97711604999999pt height=22.831056599999986pt/> is the conductivity tensor, and <img src="/004_Lesson/tex/27e556cf3caa0673ac49a8f0de3c73ca.svg?invert_in_darkmode&sanitize=true" align=middle width=8.17352744999999pt height=22.831056599999986pt/> is the temperature. For our 1-dimensional problem, the above can be reduced to a scale equation:
 
 <img src="/004_Lesson/tex/97f0a98c672fd59814696638bd7a99ef.svg?invert_in_darkmode&sanitize=true" align=middle width=175.60577264999998pt height=45.072403200000004pt/>
 
