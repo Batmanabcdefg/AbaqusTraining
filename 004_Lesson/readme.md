@@ -55,7 +55,7 @@ For the interaction properties of the tied surface is specified using *SURFACE I
 The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is specified.
 
 		
-# Thermal surfaces
+## Thermal surfaces
 
 	*Surface, type=ELEMENT, name=TOP_BLOCK_TopSurf
 	TOP_BLOCK, S5
@@ -64,7 +64,7 @@ The conductance properties of the surface is prescribed using the keyword *GAP C
 	*Surface, type=ELEMENT, name=BOT_BLOCK_TopSurf
 	BOT_BLOCK, S5
 
-# Thermal contact
+## Thermal contact
 		
 The top and bottom blocks are tied together using *CONTACT PAIR:
 	
@@ -74,6 +74,8 @@ The top and bottom blocks are tied together using *CONTACT PAIR:
 The slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
 
 The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 300 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
+
+## Analysis step
 
 ## Viewing results	
 
