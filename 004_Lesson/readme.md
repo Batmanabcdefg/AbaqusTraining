@@ -8,7 +8,7 @@ A steady-state heat transfer analysis of a unit block is performed. The top edge
 
 The flux associated with conduction across a surface is given by<sup>[a](#myfootnote1)</sup>: 
 
-<img src="/004_Lesson/tex/1d2ddd892e4a094cb3fd7a32767c4a13.svg?invert_in_darkmode&sanitize=true" align=middle width=61.85301209999999pt height=39.45205439999999pt/>
+<img src="/004_Lesson/tex/f74bf6cc1b4592d7ce730aff1109988a.svg?invert_in_darkmode&sanitize=true" align=middle width=61.85301209999999pt height=39.45205439999999pt/>
 
 which in this case can be reduced to the 1-dimensional problem:
 
