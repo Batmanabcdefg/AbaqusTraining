@@ -136,7 +136,7 @@ The top and bottom blocks are tied together using *CONTACT PAIR:
 		
 The slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
 
-The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 300 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux $q_s$, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
+The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 500 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux $q_s$, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
 ## Analysis step
 
@@ -159,6 +159,8 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 We can visually check the nodal temperatures of the model.
 
 ![](./abaqus_input_files/Lesson004_Step1_Frame11_NT11.png)
+
+At the end of the analysis, the prescribed temperature at the base is $\theta_A = 500$ and the prescribed flux at the top is $q_s = 10$. Therefore, the temperature at the top should be $\theta_B = \theta_A + q_s = 510$. The nodal temperatures at the top jibe with this analytical value.
 
 ## Exercise 
 
