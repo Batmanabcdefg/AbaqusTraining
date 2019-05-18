@@ -22,7 +22,7 @@ v.restore()
 #v.maximize()
 
 # ====================================================================
-Jobname     = 'ContactInteractions'
+Jobname     = 'Lesson004'
 ODBFile     = Jobname+'.odb'
 StepVec      = [1]
 # ====================================================================
@@ -49,8 +49,8 @@ v.view.setProjection(projection=PARALLEL)
 # fit view
 session.viewports['Viewport: 1'].view.fitView()
 
-# rotate model so that vertical Z is up
-session.viewports['Viewport: 1'].view.rotate(xAngle=-90, yAngle=0, zAngle=0, mode=MODEL)
+#### rotate model so that vertical Z is up
+###session.viewports['Viewport: 1'].view.rotate(xAngle=-90, yAngle=0, zAngle=0, mode=MODEL)
 
 for StepNo in StepVec:
 
@@ -93,69 +93,19 @@ for StepNo in StepVec:
 		session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legendBox=OFF)
 		
 		# basename for fig file
-		base_figname = Jobname+'_Step'+str(StepNo)+'_Frame'+str(fNum[i])
+		base_figname = Jobname+'_Step'+str(StepNo)+'_Frame'+str(fNum[i])		
 		
 		# ========================================
-		# plot stress q
+		# plot temperature
 		# ========================================
-		v.odbDisplay.setPrimaryVariable(variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 'Mises'), )
-		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
-		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
-		
-		# output to TIFF file
-		session.printToFile(fileName=base_figname+'_VMS', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
-		
-		# ========================================
-		# plot stress E22
-		# ========================================
-		v.odbDisplay.setPrimaryVariable(variableLabel='E', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 'E22'))
-		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
-		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
-		
-		# output to TIFF file
-		session.printToFile(fileName=base_figname+'_E22', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
-		
-		# ========================================
-		# plot stress S33
-		# ========================================
-		v.odbDisplay.setPrimaryVariable(variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 'S33'))
-		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
-		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
-		
-		# output to TIFF file
-		session.printToFile(fileName=base_figname+'_S33', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
-		
-
-		
-		# ========================================
-		# plot displacement
-		# ========================================
-		session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
-		session.viewports['Viewport: 1'].view.fitView()
-		session.viewports['Viewport: 1'].view.setValues(nearPlane=4.60318, 
-			farPlane=7.21412, width=3.3969, height=1.39356, cameraPosition=(0.622208, 
-			-5.40885, 0.370479), cameraTarget=(0.622208, 0.499796, 0.370479))
-		session.viewports['Viewport: 1'].view.setValues(cameraPosition=(0.624203, 
-			-5.40885, 0.348549), cameraTarget=(0.624203, 0.499796, 0.348549))
-			
-		v.odbDisplay.setPrimaryVariable(variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U3'))
+		session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(variableLabel='NT11', outputPosition=NODAL)
 		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
 		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
 		
 		# output to TIFF file		
-		session.printToFile(fileName=base_figname+'_U3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+		session.printToFile(fileName=base_figname+'_NT11', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 		
-		# ========================================
-		# plot reaction force
-		# ========================================
-		v.odbDisplay.setPrimaryVariable(variableLabel='RF', outputPosition=NODAL, refinement=(COMPONENT, 'RF3'))
-		v.odbDisplay.display.setValues(plotState=CONTOURS_ON_DEF)
-		v.odbDisplay.contourOptions.setValues(spectrum='Rainbow', maxAutoCompute=ON, maxValue=0, minAutoCompute=ON, minValue=0, showMinLocation=OFF, showMaxLocation=OFF)
-		
-		# output to TIFF file
-		session.printToFile(fileName=base_figname+'_RF3', format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
 
-		
 
 odb.close()
 

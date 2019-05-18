@@ -1,0 +1,87 @@
+** ***************************************************************************
+**   Written by : Femap
+**   Version    : 11.3.0
+**   From Model : I:\LA\Users\KLim\Projects\AbaqusVerification\Abq612_HeatTransferCases\ABQ-24-Incomplete\ABQ-24.modfem
+**   Date       : Tue Aug 23 11:27:54 2016
+** ***************************************************************************
+** 
+*HEADING
+ABAQUS Static Analysis Set
+*NODE, NSET=GLOBAL
+       1,          0.,          0.,          0.
+       2,   0.3333333,          0.,          0.
+       3,   0.6666667,          0.,          0.
+       4,          1.,          0.,          0.
+       5,          1.,         0.5,          0.
+       6,          0.,         0.5,          0.
+       7,   0.3333333,         0.5,          0.
+       8,   0.6666667,         0.5,          0.
+       9,          0.,          0.,        -0.5
+      10,   0.3333333,          0.,        -0.5
+      11,   0.6666667,          0.,        -0.5
+      12,          1.,          0.,        -0.5
+      13,          1.,         0.5,        -0.5
+      14,          0.,         0.5,        -0.5
+      15,   0.3333333,         0.5,        -0.5
+      16,   0.6666667,         0.5,        -0.5
+      20,          1.,          1.,          0.
+      21,          0.,          1.,          0.
+      22,          0.,         0.5,          0.
+      23,          1.,         0.5,          0.
+      28,          1.,          1.,        -0.5
+      29,          0.,          1.,        -0.5
+      30,          0.,         0.5,        -0.5
+      31,          1.,         0.5,        -0.5
+*ELEMENT, TYPE=DC3D8, ELSET=ELALL
+      1,      9,     10,     15,     14,      1,      2,      7,      6
+      2,     10,     11,     16,     15,      2,      3,      8,      7
+      3,     11,     12,     13,     16,      3,      4,      5,      8
+      4,     30,     31,     28,     29,     22,     23,     20,     21
+*NSET,NSET=EDGEA
+1,2,3,4,9,10,11,12
+*ELSET, ELSET=BOT_BLOCK
+1,2,3
+*ELSET, ELSET=TOP_BLOCK
+4
+*ELSET, ELSET=OUT_CONT
+1,2,3,4
+*SOLID SECTION,ELSET=ELALL,MATERIAL=EQUIL
+*MATERIAL,NAME=EQUIL
+*CONDUCTIVITY
+1., 
+************************************************
+*Surface, type=ELEMENT, name=TOP_BLOCK_TopSurf
+TOP_BLOCK, S5
+*Surface, type=ELEMENT, name=TOP_BLOCK_BotSurf
+TOP_BLOCK, S3
+*Surface, type=ELEMENT, name=BOT_BLOCK_TopSurf
+BOT_BLOCK, S5
+************************************************
+*Surface Interaction, name=Thermal_Contact
+1.,
+*Gap Conductance
+ 1e+06,   0.
+    0., 0.05
+** Interaction: Thermal_Contact
+*Contact Pair, interaction=Thermal_Contact, type=SURFACE TO SURFACE
+BOT_BLOCK_TopSurf, TOP_BLOCK_BotSurf
+************************************************
+*AMPLITUDE, NAME=RAMPQ
+0.0,0.0,1.0,10.0
+************************************************
+*STEP,INC=50
+*HEAT TRANSFER,STEADY STATE
+.1,1.,.25,.1
+*BOUNDARY
+EDGEA,11,11,500.
+*DSFLUX, AMPLITUDE=RAMPQ, OP=MOD
+TOP_BLOCK_TopSurf,S,1.
+*NODE PRINT,FREQ=1
+NT11,RFL
+*EL PRINT,FREQ=2
+HFL, 
+*NODE FILE,FREQ=2
+NT, 
+*EL FILE,FREQ=2
+HFL, 
+*END STEP

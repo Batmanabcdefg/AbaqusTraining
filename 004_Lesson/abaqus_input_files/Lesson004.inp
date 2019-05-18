@@ -1,0 +1,113 @@
+*NODE, NSET=GLOBAL
+       1,          0.,          0.,          0.
+       2,         0.5,          0.,          0.
+       3,          1.,          0.,          0.
+       4,          1.,         0.5,          0.
+       5,          0.,         0.5,          0.
+       6,         0.5,         0.5,          0.
+       7,          0.,          0.,        -0.5
+       8,         0.5,          0.,        -0.5
+       9,          1.,          0.,        -0.5
+      10,          1.,         0.5,        -0.5
+      11,          0.,         0.5,        -0.5
+      12,         0.5,         0.5,        -0.5
+      13,          1.,          1.,          0.
+      14,          0.,          1.,          0.
+      15,          0.,         0.5,          0.
+      16,          1.,         0.5,          0.
+      17,          1.,          1.,        -0.5
+      18,          0.,          1.,        -0.5
+      19,          0.,         0.5,        -0.5
+      20,          1.,         0.5,        -0.5
+*ELEMENT, TYPE=DC3D8, ELSET=ALL
+      1,      7,      8,     12,     11,      1,      2,      6,      5
+      2,      8,      9,     10,     12,      2,      3,      4,      6
+      3,     19,     20,     17,     18,     15,     16,     13,     14
+*************************************************
+** Nodes at the base of the model
+*************************************************
+*NSET, NSET=EDGEA
+1,2,3,7,8,9
+*************************************************
+** Bottom Blocks
+*************************************************
+******NSET, NSET=GBOT_BLOCK_NSET
+*****1,2,3,4,5,6,7,8,9,10
+*****11,12
+*ELSET, ELSET=BOT_BLOCK
+1,2
+*************************************************
+** Top Block
+*************************************************
+******NSET, NSET=TOP_BLOCK_NSET
+*****13,14,15,16,17,18,19,20
+*ELSET, ELSET=TOP_BLOCK
+3
+*************************************************
+** Section property for all elements
+*************************************************
+*SOLID SECTION, ELSET=ALL, MATERIAL=M1
+*************************************************
+** Material property for all elements
+*************************************************
+*MATERIAL,NAME=M1
+*CONDUCTIVITY
+1.,
+************************************************
+** Top surface of top block
+************************************************
+*Surface, type=ELEMENT, name=TOP_BLOCK_TopSurf
+TOP_BLOCK, S5
+************************************************
+** Bottom surface of top block
+************************************************
+*Surface, type=ELEMENT, name=TOP_BLOCK_BotSurf
+TOP_BLOCK, S3
+************************************************
+** Top surface of bottom blocks
+************************************************
+*Surface, type=ELEMENT, name=BOT_BLOCK_TopSurf
+BOT_BLOCK, S5
+************************************************
+** Thermal surface properties
+************************************************
+*Surface Interaction, name=Thermal_Contact
+*Gap Conductance
+ 1.e6,   0.
+ 1.e6, 0.05
+**
+** Interaction: Thermal_Contact
+** Slave surface followed by master surface 
+**
+*Contact Pair, interaction=Thermal_Contact, type=SURFACE TO SURFACE
+BOT_BLOCK_TopSurf, TOP_BLOCK_BotSurf
+*************************************************
+** Ramp function
+*************************************************
+*AMPLITUDE, NAME=RampQ, DEFINITION=TABULAR
+0.,0.,    1.,10.
+*************************************************
+** Transient heat transfer step
+*************************************************
+*STEP,INC=50
+*HEAT TRANSFER,STEADY STATE
+0.1,1.0,0.25,0.1
+**
+** Prescribed nodal temperature at base of model
+**
+*BOUNDARY
+EDGEA,11,11,500.
+**
+** Prescribed flux at the top surface of the model
+**
+*DSFLUX, AMPLITUDE=RAMPQ, OP=MOD
+TOP_BLOCK_TopSurf,S,1.
+**
+** Output request
+**
+*OUTPUT, FIELD, FREQ=1
+*NODE OUTPUT
+NT,RFL
+*ELEMENT OUTPUT
+HFL, 
+*END STEP

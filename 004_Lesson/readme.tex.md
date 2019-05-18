@@ -22,20 +22,73 @@ which can be used to check the accuracy of the thermal conduction procedure.
 
 ## Node definition
 
+Nodes are defined using *NODE:
+
+	*NODE, NSET=GLOBAL
+		   1,          0.,          0.,          0.
+		   2,         0.5,          0.,          0.
+		   3,          1.,          0.,          0.
+		   4,          1.,         0.5,          0.
+		   5,          0.,         0.5,          0.
+		   6,         0.5,         0.5,          0.
+		   7,          0.,          0.,        -0.5
+		   8,         0.5,          0.,        -0.5
+		   9,          1.,          0.,        -0.5
+		  10,          1.,         0.5,        -0.5
+		  11,          0.,         0.5,        -0.5
+		  12,         0.5,         0.5,        -0.5
+		  13,          1.,          1.,          0.
+		  14,          0.,          1.,          0.
+		  15,          0.,         0.5,          0.
+		  16,          1.,         0.5,          0.
+		  17,          1.,          1.,        -0.5
+		  18,          0.,          1.,        -0.5
+		  19,          0.,         0.5,        -0.5
+		  20,          1.,         0.5,        -0.5
 
 ## Element definition
 
-The block is composed of three 8-node brick elements (DC3D8). 
+The block is composed of three 8-node brick elements of type DC3D8 (note the D in front). 
 
+	*ELEMENT, TYPE=DC3D8, ELSET=ALL
+		  1,      7,      8,     12,     11,      1,      2,      6,      5
+		  2,      8,      9,     10,     12,      2,      3,      4,      6
+		  3,     19,     20,     17,     18,     15,     16,     13,     14
 
+All the elements are grouped in the element set ALL.		  
 
+## Node groups
+
+We define the group for the nodes at the base of the model on which we will be prescribing the nodal temperatures.
+
+	*************************************************
+	** Nodes at the base of the model
+	*************************************************
+	*NSET, NSET=EDGEA
+	1,2,3,7,8,9
+
+## Element groups
+	
+We create the element groups for the top half and bottom half of the model. These elements will be used to define surfaces for thermal contact and prescribed flux as described in Surface interaction below.
+
+	*************************************************
+	** Bottom Blocks
+	*************************************************
+	*ELSET, ELSET=BOT_BLOCK
+	1,2
+	*************************************************
+	** Top Block
+	*************************************************
+	*ELSET, ELSET=TOP_BLOCK
+	3
+		  
 ## Element property
 
-	*SOLID SECTION,ELSET=ELALL,MATERIAL=EQUIL	
+	*SOLID SECTION,ELSET=ALL,MATERIAL=M1	
 
 ## Material definition
 
-The sole material property associated with these elements is the thermal conductivity.
+The sole material property associated with all elements is the thermal conductivity.
 
 	*MATERIAL,NAME=EQUIL
 	*CONDUCTIVITY
@@ -49,18 +102,28 @@ For the interaction properties of the tied surface is specified using *SURFACE I
 
 	*Surface Interaction, name=Thermal_Contact	
 	*Gap Conductance
-	 1e+06,   0.
-		0., 0.05
+	 1.e6,   0.
+	 1.e6,   0.05
 
-The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity ($1e6$) of the tied surface is specified.
-
+The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity ($1e6$) of the tied surface is specified at zero distance. Note: Abaqus requires two pairs of points are needed; the second line is just a repeat at some nonzero distance away from the surface.
 		
 ## Thermal surfaces
 
+Using the element groups defined earlier, we define the following surfaces:
+
+	************************************************
+	** Top surface of top block
+	************************************************
 	*Surface, type=ELEMENT, name=TOP_BLOCK_TopSurf
 	TOP_BLOCK, S5
+	************************************************
+	** Bottom surface of top block
+	************************************************
 	*Surface, type=ELEMENT, name=TOP_BLOCK_BotSurf
 	TOP_BLOCK, S3
+	************************************************
+	** Top surface of bottom blocks
+	************************************************
 	*Surface, type=ELEMENT, name=BOT_BLOCK_TopSurf
 	BOT_BLOCK, S5
 
@@ -79,7 +142,9 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 
 ## Viewing results	
 
-TODO
+We can visually check the nodal temperatures of the model.
+
+![](./abaqus_input_files/Lesson004_Step11_Frame11_NT11.png)
 
 ## Exercise 
 
