@@ -158,7 +158,7 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 
 We can visually check the nodal temperatures of the model.
 
-![](./abaqus_input_files/Lesson004_Step11_Frame11_NT11.png)
+![](./abaqus_input_files/Lesson004_Step1_Frame11_NT11.png)
 
 ## Exercise 
 
