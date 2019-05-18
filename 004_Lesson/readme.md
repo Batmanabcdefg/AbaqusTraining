@@ -136,7 +136,7 @@ The top and bottom blocks are tied together using *CONTACT PAIR:
 		
 The slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
 
-The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 300 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
+The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 500 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
 ## Analysis step
 
@@ -159,6 +159,8 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 We can visually check the nodal temperatures of the model.
 
 ![](./abaqus_input_files/Lesson004_Step1_Frame11_NT11.png)
+
+At the end of the analysis, the prescribed temperature at the base is <img src="/004_Lesson/tex/0e51e3366d6fb575fb54c79363d576af.svg?invert_in_darkmode&sanitize=true" align=middle width=64.99995809999999pt height=22.831056599999986pt/> and the prescribed flux at the top is <img src="/004_Lesson/tex/3d767a357f45c1881feec4702c5d780c.svg?invert_in_darkmode&sanitize=true" align=middle width=52.72064489999999pt height=21.18721440000001pt/>. Therefore, the temperature at the top should be <img src="/004_Lesson/tex/6099b6c3a9463ee47dddec53d978c4f9.svg?invert_in_darkmode&sanitize=true" align=middle width=140.40478155pt height=22.831056599999986pt/>. The nodal temperatures at the top jibe with this analytical value.
 
 ## Exercise 
 
