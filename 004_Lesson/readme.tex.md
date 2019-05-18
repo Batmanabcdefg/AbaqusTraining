@@ -140,6 +140,20 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 
 ## Analysis step
 
+	*STEP,INC=50
+	*HEAT TRANSFER,STEADY STATE
+	0.1,1.0,0.25,0.1
+	**
+	** Prescribed nodal temperature at base of model
+	**
+	*BOUNDARY
+	EDGEA,11,11,500.
+	**
+	** Prescribed flux at the top surface of the model
+	**
+	*DSFLUX, AMPLITUDE=RAMPQ, OP=MOD
+	TOP_BLOCK_TopSurf,S,1.
+
 ## Viewing results	
 
 We can visually check the nodal temperatures of the model.
