@@ -1,20 +1,22 @@
 # Lesson 4: Heat Transfer
 
+**In progress and incomplete**
+
 ## Background
 
-A steady-state heat transfer analysis of a unit block is performed. The top edge (B) of the block is prescribed with a distributed flux, while the bottom edge (A) has a prescribed temperature. All other edges are insulated. The thermal conductivity of the block material is $k = 1$. 
+A steady-state heat transfer analysis of a unit block is performed. The top edge (B) of the block is prescribed with a distributed flux, while the bottom edge (A) has a prescribed temperature. All other edges are insulated. The thermal conductivity of the block material is <img src="/004_Lesson/tex/417e9d7f078cdb8c16592aee5f8c7687.svg?invert_in_darkmode&sanitize=true" align=middle width=39.21220214999999pt height=22.831056599999986pt/>. 
 
 The flux associated with conduction across a surface is given by<sup>[a](#myfootnote1)</sup>: 
 
-$q_s = -\bold{n} \cdot \bold{k} \cdot \dfrac{\partial \theta}{\partial \bold{x}}$
+<img src="/004_Lesson/tex/ae408535435f2a09ffe3f2fa5136a230.svg?invert_in_darkmode&sanitize=true" align=middle width=114.88108664999999pt height=45.072403200000004pt/>
 
-where $q_s$ is the surface flux, $\bold{n}$ is the surface normal, $\bold{k}$ is the conductivity tensor, and $\theta$ is the temperature. For our 1-dimensional problem, the above can be reduced to a scalar equation:
+where <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/> is the surface flux, <img src="/004_Lesson/tex/c2e026b8a86e00d5c521886fb6a64d89.svg?invert_in_darkmode&sanitize=true" align=middle width=10.502226899999991pt height=14.611878600000017pt/> is the surface normal, <img src="/004_Lesson/tex/4d05b05c2efa8462d93f554065731f8f.svg?invert_in_darkmode&sanitize=true" align=middle width=9.97711604999999pt height=22.831056599999986pt/> is the conductivity tensor, and <img src="/004_Lesson/tex/27e556cf3caa0673ac49a8f0de3c73ca.svg?invert_in_darkmode&sanitize=true" align=middle width=8.17352744999999pt height=22.831056599999986pt/> is the temperature. For our 1-dimensional problem, the above can be reduced to a scale equation:
 
-$q_s = -k \dfrac{\Delta\theta}{\Delta x} - \left(\theta_A - \theta_B\right)$
+<img src="/004_Lesson/tex/97f0a98c672fd59814696638bd7a99ef.svg?invert_in_darkmode&sanitize=true" align=middle width=175.60577264999998pt height=45.072403200000004pt/>
 
-since $k = 1$ and $\Delta x = 1$. This gives:
+since <img src="/004_Lesson/tex/417e9d7f078cdb8c16592aee5f8c7687.svg?invert_in_darkmode&sanitize=true" align=middle width=39.21220214999999pt height=22.831056599999986pt/> and <img src="/004_Lesson/tex/e937ba1d3e4f9e2abb84171f9ab72a0d.svg?invert_in_darkmode&sanitize=true" align=middle width=53.23049984999998pt height=22.465723500000017pt/>. This gives:
 
-$\theta_B = \theta_A + q_s$. 
+<img src="/004_Lesson/tex/24f88f149536bd362616cb16039705a9.svg?invert_in_darkmode&sanitize=true" align=middle width=93.00760919999999pt height=22.831056599999986pt/>. 
 
 which can be used to check the accuracy of the thermal conduction procedure.
 
@@ -103,7 +105,7 @@ For the interaction properties of the tied surface is specified using *SURFACE I
 	 1.e6,   0.
 	 1.e6,   0.05
 
-The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity ($1e6$) of the tied surface is specified at zero distance. Note: Abaqus requires two pairs of points are needed; the second line is just a repeat at some nonzero distance away from the surface.
+The conductance properties of the surface is prescribed using the keyword *GAP CONDUCTANCE. Here, a large thermal conductivity (<img src="/004_Lesson/tex/876fd957d8cc6f84f8dc48ba76a1a494.svg?invert_in_darkmode&sanitize=true" align=middle width=24.09255749999999pt height=21.18721440000001pt/>) of the tied surface is specified at zero distance. Note: Abaqus requires two pairs of points are needed; the second line is just a repeat at some nonzero distance away from the surface.
 		
 ## Thermal surfaces
 
@@ -134,7 +136,7 @@ The top and bottom blocks are tied together using *CONTACT PAIR:
 		
 The slave surface is associated with the bottom half and the master surface is associated with the top half of the block.
 
-The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 500 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux $q_s$, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
+The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 500 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux <img src="/004_Lesson/tex/2f128f854fd9ff3109e6b9c75fa629a0.svg?invert_in_darkmode&sanitize=true" align=middle width=13.54268354999999pt height=14.15524440000002pt/>, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
 ## Analysis step
 
@@ -158,7 +160,7 @@ We can visually check the nodal temperatures of the model.
 
 ![](./abaqus_input_files/Lesson004_Step1_Frame11_NT11.png)
 
-At the end of the analysis, the prescribed temperature at the base is $\theta_A = 500$ and the prescribed flux at the top is $q_s = 10$. Therefore, the temperature at the top should be $\theta_B = \theta_A + q_s = 510$. The nodal temperatures at the top jibe with this analytical value.
+At the end of the analysis, the prescribed temperature at the base is <img src="/004_Lesson/tex/0e51e3366d6fb575fb54c79363d576af.svg?invert_in_darkmode&sanitize=true" align=middle width=64.99995809999999pt height=22.831056599999986pt/> and the prescribed flux at the top is <img src="/004_Lesson/tex/3d767a357f45c1881feec4702c5d780c.svg?invert_in_darkmode&sanitize=true" align=middle width=52.72064489999999pt height=21.18721440000001pt/>. Therefore, the temperature at the top should be <img src="/004_Lesson/tex/6099b6c3a9463ee47dddec53d978c4f9.svg?invert_in_darkmode&sanitize=true" align=middle width=140.40478155pt height=22.831056599999986pt/>. The nodal temperatures at the top jibe with this analytical value.
 
 ## Exercise 
 

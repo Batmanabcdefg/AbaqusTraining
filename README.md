@@ -18,6 +18,7 @@ Table of Contents
   * [Lesson 2: Predefined Field Variables](#lesson-2-predefined-field-variables)  
   * [Lesson 3: Contact Interactions](#lesson-3-contact-interactions)  
   * [Lesson 4: Heat Transfer](#lesson-4-heat-transfer)  
+  * [Lesson 5: Concrete Damage Plasticity](#lesson-5-concrete-damage-plasticity)
   
 ---
 
@@ -64,7 +65,11 @@ This lesson covers:
 
 ## [Lesson 4: Heat Transfer](004_Lesson#lesson-4-heat-transfer)
 
- X. Defining amplitude function
+ 1. Steady-state heat transfer analysis
+ 2. Defining amplitude function
+ 3. Defining heat flux
+
+## [Lesson 5: Concrete Damage Plasticity](005_Lesson#lesson-5-concrete-damage-plasticity)
  
 **In progress, incomplete**
  
