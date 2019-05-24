@@ -187,4 +187,6 @@ None
 
 ---
 ## Additional Comments on This Lesson (Links to Milo)
-None
+
+https://milo.sgh.com/community/software/blog/2019/05/24/elementary-abaqus-heat-transfer-analysis
+
