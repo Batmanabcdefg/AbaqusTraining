@@ -84,7 +84,7 @@ BOT_BLOCK_TopSurf, TOP_BLOCK_BotSurf
 *************************************************
 ** Ramp function
 *************************************************
-*AMPLITUDE, NAME=RampQ, DEFINITION=TABULAR
+*AMPLITUDE, NAME=RAMPQ, DEFINITION=TABULAR
 0.,0.,    1.,10.
 *************************************************
 ** Transient heat transfer step

@@ -136,7 +136,19 @@ The slave surface is associated with the bottom half and the master surface is a
 
 The block has 1 element at the top half and 2 elements at the bottom half. The base of the block (side A) is prescribed a temperature, which is ramped from 0 to 500 within duration of 1.0. The opposite side (top; side B) of the block has a uniform distributed flux $q_s$, which is prescribed using the keyword *DSFLUX and ramped from 0 to 10 using the keyword *AMPLITUDE.
 
+## Amplitude function definition
+
+We define an amplitude function, named <em> RAMPQ </em>, to ramp the heat flux from $0$ to $10$ from time $0$ to $1$:
+
+	*************************************************
+	** Ramp function
+	*************************************************
+	*AMPLITUDE, NAME=RAMPQ, DEFINITION=TABULAR
+	0.,0.,    1.,10.
+
 ## Analysis step
+
+Heat transfer analysis is performed using the keyword <em> *HEAT TRANSFER </em> and with the option <em> STEADY STATE </em>. The  time stepping parameters are identical to those used in static analyses (for e.g., see [Lesson 1](./../01_Lesson)).
 
 	*STEP,INC=50
 	*HEAT TRANSFER,STEADY STATE
@@ -152,9 +164,11 @@ The block has 1 element at the top half and 2 elements at the bottom half. The b
 	*DSFLUX, AMPLITUDE=RAMPQ, OP=MOD
 	TOP_BLOCK_TopSurf,S,1.
 
+The boundary conditions are the nodal temperatures (degree of freedom $11$) of $500$ at the base of the model. The reference value of the heat flux of $1.0$ is prescribed at the top of the model using the keyword <em> *DSFLUX </em>. During analysis, this reference valued will be scaled by the amplitude function <em> RAMPQ </em> defined above.
+	
 ## Viewing results	
 
-We can visually check the nodal temperatures of the model.
+After performing the steady-state heat transfer analysis, we can visually check the nodal temperatures of the model.
 
 ![](./abaqus_input_files/Lesson004_Step1_Frame11_NT11.png)
 
