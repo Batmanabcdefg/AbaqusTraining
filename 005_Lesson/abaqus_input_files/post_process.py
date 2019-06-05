@@ -85,7 +85,7 @@ numdata = len(store_E11)
 
 f = open('results.dat', 'w')
 for i in range(0,numdata):
-	f.write('%d %20.8e %20.8e %20.8e %20.8e %20.8e %20.8e %20.8e %20.8e\n'
+	f.write('%d, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e\n'
 			%(i,store_E11[i],store_E22[i],store_E33[i],
 			  store_S11[i],store_S22[i],store_S33[i],
 			  store_Q[i],store_P[i]))
