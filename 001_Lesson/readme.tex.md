@@ -78,7 +78,7 @@ In addition, within the analysis step, we specify:
 	
 ### Boundary conditions
 
-The boundary conditions are such that we have symmetry boundary conditions on the planes $X = 0$, $Y = 0$ and $Z = 0$.
+The boundary conditions are such that we have symmetry boundary conditions on the planes $X =0$, $Y = 0$ and $Z = 0$.
 
 	*BOUNDARY
 	1,    1
