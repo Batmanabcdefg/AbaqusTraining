@@ -1,0 +1,19 @@
+*PARAMETER
+Emod    = 100.0 <= 100.0>
+nu      = 0.3 <= 0.3>
+sigy0   = 3.0 <= 3.0>
+Hmod    = 1.0 <= 1.0>
+sigy1   = sigy0+Hmod*1.0 <= 4.0>
+*************** <ABAQUS comment>
+InitialPressure = 5.0 <= 5.0>
+*************** <ABAQUS comment>
+NSTEPS = 10 <= 10>
+DT     = 1.0/60 <= 0.016666666666666666>
+DTMIN  = 1.e-12 <= 1e-12>
+DTMAX  = 0.1 <= 0.1>
+DEPS   = 0.01 <= 0.01>
+EPS0   = InitialPressure*(1.0-2.0*nu)/Emod; <= 0.02>
+EPS1   = EPS0 + NSTEPS*DEPS <= 0.12000000000000001>
+*** <ABAQUS comment>
+SidePressureY   = InitialPressure <= 5.0>
+************** <ABAQUS comment>

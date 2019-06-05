@@ -3,7 +3,7 @@
 
 =================
 
-Abaqus Elementary Lessons 
+Abaqus Lessons 
 
 =================
 
@@ -12,13 +12,20 @@ Abaqus Elementary Lessons
 Table of Contents
 =================
 
+Elementary:
+
   * [Latest News on Tips, Tricks and Guidance on Use of Abaqus (Links to Milo)](LatestNews#Latest-News)  
   * [Lesson 0: Administrative](#lesson-0-administrative)  
   * [Lesson 1: Overview of a Model](#lesson-1-overview-of-a-model)  
   * [Lesson 2: Predefined Field Variables](#lesson-2-predefined-field-variables)  
   * [Lesson 3: Contact Interactions](#lesson-3-contact-interactions)  
   * [Lesson 4: Heat Transfer](#lesson-4-heat-transfer)  
-  * [Lesson 5: Concrete Damage Plasticity](#lesson-5-concrete-damage-plasticity)
+
+Intermediate:
+  
+  * [Lesson 5: Metal Plasticity](#lesson-5-metal-plasticity)
+  * [Lesson 6: Drucker Prager](#lesson-6-drucker-prager)
+  * [Lesson 7: Concrete Damage Plasticity](#lesson-7-concrete-damage-plasticity)
   
 ---
 
@@ -69,7 +76,15 @@ This lesson covers:
  2. Defining amplitude function
  3. Defining heat flux
 
-## [Lesson 5: Concrete Damage Plasticity](005_Lesson#lesson-5-concrete-damage-plasticity)
+## [Lesson 5: Metal Plasticity](005_Lesson#lesson-5-metal-plasticity)
+ 
+**In progress, incomplete**
+
+## [Lesson 6: Drucker Prager](006_Lesson#lesson-6-drucker-prager)
+ 
+**In progress, incomplete**
+ 
+## [Lesson 7: Concrete Damage Plasticity](005_Lesson#lesson-7-concrete-damage-plasticity)
  
 **In progress, incomplete**
  
