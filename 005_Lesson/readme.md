@@ -1,4 +1,4 @@
-# Lesson 5: Concrete Damage Plasticity
+# Lesson 5: Metal Plasticity
 
 **In progress, incomplete**
 
