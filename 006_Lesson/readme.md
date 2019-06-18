@@ -1,4 +1,4 @@
-# Lesson 5: Metal Plasticity
+# Lesson 6: Drucker Prager
 
 **In progress, incomplete**
 
