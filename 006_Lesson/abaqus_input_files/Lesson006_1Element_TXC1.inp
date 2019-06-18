@@ -27,11 +27,15 @@ ABAQUS Static Analysis Set
 *SOLID SECTION, ELSET=P1, MATERIAL=M1
 **********************************************************************
 *PARAMETER
-Emod    = 100.0
-nu      = 0.3
-sigy0   = 3.0
+Emod     = 100.0
+nu       = 0.3
+fric_ang = 0.0
+K_ratio  = 1.0
+dil_ang  = 0.0
+eccentricity = 1.e-6
 Hmod    = 1.0
-sigy1   = sigy0+Hmod*1.0
+coh0    = 3.0
+coh1    = coh0+Hmod*1.0
 ***************
 InitialPressure = 5.0
 ***************
@@ -48,9 +52,11 @@ SidePressureY   = InitialPressure
 *MATERIAL, NAME=M1
 *ELASTIC
 <Emod>,<nu>
-*PLASTIC
-<sigy0>,0.0
-<sigy1>,1.0
+*DRUCKER PRAGER, ECCENTRICITY=<eccentricity>
+<fric_ang>,<K_ratio>,<dil_ang>
+*DRUCKER PRAGER HARDENING
+<coh0>,0.0
+<coh1>,1.0
 **********************************************************************
 ** Load Amplitudes
 **********************************************************************

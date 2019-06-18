@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-jobname = 'Lesson005_1Element_TXC'
+jobname = 'Lesson006_1Element_TXC2'
 remove_consolidation_step = True
 
 # ================================================================

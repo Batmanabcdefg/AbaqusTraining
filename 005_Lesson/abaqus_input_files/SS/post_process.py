@@ -7,8 +7,7 @@ from odbSection import *
 from abaqusConstants import *
 import numpy as np
 
-jobname = 'Lesson006_1Element_TXC1'
-odbName=jobname+'.odb'
+odbName='Lesson005_1Element_TXC.odb'
 step_vec = [1,2]
 
 odb = openOdb(odbName)
@@ -16,7 +15,6 @@ assembly = odb.rootAssembly
 
 elementSet = odb.rootAssembly.instances['PART-1-1'].elementSets['P1']
 
-store_step = []
 store_E11 = []
 store_E22 = []
 store_E33 = []
@@ -29,7 +27,7 @@ store_P = []
 	
 integ_point=0
 
-for step_counter,step in enumerate(step_vec):
+for step in step_vec:
 	
 	step_name = 'Step-'+str(step)
 	print 'Processing Step:', odb.steps[step_name].number
@@ -52,7 +50,6 @@ for step_counter,step in enumerate(step_vec):
 		Q = sqrt( 0.5*( (S11-S22)**2+(S22-S33)**2+(S33-S11)**2 ) )
 		print('p = %f, q = %f'%(P,Q))
 		
-		store_step.append(step_counter+1)
 		store_E11.append(E11) 
 		store_E22.append(E22) 
 		store_E33.append(E33) 		
@@ -86,10 +83,10 @@ numdata = len(store_E11)
 #	store_shear_stress[i]      = store_shear_stress[i]-S0
 	
 
-f = open(jobname + '_results.dat', 'w')
+f = open('results.dat', 'w')
 for i in range(0,numdata):
 	f.write('%d, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e, %20.8e\n'
-			%(store_step[i],store_E11[i],store_E22[i],store_E33[i],
+			%(i,store_E11[i],store_E22[i],store_E33[i],
 			  store_S11[i],store_S22[i],store_S33[i],
 			  store_Q[i],store_P[i]))
 	

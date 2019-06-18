@@ -26,42 +26,25 @@ ABAQUS Static Analysis Set
 **********************************************************************
 *SOLID SECTION, ELSET=P1, MATERIAL=M1
 **********************************************************************
-*PARAMETER
-Emod    = 100.0
-nu      = 0.3
-sigy0   = 3.0
-Hmod    = 1.0
-sigy1   = sigy0+Hmod*1.0
-***************
-InitialPressure = 5.0
-***************
-NSTEPS = 10
-DT     = 1.0/60
-DTMIN  = 1.e-12
-DTMAX  = 0.02
-DEPS   = 0.01
-EPS0   = InitialPressure*(1.0-2.0*nu)/Emod;
-EPS1   = EPS0 + NSTEPS*DEPS
-***
-SidePressureY   = InitialPressure
-**************
 *MATERIAL, NAME=M1
 *ELASTIC
-<Emod>,<nu>
-*PLASTIC
-<sigy0>,0.0
-<sigy1>,1.0
+100.0,0.3
+*DRUCKER PRAGER, ECCENTRICITY=1e-06
+0.0,1.0,0.0
+*DRUCKER PRAGER HARDENING
+3.0,0.0
+4.0,1.0
 **********************************************************************
 ** Load Amplitudes
 **********************************************************************
 *AMPLITUDE, TIME=TOTAL TIME, NAME=PlaneDispAmplitude
 0.0,0.0
-1.0,<EPS0>
-2.0,<EPS1>
+1.0,0.02
+2.0,0.12
 *AMPLITUDE, TIME=TOTAL TIME, NAME=SidePres_Amplitude
 0.0,0.0
-1.0,<InitialPressure>
-2.0,<SidePressureY>
+1.0,5.0
+2.0,5.0
 **********************************************************************
 ** Load Step 1 - Initial Confinement
 ** Take one step - material responds elastically under isotropic 
@@ -70,7 +53,7 @@ SidePressureY   = InitialPressure
 *STEP, UNSYMM=YES, NLGEOM=NO, INC=99999999
 Confinement
 *STATIC
-<DT>,1.0,<DTMIN>,<DTMAX>
+0.0166666666667,1.0,1e-12,0.02
 *OUTPUT, FIELD
 *NODE OUTPUT
 U,RF
@@ -112,5 +95,5 @@ E11,E22,E33,S11,S22,S33,MISES
 *STEP, UNSYMM=YES, NLGEOM=NO, INC=99999999
 Shearing
 *STATIC
-<DT>,1.0,<DTMIN>,<DTMAX>
+0.0166666666667,1.0,1e-12,0.02
 *END STEP

@@ -1,6 +1,6 @@
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:52:53
+   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:51:31
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
 
@@ -68,7 +68,7 @@
 
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:52:53
+   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:51:31
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
                                                                                      
@@ -102,7 +102,11 @@
   *ELSET, ELSET=OUT_CONT
   *MATERIAL, NAME=M1
   *ELASTIC
-  *PLASTIC
+  *DRUCKER PRAGER, ECCENTRICITY=1e-06
+
+ ***WARNING: THE ECCENTRICITY PARAMETER WILL ONLY BE USED IF CREEP PROPERTIES 
+             ARE SPECIFIED.
+  *DRUCKER PRAGER HARDENING
   *SOLID SECTION, ELSET=P1, MATERIAL=M1
   *SOLID SECTION, ELSET=P1, MATERIAL=M1
   *BOUNDARY, OP=MOD
@@ -190,7 +194,7 @@
        WALLCLOCK TIME (SEC) =          0
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:52:55
+   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:51:33
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
      ABAQUS Static Analysis Set                                                                STEP    1  INCREMENT    1
@@ -251,7 +255,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:52:56
+   Abaqus 3DEXPERIENCE R2018x                                  Date 18-Jun-2019   Time 10:51:34
    For use by SIMPSON GUMPERTZ AND HEGER INC under license from Dassault Systemes or its subsidiary.
 
      ABAQUS Static Analysis Set                                                                STEP    2  INCREMENT    1
@@ -317,11 +321,12 @@
 
 
                               ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.90000    
+       USER TIME (SEC)      =   1.2000    
        SYSTEM TIME (SEC)    =  0.60000    
-       TOTAL CPU TIME (SEC) =   1.5000    
+       TOTAL CPU TIME (SEC) =   1.8000    
        WALLCLOCK TIME (SEC) =          2
